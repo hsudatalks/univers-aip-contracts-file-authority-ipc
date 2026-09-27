@@ -145,6 +145,10 @@ pub enum Request {
     RetentionAudit(String),
     /// Ask World to prepare an authoritative write before transferring bytes.
     PrepareContentWrite(FileContentWritePrepareRequest),
+    EnsureDirectory(FileCatalogPathRequest),
+    RemoveEmptyDirectory(FileCatalogPathRequest),
+    DeleteFile(FileCatalogPathRequest),
+    MoveFileRecord(FileRecordMoveRequest),
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -194,6 +198,20 @@ pub enum Reply {
     RetentionAuditReceipt(FileRetentionAuditReceipt),
     RetentionAudit(Option<FileRetentionAuditReceipt>),
     ContentWritePrepared(FileContentWritePrepareOutcome),
+    DirectoryEnsured {
+        record: FileCatalogRecord,
+        created: bool,
+    },
+    DirectoryRemoved {
+        removed: bool,
+    },
+    FileDeleted {
+        deleted: bool,
+    },
+    FileRecordMoved {
+        record: Option<FileCatalogRecord>,
+        changed: bool,
+    },
 }
 
 /// Content byte-transfer protocol, distinct from File-authority metadata.
@@ -228,4 +246,20 @@ pub struct FileContentWritePrepareRequest {
 pub enum FileContentWritePrepareOutcome {
     Claimed(Box<FileContentWriteClaim>),
     ConditionNotMet,
+}
+
+/// Path intent only. World binds scope and chooses records, time and CAS conditions.
+#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
+#[serde(rename_all = "camelCase", deny_unknown_fields)]
+pub struct FileCatalogPathRequest {
+    pub path: String,
+}
+
+/// One file-record move for repair steps; not a namespace Move workflow.
+/// The World response reports this call's result, never a durable retry receipt.
+#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
+#[serde(rename_all = "camelCase", deny_unknown_fields)]
+pub struct FileRecordMoveRequest {
+    pub source_path: String,
+    pub target_path: String,
 }

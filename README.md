@@ -37,3 +37,28 @@ Existing endpoints and variants keep their encoding; older servers cannot
 handle the new variant and callers must not fall back to self-issued authority.
 World can expose this operation through a local server facet without changing
 or upgrading the C0 Data Port used by existing consumers.
+
+Version 0.1.3 appends four World-owned catalog operations. Path-only requests
+reject caller-supplied scope, timestamps, records and preconditions:
+
+- `EnsureDirectory` returns the authoritative directory record and `created`;
+  an existing directory preserves its record, while an existing file conflicts.
+- `RemoveEmptyDirectory` returns `removed`; a missing path is false, while a
+  file or a nonempty directory conflicts. World checks descendants and deletion
+  against the same catalog revision.
+- `DeleteFile` returns `deleted`; a missing path is false and a directory conflicts.
+- `MoveFileRecord` accepts `sourcePath` and `targetPath`, returning `record` and
+  `changed`. Missing source returns None/false, including equal paths. Equal paths
+  with an existing file return its original record/false without changing time.
+  A real move returns the World-generated target record/true. A source directory
+  or descendants, occupied different target, or concurrent revision conflicts.
+
+World owns path/tenant validation, time and atomic revision CAS. Invalid scope
+or path returns Validation; other errors retain FileAuthorityError. These
+results describe this call's linearized outcome, not a durable idempotency or
+historical receipt. Do not retry a possibly executed deletion/move automatically
+or infer original success from a later equal/missing read after a lost reply.
+Business Move/Trash/Restore/Purge continue to use the existing namespace workflows;
+the simple move supports their individual sidecar/version repair steps without
+nesting another workflow. Byte transfer stays on ContentStore. No implementation
+or new SDK is included in these envelopes.
