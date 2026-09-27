@@ -1,0 +1,450 @@
+{
+  "requests": [
+    {
+      "operation": "read_probe"
+    },
+    {
+      "operation": "put",
+      "value": {
+        "capability": {
+          "claims": {
+            "id": "fixture-only",
+            "scope": {
+              "organizationId": "org-a",
+              "worldInstanceId": "world-a"
+            },
+            "operations": [
+              "put",
+              "head",
+              "read",
+              "verify",
+              "delete"
+            ],
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "maxBytes": 4096,
+            "issuedAtMs": 10,
+            "expiresAtMs": 20,
+            "fencingToken": 2
+          },
+          "keyId": "fixture-only",
+          "signature": "wire-fixture-not-authority"
+        },
+        "idempotencyKey": "put-1",
+        "expectedDigest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "content": [
+          0,
+          1,
+          255
+        ]
+      }
+    },
+    {
+      "operation": "begin_upload",
+      "value": {
+        "capability": {
+          "claims": {
+            "id": "fixture-only",
+            "scope": {
+              "organizationId": "org-a",
+              "worldInstanceId": "world-a"
+            },
+            "operations": [
+              "put",
+              "head",
+              "read",
+              "verify",
+              "delete"
+            ],
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "maxBytes": 4096,
+            "issuedAtMs": 10,
+            "expiresAtMs": 20,
+            "fencingToken": 2
+          },
+          "keyId": "fixture-only",
+          "signature": "wire-fixture-not-authority"
+        },
+        "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "idempotencyKey": "upload-1",
+        "sizeBytes": 3,
+        "chunkSizeBytes": 2
+      }
+    },
+    {
+      "operation": "put_upload_chunk",
+      "value": {
+        "capability": {
+          "claims": {
+            "id": "fixture-only",
+            "scope": {
+              "organizationId": "org-a",
+              "worldInstanceId": "world-a"
+            },
+            "operations": [
+              "put",
+              "head",
+              "read",
+              "verify",
+              "delete"
+            ],
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "maxBytes": 4096,
+            "issuedAtMs": 10,
+            "expiresAtMs": 20,
+            "fencingToken": 2
+          },
+          "keyId": "fixture-only",
+          "signature": "wire-fixture-not-authority"
+        },
+        "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "uploadId": "upload-1",
+        "offset": 0,
+        "chunkDigest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "bytes": [
+          0,
+          255
+        ]
+      }
+    },
+    {
+      "operation": "commit_upload",
+      "value": {
+        "capability": {
+          "claims": {
+            "id": "fixture-only",
+            "scope": {
+              "organizationId": "org-a",
+              "worldInstanceId": "world-a"
+            },
+            "operations": [
+              "put",
+              "head",
+              "read",
+              "verify",
+              "delete"
+            ],
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "maxBytes": 4096,
+            "issuedAtMs": 10,
+            "expiresAtMs": 20,
+            "fencingToken": 2
+          },
+          "keyId": "fixture-only",
+          "signature": "wire-fixture-not-authority"
+        },
+        "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "uploadId": "upload-1",
+        "idempotencyKey": "request-1"
+      }
+    },
+    {
+      "operation": "abort_upload",
+      "value": {
+        "capability": {
+          "claims": {
+            "id": "fixture-only",
+            "scope": {
+              "organizationId": "org-a",
+              "worldInstanceId": "world-a"
+            },
+            "operations": [
+              "put",
+              "head",
+              "read",
+              "verify",
+              "delete"
+            ],
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "maxBytes": 4096,
+            "issuedAtMs": 10,
+            "expiresAtMs": 20,
+            "fencingToken": 2
+          },
+          "keyId": "fixture-only",
+          "signature": "wire-fixture-not-authority"
+        },
+        "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "uploadId": "upload-1",
+        "idempotencyKey": "request-1"
+      }
+    },
+    {
+      "operation": "head",
+      "value": {
+        "capability": {
+          "claims": {
+            "id": "fixture-only",
+            "scope": {
+              "organizationId": "org-a",
+              "worldInstanceId": "world-a"
+            },
+            "operations": [
+              "put",
+              "head",
+              "read",
+              "verify",
+              "delete"
+            ],
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "maxBytes": 4096,
+            "issuedAtMs": 10,
+            "expiresAtMs": 20,
+            "fencingToken": 2
+          },
+          "keyId": "fixture-only",
+          "signature": "wire-fixture-not-authority"
+        },
+        "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      }
+    },
+    {
+      "operation": "read",
+      "value": {
+        "capability": {
+          "claims": {
+            "id": "fixture-only",
+            "scope": {
+              "organizationId": "org-a",
+              "worldInstanceId": "world-a"
+            },
+            "operations": [
+              "put",
+              "head",
+              "read",
+              "verify",
+              "delete"
+            ],
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "maxBytes": 4096,
+            "issuedAtMs": 10,
+            "expiresAtMs": 20,
+            "fencingToken": 2
+          },
+          "keyId": "fixture-only",
+          "signature": "wire-fixture-not-authority"
+        },
+        "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "offset": 1,
+        "length": 2
+      }
+    },
+    {
+      "operation": "verify",
+      "value": {
+        "capability": {
+          "claims": {
+            "id": "fixture-only",
+            "scope": {
+              "organizationId": "org-a",
+              "worldInstanceId": "world-a"
+            },
+            "operations": [
+              "put",
+              "head",
+              "read",
+              "verify",
+              "delete"
+            ],
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "maxBytes": 4096,
+            "issuedAtMs": 10,
+            "expiresAtMs": 20,
+            "fencingToken": 2
+          },
+          "keyId": "fixture-only",
+          "signature": "wire-fixture-not-authority"
+        },
+        "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      }
+    },
+    {
+      "operation": "delete",
+      "value": {
+        "capability": {
+          "claims": {
+            "id": "fixture-only",
+            "scope": {
+              "organizationId": "org-a",
+              "worldInstanceId": "world-a"
+            },
+            "operations": [
+              "put",
+              "head",
+              "read",
+              "verify",
+              "delete"
+            ],
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "maxBytes": 4096,
+            "issuedAtMs": 10,
+            "expiresAtMs": 20,
+            "fencingToken": 2
+          },
+          "keyId": "fixture-only",
+          "signature": "wire-fixture-not-authority"
+        },
+        "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "idempotencyKey": "delete-1",
+        "confirm": true
+      }
+    }
+  ],
+  "replies": [
+    {
+      "status": "unit"
+    },
+    {
+      "status": "put",
+      "value": {
+        "scope": {
+          "organizationId": "org-a",
+          "worldInstanceId": "world-a"
+        },
+        "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "sizeBytes": 3,
+        "outcome": "created",
+        "bytesWritten": 3,
+        "idempotent": false,
+        "idempotencyKey": "put-1"
+      }
+    },
+    {
+      "status": "upload_begin",
+      "value": {
+        "scope": {
+          "organizationId": "org-a",
+          "worldInstanceId": "world-a"
+        },
+        "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "sizeBytes": 3,
+        "uploadId": "upload-1",
+        "chunkSizeBytes": 2,
+        "receivedBytes": 0,
+        "resumed": false,
+        "idempotencyKey": "upload-1"
+      }
+    },
+    {
+      "status": "upload_chunk",
+      "value": {
+        "uploadId": "upload-1",
+        "offset": 0,
+        "sizeBytes": 2,
+        "receivedBytes": 2,
+        "reused": false
+      }
+    },
+    {
+      "status": "upload_abort",
+      "value": {
+        "scope": {
+          "organizationId": "org-a",
+          "worldInstanceId": "world-a"
+        },
+        "uploadId": "upload-1",
+        "removedChunks": 1,
+        "idempotent": false,
+        "idempotencyKey": "abort-1"
+      }
+    },
+    {
+      "status": "descriptor",
+      "value": {
+        "scope": {
+          "organizationId": "org-a",
+          "worldInstanceId": "world-a"
+        },
+        "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "sizeBytes": 3
+      }
+    },
+    {
+      "status": "read",
+      "value": {
+        "descriptor": {
+          "scope": {
+            "organizationId": "org-a",
+            "worldInstanceId": "world-a"
+          },
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "sizeBytes": 3
+        },
+        "offset": 1,
+        "bytes": [
+          1,
+          255
+        ]
+      }
+    },
+    {
+      "status": "verify",
+      "value": {
+        "descriptor": {
+          "scope": {
+            "organizationId": "org-a",
+            "worldInstanceId": "world-a"
+          },
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "sizeBytes": 3
+        },
+        "actualDigest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "valid": true
+      }
+    },
+    {
+      "status": "delete",
+      "value": {
+        "scope": {
+          "organizationId": "org-a",
+          "worldInstanceId": "world-a"
+        },
+        "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "deleted": true,
+        "idempotent": false,
+        "idempotencyKey": "delete-1"
+      }
+    },
+    {
+      "status": "error",
+      "value": {
+        "code": "invalid",
+        "message": "fixture"
+      }
+    },
+    {
+      "status": "error",
+      "value": {
+        "code": "denied",
+        "message": "fixture"
+      }
+    },
+    {
+      "status": "error",
+      "value": {
+        "code": "not_found",
+        "message": "fixture"
+      }
+    },
+    {
+      "status": "error",
+      "value": {
+        "code": "conflict",
+        "message": "fixture"
+      }
+    },
+    {
+      "status": "error",
+      "value": {
+        "code": "resource_exhausted",
+        "message": "fixture"
+      }
+    },
+    {
+      "status": "error",
+      "value": {
+        "code": "backend",
+        "message": "fixture"
+      }
+    }
+  ]
+}

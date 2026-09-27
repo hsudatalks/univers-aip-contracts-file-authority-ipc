@@ -192,3 +192,6 @@ pub enum Reply {
     RetentionAuditReceipt(FileRetentionAuditReceipt),
     RetentionAudit(Option<FileRetentionAuditReceipt>),
 }
+
+/// Content byte-transfer protocol, distinct from File-authority metadata.
+pub mod content;

@@ -16,3 +16,10 @@ separate protocol and are not File-authority metadata messages.
 Run `bash scripts/check.sh`; publish a clean committed candidate with
 `bash scripts/publish.sh`. All dependencies are Registry packages. C0 Data must
 be at least 1.0.0-rc.2; this release does not claim compatibility with rc.1.
+
+Version 0.1.1 adds `content::{Request, Reply}` plus the existing `/v1/content`
+path and byte/chunk bounds. These tagged envelopes reuse C0 Data content types
+and preserve the Content Engine wire. No client/server, grants, storage, virtual
+paths, upload lifecycle or timeout/retry policy is moved into this package.
+Files owns byte storage and capability verification; World owns its scoped
+consumer and semantic File lifecycle.
