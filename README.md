@@ -62,3 +62,12 @@ Business Move/Trash/Restore/Purge continue to use the existing namespace workflo
 the simple move supports their individual sidecar/version repair steps without
 nesting another workflow. Byte transfer stays on ContentStore. No implementation
 or new SDK is included in these envelopes.
+
+Version 0.1.4 adds `ReconcilePendingContentWrites { mode, limit }` and
+`ContentWritesReconciled`, reusing C0 Data's FileContentReconciliationMode and
+FileContentReconciliationReport. World checks real Content state and owns
+Finalize/Abandon/conflict decisions. The envelope preserves the caller's limit;
+World validates its existing 1..=10000 bound. Audit does not request repairs.
+Unconfigured Content/recovery returns an explicit error, never an empty success.
+Reports describe the performed scan, not a durable replay receipt. This adds no
+client/server implementation, startup gate or automatic retry/fallback policy.

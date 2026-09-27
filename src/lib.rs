@@ -30,6 +30,9 @@ use univers_aip_contracts_data::file::{
     FileQuotaStatus, FileRetentionAuditReceipt, FileRetentionAuditRequest, FileRetentionDecision,
     FileRetentionDecisionRequest, FileRetentionPolicy,
 };
+use univers_aip_contracts_data::storage::file_store::{
+    FileContentReconciliationMode, FileContentReconciliationReport,
+};
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub enum Request {
     ReadProbe,
@@ -149,6 +152,11 @@ pub enum Request {
     RemoveEmptyDirectory(FileCatalogPathRequest),
     DeleteFile(FileCatalogPathRequest),
     MoveFileRecord(FileRecordMoveRequest),
+    /// World checks Content and decides repair; the caller selects mode and bound only.
+    ReconcilePendingContentWrites {
+        mode: FileContentReconciliationMode,
+        limit: usize,
+    },
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -212,6 +220,7 @@ pub enum Reply {
         record: Option<FileCatalogRecord>,
         changed: bool,
     },
+    ContentWritesReconciled(FileContentReconciliationReport),
 }
 
 /// Content byte-transfer protocol, distinct from File-authority metadata.
