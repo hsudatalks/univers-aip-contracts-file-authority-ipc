@@ -143,6 +143,8 @@ pub enum Request {
     DecideRetention(FileRetentionDecisionRequest),
     RecordRetentionAudit(FileRetentionAuditRequest),
     RetentionAudit(String),
+    /// Ask World to prepare an authoritative write before transferring bytes.
+    PrepareContentWrite(FileContentWritePrepareRequest),
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -191,7 +193,39 @@ pub enum Reply {
     RetentionDecision(FileRetentionDecision),
     RetentionAuditReceipt(FileRetentionAuditReceipt),
     RetentionAudit(Option<FileRetentionAuditReceipt>),
+    ContentWritePrepared(FileContentWritePrepareOutcome),
 }
 
 /// Content byte-transfer protocol, distinct from File-authority metadata.
 pub mod content;
+
+/// Caller-declared condition, evaluated against World's authoritative catalog.
+#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
+#[serde(rename_all = "snake_case")]
+pub enum FileContentWritePrepareMode {
+    Replace,
+    CreateOnly,
+    IfHashMatches(ContentDigest),
+}
+
+/// Declares desired content, not catalog authority or a trusted mutation receipt.
+/// The receiving World binds scope and validates the optional mutation link.
+/// Intent identity, timestamps and previous catalog state are never caller inputs.
+#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
+#[serde(rename_all = "camelCase", deny_unknown_fields)]
+pub struct FileContentWritePrepareRequest {
+    pub path: String,
+    pub digest: ContentDigest,
+    pub size_bytes: u64,
+    pub mode: FileContentWritePrepareMode,
+    pub mutation: Option<FileContentWriteMutation>,
+}
+
+/// A false condition does not claim a write or authorize any byte transfer.
+/// Claimed reuses the canonical C0 Data claim, including original retry evidence.
+#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
+#[serde(rename_all = "snake_case")]
+pub enum FileContentWritePrepareOutcome {
+    Claimed(Box<FileContentWriteClaim>),
+    ConditionNotMet,
+}

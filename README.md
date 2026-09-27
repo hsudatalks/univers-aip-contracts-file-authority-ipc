@@ -23,3 +23,17 @@ and preserve the Content Engine wire. No client/server, grants, storage, virtual
 paths, upload lifecycle or timeout/retry policy is moved into this package.
 Files owns byte storage and capability verification; World owns its scoped
 consumer and semantic File lifecycle.
+
+Version 0.1.2 adds `Request::PrepareContentWrite` and
+`Reply::ContentWritePrepared`. The request declares path, digest, byte size,
+Replace/CreateOnly/IfHashMatches condition, and an optional existing C0 Data
+mutation link. World validates that link and binds scope, previous catalog
+state, intent identity and timestamps through its existing atomic claim.
+Those authority fields are not accepted in the preparation request.
+`ConditionNotMet` is distinct from a claimed write and from a backend failure;
+`Claimed` contains the original C0 Data claim, including retry identity.
+No byte-transfer implementation or lifecycle policy lives in this crate.
+Existing endpoints and variants keep their encoding; older servers cannot
+handle the new variant and callers must not fall back to self-issued authority.
+World can expose this operation through a local server facet without changing
+or upgrading the C0 Data Port used by existing consumers.
