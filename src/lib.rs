@@ -1,5 +1,7 @@
 //! Pure public envelopes for the World-owned File authority protocol.
 //! Request scope, storage, grants, recovery, retries and admission belong to owners.
+#[cfg(feature = "capability")]
+pub mod capability;
 pub const ENDPOINT: &str = "/v1/file-authority";
 pub const CLIENT_URL: &str = "http://file-authority/v1/file-authority";
 pub const CAPABILITY: &str = "file-authority";

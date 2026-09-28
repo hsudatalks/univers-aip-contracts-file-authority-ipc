@@ -211,8 +211,9 @@ dependencies = [
 
 [[package]]
 name = "univers-aip-contracts-file-authority-ipc"
-version = "0.1.4"
+version = "0.1.5"
 dependencies = [
+ "bytes",
  "rmp-serde",
  "serde",
  "serde_json",

@@ -1,6 +1,6 @@
 [package]
 name = "univers-aip-contracts-file-authority-ipc"
-version = "0.1.4"
+version = "0.1.5"
 edition = "2021"
 rust-version = "1.89"
 license = "MIT"
@@ -12,7 +12,11 @@ include = ["Cargo.toml", "Cargo.lock", "README.md", "src/**", "tests/**", "scrip
 [workspace]
 members = ["."]
 resolver = "2"
+[features]
+default = []
+capability = ["dep:bytes", "univers-aip-contracts-data/file-file"]
 [dependencies]
+bytes = { version = "1", features = ["serde"], optional = true }
 serde = { version = "1", features = ["derive"] }
 univers-aip-contracts-data = { version = ">=1.0.0-rc.2, <1.0.0", registry = "univers", default-features = false, features = ["content-types", "file", "file-authority", "storage-full"] }
 [dev-dependencies]

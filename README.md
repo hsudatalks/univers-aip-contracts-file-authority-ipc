@@ -1,5 +1,10 @@
 # File authority IPC contract
 
+Version 0.1.5 adds optional `capability` wire values for the selected-World
+`/v1/file/capability` endpoint. Request variant ordering, legacy decode-only
+variants, reply payloads, the World envelope and request bound remain unchanged.
+This feature contains no File service, transport, authentication or persistence.
+
 `Request` and `Reply` retain the existing File authority enum representation and
 published C0 Data payloads. This package also publishes endpoint/client URI,
 capability, the existing 30-second request timeout value, and 2MiB request,
