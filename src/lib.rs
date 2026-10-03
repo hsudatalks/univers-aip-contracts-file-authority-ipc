@@ -274,3 +274,7 @@ pub struct FileRecordMoveRequest {
     pub source_path: String,
     pub target_path: String,
 }
+
+/// Opt-in reverse Content-to-World original reservation/journal verifier wire.
+#[cfg(feature = "world-verifier")]
+pub mod content_world_verifier;

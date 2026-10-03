@@ -1,6 +1,6 @@
 [package]
 name = "univers-aip-contracts-file-authority-ipc"
-version = "0.1.6-dev.1"
+version = "0.1.6"
 edition = "2021"
 rust-version = "1.89"
 license = "MIT"
@@ -8,7 +8,7 @@ description = "Pure File authority IPC requests, replies and protocol bounds"
 repository = "https://github.com/hsudatalks/univers-aip-contracts-file-authority-ipc"
 publish = ["univers"]
 readme = "README.md"
-include = ["Cargo.toml", "Cargo.lock", "README.md", "CONTENT_RETENTION.md", "src/**", "tests/**", "scripts/**", ".cargo/config.toml"]
+include = ["Cargo.toml", "Cargo.lock", "README.md", "CONTENT_RETENTION.md", "CONTENT_WORLD_VERIFIER.md", "src/**", "tests/**", "scripts/**", ".cargo/config.toml"]
 [workspace]
 members = ["."]
 resolver = "2"
@@ -16,6 +16,7 @@ resolver = "2"
 default = []
 capability = ["dep:bytes", "univers-aip-contracts-data/file-file"]
 retention = ["univers-aip-contracts-data/file-artifact", "dep:univers-aip-contracts-world-ipc", "dep:rmp-serde", "dep:serde_json", "dep:sha2"]
+world-verifier = ["retention"]
 [dependencies]
 bytes = { version = "1", features = ["serde"], optional = true }
 serde = { version = "1", features = ["derive"] }

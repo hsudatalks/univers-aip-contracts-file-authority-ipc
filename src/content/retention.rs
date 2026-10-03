@@ -83,7 +83,7 @@ impl Invocation {
             ),
         }
     }
-    fn validate_schema(&self) -> ContentResult<()> {
+    pub(crate) fn validate_schema(&self) -> ContentResult<()> {
         let valid = match self {
             Self::Spatial(value) => {
                 value.schema_version == univers_aip_contracts_world_ipc::spatial_mutation::SCHEMA

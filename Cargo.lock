@@ -467,7 +467,7 @@ dependencies = [
 
 [[package]]
 name = "univers-aip-contracts-file-authority-ipc"
-version = "0.1.6-dev.1"
+version = "0.1.6"
 dependencies = [
  "bytes",
  "rmp-serde",

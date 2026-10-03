@@ -1,5 +1,11 @@
 # File authority IPC contract
 
+Version 0.1.6 adds opt-in `world-verifier` for the explicit reverse Content-to-World
+original reservation/journal verification callback. Full requests/observers/terminal
+records and bounded opaque witnesses remain untrusted wire values; see
+[CONTENT_WORLD_VERIFIER.md](CONTENT_WORLD_VERIFIER.md). Existing Content defaults
+and encodings remain unchanged. World SDK dev.3 requires an owner dependency update.
+
 Version 0.1.6-dev.1 adds opt-in `retention` public Content acquire/original
 restore/pureRead status/owner drain/terminal and accepted-reference lifecycle
 envelopes. See [CONTENT_RETENTION.md](CONTENT_RETENTION.md) for authority,
