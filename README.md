@@ -1,5 +1,9 @@
 # File authority IPC contract
 
+Version 0.1.10 admits issued WorldIPC0.3.12-dev.6 for a coherent combined
+Subject-disposition/Files-policy graph while retaining Policy0.1.0-dev.4.
+Every 0.1.9 carrier, schema, bound, encoding and public feature stays unchanged.
+
 Version 0.1.9 binds `world-policy-projection` to issued Files Policy0.1.0-dev.4,
 which accepts canonical bare descriptor SHA256 alongside unchanged prefixed proofs.
 All 0.1.8 schemas, operations, encodings, bounds and features remain unchanged.

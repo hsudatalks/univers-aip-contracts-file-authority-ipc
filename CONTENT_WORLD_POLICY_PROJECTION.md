@@ -2,7 +2,7 @@
 
 `world-policy-projection` is optional and implies `world-verifier`/`retention` plus
 the issued `univers-file-governed-policy=0.1.0-dev.4` pure snapshot decoder. Defaults
-remain empty. Library 0.1.9 preserves every legacy .7/.6 Content/File/verifier wire,
+remain empty. Library 0.1.10 preserves every legacy .7/.6 Content/File/verifier wire,
 operation and bound. Module `content_world_policy_projection` uses the SAME selected
 reverse World endpoint/provider/direction/capability/client URL as `world-verifier`.
 The NEW explicit schema is `univers.world-content-files-policy-projection/v1`.
@@ -100,7 +100,7 @@ Binary rollback does not restore World/Files original journals or live authority
 
 ## Exact World SDK/native and Files delivery request
 
-World owner must consume ACTUALLY published IPC0.1.9/world-policy-projection and mount
+World owner must consume ACTUALLY published IPC0.1.10/world-policy-projection and mount
 this typed schema on its existing selected reverse verifier, with explicit trusted
 endpoint/token/timeout and new whole reply bounds. Source identity/store and complete
 snapshot from actual SAME original material pin/Files authority, preserving complete
@@ -126,3 +126,11 @@ canonical bare lowercase SHA256 physical descriptors with unchanged prefixed
 original proofs, without rewriting either field or any original Access/held row.
 IPC0.1.8 remains immutable and exactly pinned to Policydev.2; mixing it with
 Policydev.4 under required projection features is not a coherent resolver graph.
+
+IPC0.1.10 admits actually issued WorldIPC0.3.12-dev.6, retaining exact Policydev.4.
+Its production carrier code/schema/profile and public feature map remain unchanged
+from IPC0.1.9. Consumers requiring ordinary Subject disposition enable the issued
+WorldIPC `subject-disposition` feature on the same single dev.6 instance; IPC adds
+no Subject carrier or feature of its own. Immutable IPC0.1.9 stays pinneddev.4
+and cannot resolve the required combined WorldIPCdev.6 graph. No AuthIPC cycle,
+private wire, feature downgrade or guessed SDK/native successor is introduced.
