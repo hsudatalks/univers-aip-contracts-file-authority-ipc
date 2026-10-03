@@ -1,5 +1,13 @@
 # File authority IPC contract
 
+Version 0.1.11 admits issued WorldIPC0.3.12-dev.8 for the combined Files-policy,
+Subject-disposition and opt-in ordinary Subject-policy projection contract graph.
+It preserves every 0.1.10 API, feature, schema, carrier, encoding and bound; downstream
+consumers enable WorldIPC `subject-policy-projection` explicitly when required.
+Issued WorldSDK0.2.1-dev.7 still fixes WorldIPCdev6 and needs its own owner successor
+before a unified SDK graph is possible. The Files-owned complete UNTRUSTED Access
+transport primitive and native original continuation remain separate prerequisites.
+
 Version 0.1.10 admits issued WorldIPC0.3.12-dev.6 for a coherent combined
 Subject-disposition/Files-policy graph while retaining Policy0.1.0-dev.4.
 Every 0.1.9 carrier, schema, bound, encoding and public feature stays unchanged.

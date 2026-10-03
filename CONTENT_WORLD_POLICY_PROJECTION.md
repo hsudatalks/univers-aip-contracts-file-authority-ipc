@@ -2,7 +2,7 @@
 
 `world-policy-projection` is optional and implies `world-verifier`/`retention` plus
 the issued `univers-file-governed-policy=0.1.0-dev.4` pure snapshot decoder. Defaults
-remain empty. Library 0.1.10 preserves every legacy .7/.6 Content/File/verifier wire,
+remain empty. Library 0.1.11 preserves every legacy .7/.6 Content/File/verifier wire,
 operation and bound. Module `content_world_policy_projection` uses the SAME selected
 reverse World endpoint/provider/direction/capability/client URL as `world-verifier`.
 The NEW explicit schema is `univers.world-content-files-policy-projection/v1`.
@@ -100,7 +100,7 @@ Binary rollback does not restore World/Files original journals or live authority
 
 ## Exact World SDK/native and Files delivery request
 
-World owner must consume ACTUALLY published IPC0.1.10/world-policy-projection and mount
+World owner must consume ACTUALLY published IPC0.1.11/world-policy-projection and mount
 this typed schema on its existing selected reverse verifier, with explicit trusted
 endpoint/token/timeout and new whole reply bounds. Source identity/store and complete
 snapshot from actual SAME original material pin/Files authority, preserving complete
@@ -134,3 +134,19 @@ WorldIPC `subject-disposition` feature on the same single dev.6 instance; IPC ad
 no Subject carrier or feature of its own. Immutable IPC0.1.9 stays pinneddev.4
 and cannot resolve the required combined WorldIPCdev.6 graph. No AuthIPC cycle,
 private wire, feature downgrade or guessed SDK/native successor is introduced.
+
+## Ordinary Subject policy graph adoption
+
+IPC0.1.11 pins actual issued WorldIPC0.3.12-dev.8; downstream consumers may enable
+its additive `subject-policy-projection` alongside existing `subject-disposition`
+and `spatial-mutation`. Existing Files policy projection remains unchanged and
+readonly, with exact Policy0.1.0-dev.4. WorldIPC Subject backend projections are
+Eligible/Denied/Unavailable data and never a combined Host Auth grant or write,
+reservation, ACK, drain, terminal or release permission.
+
+The new direct contract fragment requires its own Registry-only consumer. Issued
+WorldSDK0.2.1-dev.7 still pins WorldIPCdev6; World owns actual SDK/native successor
+adoption and the full required-feature graph. Files public complete UNTRUSTED
+Access transport and native original continuation are separate unresolved owner
+prerequisites. This dependency update supplies neither trusted Access conversion
+nor a native continuation callback.
