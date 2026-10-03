@@ -2,7 +2,7 @@
 
 `world-policy-projection` is optional and implies `world-verifier`/`retention` plus
 the issued `univers-file-governed-policy=0.1.0-dev.4` pure snapshot decoder. Defaults
-remain empty. Library 0.1.11 preserves every legacy .7/.6 Content/File/verifier wire,
+remain empty. Library 0.1.12 preserves every legacy .7/.6 Content/File/verifier wire,
 operation and bound. Module `content_world_policy_projection` uses the SAME selected
 reverse World endpoint/provider/direction/capability/client URL as `world-verifier`.
 The NEW explicit schema is `univers.world-content-files-policy-projection/v1`.
@@ -100,7 +100,7 @@ Binary rollback does not restore World/Files original journals or live authority
 
 ## Exact World SDK/native and Files delivery request
 
-World owner must consume ACTUALLY published IPC0.1.11/world-policy-projection and mount
+World owner must consume ACTUALLY published IPC0.1.12/world-policy-projection and mount
 this typed schema on its existing selected reverse verifier, with explicit trusted
 endpoint/token/timeout and new whole reply bounds. Source identity/store and complete
 snapshot from actual SAME original material pin/Files authority, preserving complete
@@ -150,3 +150,19 @@ adoption and the full required-feature graph. Files public complete UNTRUSTED
 Access transport and native original continuation are separate unresolved owner
 prerequisites. This dependency update supplies neither trusted Access conversion
 nor a native continuation callback.
+
+## Selected ordinary Subject session graph adoption
+
+IPC0.1.12 pins actual issued WorldIPC0.3.12-dev.10. Downstream consumers enable
+its formal `subject-policy-session` feature to compose strict selected-peer raw
+enrollment, staged full projection and exact prior-evaluation affirmation. The
+feature implies the existing `subject-policy-projection`/`subject-disposition`;
+no File/Content protocol or default feature changes here. Policydev4 remains fixed.
+
+Current/Changed/Expired/Unknown/Unsupported observations remain backend data; they
+never grant Auth/write/reservation/ACK/drain/release or freeze future policy. Actual
+SDK0.2.1-dev.8 still fixes WorldIPCdev8 and is excluded from the new direct contract
+fragment. World owns its genuine async SDK/native successor and full mandatory
+graph; Framework owns current Host Auth composition. Physical retained snapshot/
+full predicate/expiry/capacity/eviction checks and native Files Access/continuation/
+startup/current ACL remain separate acceptance prerequisites.

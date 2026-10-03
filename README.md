@@ -1,5 +1,13 @@
 # File authority IPC contract
 
+Version 0.1.12 admits actually issued WorldIPC0.3.12-dev.10 for the selected
+ordinary Subject-policy session contract graph. Every 0.1.11 File/Content API,
+wire encoding, feature, default and bound stays unchanged; downstream consumers
+explicitly enable WorldIPC `subject-policy-session` when required. Issued World
+SDK0.2.1-dev.8 still pins WorldIPCdev8 and requires its own owner successor.
+Session carriers remain data; physical World predicates/current Host Auth and
+Files public Access/original continuation/startup/ACL remain separate prerequisites.
+
 Version 0.1.11 admits issued WorldIPC0.3.12-dev.8 for the combined Files-policy,
 Subject-disposition and opt-in ordinary Subject-policy projection contract graph.
 It preserves every 0.1.10 API, feature, schema, carrier, encoding and bound; downstream

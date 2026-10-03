@@ -568,7 +568,7 @@ dependencies = [
 
 [[package]]
 name = "univers-aip-contracts-file-authority-ipc"
-version = "0.1.11"
+version = "0.1.12"
 dependencies = [
  "async-trait",
  "bytes",
@@ -631,9 +631,9 @@ dependencies = [
 
 [[package]]
 name = "univers-aip-contracts-world-ipc"
-version = "0.3.12-dev.8"
+version = "0.3.12-dev.10"
 source = "sparse+https://david-server.mink-ph.ts.net/api/v1/crates/"
-checksum = "ac2ab3e92a85a794c6530d03be6a0ab55c677b1e017544f1e3304726048505f3"
+checksum = "dda10d12a09a364c728e720b0b3c9ac97915bcaef0cfc55aaf1e608f16097efa"
 dependencies = [
  "chrono",
  "rmp-serde",
