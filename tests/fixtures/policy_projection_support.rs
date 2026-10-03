@@ -81,6 +81,9 @@ pub struct Fixture {
 }
 impl Fixture {
     pub async fn new(scope_padding: usize) -> Self {
+        Self::with_descriptor_form(scope_padding, false).await
+    }
+    pub async fn with_descriptor_form(scope_padding: usize, bare: bool) -> Self {
         let (retained, bytes) = canonical::retained();
         let original = &retained.original;
         let c = &original.admission.correlation;
@@ -114,7 +117,12 @@ impl Fixture {
         };
         let directory = tempfile::tempdir().unwrap();
         let kv = Arc::new(RedbKvStore::open(directory.path().join("fixture.redb")).unwrap());
-        let descriptor: ArtifactDescriptor = serde_json::from_value(serde_json::json!({"id":access.artifact_id,"reference":access.artifact_ref,"organization_id":selected.organization,"kind":"reality_geometry","storage_backend":"unsigned-fixture","path":"fixture/material","sha256":original.material.sha256,"size_bytes":bytes.len(),"content_type":original.material.content_type,"owner_module":null,"owner_id":null,"metadata":{"synthetic":true},"status":"active","version":1,"created_at":"2026-10-03T00:00:00Z","updated_at":"2026-10-03T00:00:00Z"})).unwrap();
+        let descriptor_sha256 = if bare {
+            univers_aip_contracts_shared::artifact_ref::sha256_hex(&bytes)
+        } else {
+            original.material.sha256.clone()
+        };
+        let descriptor: ArtifactDescriptor = serde_json::from_value(serde_json::json!({"id":access.artifact_id,"reference":access.artifact_ref,"organization_id":selected.organization,"kind":"reality_geometry","storage_backend":"unsigned-fixture","path":"fixture/material","sha256":descriptor_sha256,"size_bytes":bytes.len(),"content_type":original.material.content_type,"owner_module":null,"owner_id":null,"metadata":{"synthetic":true},"status":"active","version":1,"created_at":"2026-10-03T00:00:00Z","updated_at":"2026-10-03T00:00:00Z"})).unwrap();
         kv.put(
             "fixture/material",
             &rmp_serde::to_vec_named(&descriptor).unwrap(),

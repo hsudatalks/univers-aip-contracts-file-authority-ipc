@@ -1,5 +1,9 @@
 # File authority IPC contract
 
+Version 0.1.9 binds `world-policy-projection` to issued Files Policy0.1.0-dev.4,
+which accepts canonical bare descriptor SHA256 alongside unchanged prefixed proofs.
+All 0.1.8 schemas, operations, encodings, bounds and features remain unchanged.
+
 Version 0.1.8 adds opt-in `world-policy-projection`: complete untrusted same-store
 Files held snapshot projection, using the issued Files decoder and bounded whole
 messages. See [CONTENT_WORLD_POLICY_PROJECTION.md](CONTENT_WORLD_POLICY_PROJECTION.md).

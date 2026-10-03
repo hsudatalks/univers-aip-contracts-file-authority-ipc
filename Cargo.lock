@@ -568,7 +568,7 @@ dependencies = [
 
 [[package]]
 name = "univers-aip-contracts-file-authority-ipc"
-version = "0.1.8"
+version = "0.1.9"
 dependencies = [
  "async-trait",
  "bytes",
@@ -579,6 +579,7 @@ dependencies = [
  "tempfile",
  "tokio",
  "univers-aip-contracts-data",
+ "univers-aip-contracts-shared",
  "univers-aip-contracts-world-ipc",
  "univers-aip-lib-kv-redb",
  "univers-file-governed-policy",
@@ -676,9 +677,9 @@ dependencies = [
 
 [[package]]
 name = "univers-file-governed-policy"
-version = "0.1.0-dev.2"
+version = "0.1.0-dev.4"
 source = "sparse+https://david-server.mink-ph.ts.net/api/v1/crates/"
-checksum = "c68cdf1b2cd68eb714932141c90c78586703bfac5f5e64412a4569f4ca05054a"
+checksum = "4705313626d01cc1fd064f855ff23c127d1e87e627e75113dc10131d8a1366ca"
 dependencies = [
  "async-trait",
  "bytes",

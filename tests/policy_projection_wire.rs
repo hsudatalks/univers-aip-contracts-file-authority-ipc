@@ -318,3 +318,58 @@ fn actual_published_0_1_7_thirty_requests_and_statuses_keep_exact_wire() {
         }
     }
 }
+
+#[tokio::test]
+async fn issued_policy_dev4_accepts_canonical_bare_descriptor_without_rewriting_original_or_rows() {
+    for bare in [true, false] {
+        let f = support::Fixture::with_descriptor_form(0, bare).await;
+        f.retained.original.validate().unwrap();
+        let original_before = rmp_serde::to_vec_named(&f.retained.original).unwrap();
+        let access_before = rmp_serde::to_vec_named(&f.access).unwrap();
+        let descriptor_before = f.kv.get("fixture/material").await.unwrap().unwrap();
+        let descriptor: univers_aip_contracts_data::file::ArtifactDescriptor =
+            rmp_serde::from_slice(&descriptor_before).unwrap();
+        let prefixed = &f.retained.original.material.sha256;
+        assert!(prefixed.starts_with("sha256:"));
+        if bare {
+            assert_eq!(descriptor.sha256.len(), 64);
+            assert_eq!(format!("sha256:{}", descriptor.sha256), *prefixed);
+        } else {
+            assert_eq!(descriptor.sha256, *prefixed);
+        }
+        let projected = f.projection().await;
+        let rows_before = f.kv.scan_prefix("").await.unwrap();
+        for request in f.requests() {
+            let reply = Reply {
+                request: request.clone(),
+                status: Status::UntrustedProjection(Box::new(projected.clone())),
+            };
+            let decoded = Reply::decode_named(&rmp_serde::to_vec_named(&reply).unwrap()).unwrap();
+            assert_eq!(
+                decoded
+                    .validate_policy_for(&request, &f.selected, &f.access)
+                    .unwrap(),
+                1
+            );
+            assert_eq!(
+                univers_file_governed_policy::snapshot::validate_held_policy_snapshot(
+                    &f.selected,
+                    &f.access,
+                    &projected.files_held_policy_snapshot
+                )
+                .unwrap(),
+                1
+            );
+        }
+        assert_eq!(f.kv.scan_prefix("").await.unwrap(), rows_before);
+        assert_eq!(
+            f.kv.get("fixture/material").await.unwrap().unwrap(),
+            descriptor_before
+        );
+        assert_eq!(
+            rmp_serde::to_vec_named(&f.retained.original).unwrap(),
+            original_before
+        );
+        assert_eq!(rmp_serde::to_vec_named(&f.access).unwrap(), access_before);
+    }
+}

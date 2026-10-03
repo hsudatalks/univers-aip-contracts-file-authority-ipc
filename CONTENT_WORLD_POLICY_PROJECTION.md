@@ -1,8 +1,8 @@
 # Complete World Files-policy projection
 
 `world-policy-projection` is optional and implies `world-verifier`/`retention` plus
-the issued `univers-file-governed-policy=0.1.0-dev.2` pure snapshot decoder. Defaults
-remain empty. Library 0.1.8 preserves every legacy .7/.6 Content/File/verifier wire,
+the issued `univers-file-governed-policy=0.1.0-dev.4` pure snapshot decoder. Defaults
+remain empty. Library 0.1.9 preserves every legacy .7/.6 Content/File/verifier wire,
 operation and bound. Module `content_world_policy_projection` uses the SAME selected
 reverse World endpoint/provider/direction/capability/client URL as `world-verifier`.
 The NEW explicit schema is `univers.world-content-files-policy-projection/v1`.
@@ -100,11 +100,11 @@ Binary rollback does not restore World/Files original journals or live authority
 
 ## Exact World SDK/native and Files delivery request
 
-World owner must consume ACTUALLY published IPC0.1.8/world-policy-projection and mount
+World owner must consume ACTUALLY published IPC0.1.9/world-policy-projection and mount
 this typed schema on its existing selected reverse verifier, with explicit trusted
 endpoint/token/timeout and new whole reply bounds. Source identity/store and complete
 snapshot from actual SAME original material pin/Files authority, preserving complete
-original Access independently of fresh observer. Use issued Policydev.2 decoder;
+original Access independently of fresh observer. Use issued Policydev.4 decoder;
 no private World/Files codec or body permissions. Implement actual current Auth and
 same-store checks before/after awaits and owned+queued terminal journal verification.
 Publish a normal owner-checked real SDK/native successor; its coordinate is selected
@@ -113,9 +113,16 @@ witnesses only, so a new profile consumer is genuinely required.
 
 Files then consumes that actual SDK successor with mandatory ipc-file-capability,
 ipc-content, ipc-content-verifier/test-artifacts support preserved, plus real new
-projection support. Files independently decodes with Policy0.1.0-dev.2 and mounts
+projection support. Files independently decodes with Policy0.1.0-dev.4 and mounts
 its genuine same-authority bridge; retained startup/native acceptance is its own
 unfinished owner delivery. Registry graph remains coherent DataRC3/SharedRC2/WorldRC11,
-Policydev.2 (test Redbdev.3), with no decorative SDK dependency in this contract.
+Policydev.4 (test Redbdev.3), with no decorative SDK dependency in this contract.
 Fixtures use isolated real Redb with explicitly unsigned Auth/material adapters.
 No native/startup/installed/Vertical acceptance or business credit from this carrier.
+
+IPC0.1.9 changes only the optional decoder dependency to issued Policydev.4.
+It preserves the complete0.1.8 carrier/schema/profile/wire. Policydev.4 accepts
+canonical bare lowercase SHA256 physical descriptors with unchanged prefixed
+original proofs, without rewriting either field or any original Access/held row.
+IPC0.1.8 remains immutable and exactly pinned to Policydev.2; mixing it with
+Policydev.4 under required projection features is not a coherent resolver graph.

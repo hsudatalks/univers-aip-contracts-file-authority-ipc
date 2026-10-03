@@ -1,6 +1,6 @@
 [package]
 name = "univers-aip-contracts-file-authority-ipc"
-version = "0.1.8"
+version = "0.1.9"
 edition = "2021"
 rust-version = "1.89"
 license = "MIT"
@@ -26,7 +26,7 @@ rmp-serde = { version = "1", optional = true }
 serde_json = { version = "1", optional = true }
 sha2 = { version = "0.10", optional = true }
 univers-aip-contracts-world-ipc = { version = "=0.3.12-dev.4", registry = "univers", default-features = false, features = ["spatial-mutation"], optional = true }
-univers-file-governed-policy = { version = "=0.1.0-dev.2", registry = "univers", optional = true }
+univers-file-governed-policy = { version = "=0.1.0-dev.4", registry = "univers", optional = true }
 [dev-dependencies]
 serde_json = "1"
 rmp-serde = "1"
@@ -35,3 +35,4 @@ bytes = "1"
 tokio = { version = "1", features = ["rt", "macros"] }
 tempfile = "3"
 univers-aip-lib-kv-redb = { version = "=1.0.0-dev.3", registry = "univers" }
+univers-aip-contracts-shared = { version = "=1.0.0-rc.2", registry = "univers", default-features = false, features = ["artifact-ref"] }
