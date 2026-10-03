@@ -373,3 +373,161 @@ async fn issued_policy_dev4_accepts_canonical_bare_descriptor_without_rewriting_
         assert_eq!(rmp_serde::to_vec_named(&f.access).unwrap(), access_before);
     }
 }
+
+#[tokio::test]
+async fn issued_dev5_terminal_frame_preserves_saved_projection_wire_and_requires_current_predicates(
+) {
+    use univers_aip_contracts_data::storage::{KvConditionalBatch, KvConditionalBatchOutcome};
+    use univers_file_governed_policy::{OriginalAdmissionState, TerminalAdmissionOrigin};
+
+    // Real same-store Redb, with explicitly unsigned fixture authorization.
+    // This checks dependency/codec composition, not production Auth or drain.
+    let f = support::Fixture::with_descriptor_form(0, true).await;
+    let saved = f.projection().await;
+    let request = f.requests().remove(0);
+    let reply = Reply {
+        request: request.clone(),
+        status: Status::UntrustedProjection(Box::new(saved)),
+    };
+    let json_before = serde_json::to_vec(&reply).unwrap();
+    let named_before = rmp_serde::to_vec_named(&reply).unwrap();
+    let rows_before = f.kv.scan_prefix("").await.unwrap();
+    assert!(f
+        .authority
+        .observe_original_admission(&f.access, b"not-terminal")
+        .await
+        .is_err());
+    let held = f
+        .authority
+        .observe_original_admission(&f.access, b"unsigned-fixture-terminal")
+        .await
+        .unwrap();
+    assert_eq!(held.state, OriginalAdmissionState::Held);
+    assert_eq!(held.terminal_origin, None);
+    assert_eq!(rows_before, f.kv.scan_prefix("").await.unwrap());
+
+    let terminal = f
+        .authority
+        .reconcile_original_terminal(&f.access, b"unsigned-fixture-terminal")
+        .await
+        .unwrap();
+    assert_eq!(terminal.origin, TerminalAdmissionOrigin::PreviouslyHeld);
+    let released = f
+        .authority
+        .observe_original_admission(&f.access, b"unsigned-fixture-terminal")
+        .await
+        .unwrap();
+    assert_eq!(released.state, OriginalAdmissionState::Released);
+    assert_eq!(
+        released.terminal_origin,
+        Some(TerminalAdmissionOrigin::PreviouslyHeld)
+    );
+    let stale =
+        f.kv.compare_and_swap_batch_if(KvConditionalBatch {
+            conditions: held.conditions().to_vec(),
+            puts: vec![],
+            deletes: vec![],
+            not_after_unix_ms: None,
+        })
+        .await
+        .unwrap();
+    assert!(!matches!(stale, KvConditionalBatchOutcome::Applied { .. }));
+    let current =
+        f.kv.compare_and_swap_batch_if(KvConditionalBatch {
+            conditions: terminal.conditions().to_vec(),
+            puts: vec![],
+            deletes: vec![],
+            not_after_unix_ms: None,
+        })
+        .await
+        .unwrap();
+    assert!(matches!(current, KvConditionalBatchOutcome::Applied { .. }));
+    let terminal_replay = f
+        .authority
+        .reconcile_original_terminal(&f.access, b"unsigned-fixture-terminal")
+        .await
+        .unwrap();
+    assert_eq!(terminal_replay.receipt_sha256, terminal.receipt_sha256);
+    assert_eq!(terminal_replay.conditions(), terminal.conditions());
+
+    // A saved complete projection still decodes exactly. It does not re-acquire.
+    let rows_released = f.kv.scan_prefix("").await.unwrap();
+    for decoded in [
+        Reply::decode_json(&json_before).unwrap(),
+        Reply::decode_named(&named_before).unwrap(),
+    ] {
+        assert_eq!(decoded, reply);
+        assert_eq!(
+            decoded
+                .validate_policy_for(&request, &f.selected, &f.access)
+                .unwrap(),
+            1
+        );
+        assert_eq!(serde_json::to_vec(&decoded).unwrap(), json_before);
+        assert_eq!(rmp_serde::to_vec_named(&decoded).unwrap(), named_before);
+    }
+    assert_eq!(rows_released, f.kv.scan_prefix("").await.unwrap());
+    assert!(f.authority.held_policy_snapshot(&f.access).await.is_err());
+}
+
+#[tokio::test]
+async fn issued_dev5_absent_terminal_is_never_acquired_and_original_bytes_remain_immutable() {
+    use univers_aip_contracts_data::storage::{KvConditionalBatch, KvConditionalBatchOutcome};
+    use univers_file_governed_policy::{OriginalAdmissionState, TerminalAdmissionOrigin};
+
+    // Genuine Files API enrolls policy/material; no per-original row is prebuilt.
+    let f = support::Fixture::unacquired().await;
+    let access_before = rmp_serde::to_vec_named(&f.access).unwrap();
+    let original_before = rmp_serde::to_vec_named(&f.retained.original).unwrap();
+    let rows_before = f.kv.scan_prefix("").await.unwrap();
+    let observed = f
+        .authority
+        .observe_original_admission(&f.access, b"unsigned-fixture-terminal")
+        .await
+        .unwrap();
+    assert_eq!(observed.state, OriginalAdmissionState::Absent);
+    assert_eq!(observed.terminal_origin, None);
+    assert_eq!(f.kv.scan_prefix("").await.unwrap(), rows_before);
+    let terminal = f
+        .authority
+        .reconcile_original_terminal(&f.access, b"unsigned-fixture-terminal")
+        .await
+        .unwrap();
+    assert_eq!(terminal.origin, TerminalAdmissionOrigin::NeverAcquired);
+    let released = f
+        .authority
+        .observe_original_admission(&f.access, b"unsigned-fixture-terminal")
+        .await
+        .unwrap();
+    assert_eq!(released.state, OriginalAdmissionState::Released);
+    assert_eq!(
+        released.terminal_origin,
+        Some(TerminalAdmissionOrigin::NeverAcquired)
+    );
+    let stale =
+        f.kv.compare_and_swap_batch_if(KvConditionalBatch {
+            conditions: observed.conditions().to_vec(),
+            puts: vec![],
+            deletes: vec![],
+            not_after_unix_ms: None,
+        })
+        .await
+        .unwrap();
+    assert!(!matches!(stale, KvConditionalBatchOutcome::Applied { .. }));
+    let rows_after = f.kv.scan_prefix("").await.unwrap();
+    let replay = f
+        .authority
+        .reconcile_original_terminal(&f.access, b"unsigned-fixture-terminal")
+        .await
+        .unwrap();
+    assert_eq!(replay.origin, terminal.origin);
+    assert_eq!(replay.receipt_sha256, terminal.receipt_sha256);
+    assert_eq!(replay.conditions(), terminal.conditions());
+    assert!(f.authority.acquire(&f.access).await.is_err());
+    assert_eq!(f.kv.scan_prefix("").await.unwrap(), rows_after);
+    assert_eq!(rmp_serde::to_vec_named(&f.access).unwrap(), access_before);
+    assert_eq!(
+        rmp_serde::to_vec_named(&f.retained.original).unwrap(),
+        original_before
+    );
+}

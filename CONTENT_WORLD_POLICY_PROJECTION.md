@@ -1,8 +1,8 @@
 # Complete World Files-policy projection
 
 `world-policy-projection` is optional and implies `world-verifier`/`retention` plus
-the issued `univers-file-governed-policy=0.1.0-dev.4` pure snapshot decoder. Defaults
-remain empty. Library 0.1.12 preserves every legacy .7/.6 Content/File/verifier wire,
+the issued `univers-file-governed-policy=0.1.0-dev.5` pure snapshot decoder. Defaults
+remain empty. Library 0.1.13 preserves every legacy .7/.6 Content/File/verifier wire,
 operation and bound. Module `content_world_policy_projection` uses the SAME selected
 reverse World endpoint/provider/direction/capability/client URL as `world-verifier`.
 The NEW explicit schema is `univers.world-content-files-policy-projection/v1`.
@@ -100,11 +100,11 @@ Binary rollback does not restore World/Files original journals or live authority
 
 ## Exact World SDK/native and Files delivery request
 
-World owner must consume ACTUALLY published IPC0.1.12/world-policy-projection and mount
+World owner must consume ACTUALLY published IPC0.1.13/world-policy-projection (after this candidate is issued) and mount
 this typed schema on its existing selected reverse verifier, with explicit trusted
 endpoint/token/timeout and new whole reply bounds. Source identity/store and complete
 snapshot from actual SAME original material pin/Files authority, preserving complete
-original Access independently of fresh observer. Use issued Policydev.4 decoder;
+original Access independently of fresh observer. Use issued Policydev.5 decoder;
 no private World/Files codec or body permissions. Implement actual current Auth and
 same-store checks before/after awaits and owned+queued terminal journal verification.
 Publish a normal owner-checked real SDK/native successor; its coordinate is selected
@@ -113,10 +113,10 @@ witnesses only, so a new profile consumer is genuinely required.
 
 Files then consumes that actual SDK successor with mandatory ipc-file-capability,
 ipc-content, ipc-content-verifier/test-artifacts support preserved, plus real new
-projection support. Files independently decodes with Policy0.1.0-dev.4 and mounts
+projection support. Files independently decodes with Policy0.1.0-dev.5 and mounts
 its genuine same-authority bridge; retained startup/native acceptance is its own
 unfinished owner delivery. Registry graph remains coherent DataRC3/SharedRC2/WorldRC11,
-Policydev.4 (test Redbdev.3), with no decorative SDK dependency in this contract.
+Policydev.5 (test Redbdev.3), with no decorative SDK dependency in this contract.
 Fixtures use isolated real Redb with explicitly unsigned Auth/material adapters.
 No native/startup/installed/Vertical acceptance or business credit from this carrier.
 
@@ -166,3 +166,33 @@ fragment. World owns its genuine async SDK/native successor and full mandatory
 graph; Framework owns current Host Auth composition. Physical retained snapshot/
 full predicate/expiry/capacity/eviction checks and native Files Access/continuation/
 startup/current ACL remain separate acceptance prerequisites.
+
+## Original-admission recovery graph adoption
+
+IPC0.1.13 pins the actually issued
+`univers-file-governed-policy=0.1.0-dev.5`; it retains WorldIPCdev.10 and the
+entire existing projection carrier, request identity/fingerprint and MessagePack/
+JSON bytes. No original-admission enum or terminal receipt is serialized into this
+IPC protocol. Defaults/features and all strict frame/descriptor/proof checks stay
+unchanged. Old 0.1.12 and older archives remain immutable with their exact pins.
+
+In genuine same-store composition, the Files authority's public
+`observe_original_admission(&actual_original_access, terminal_proof)` returns
+Absent/Held/Released and complete `conditions()`. Its public
+`reconcile_original_terminal` returns NeverAcquired/PreviouslyHeld, an immutable
+receipt hash and current conditions. Those non-serde results require real current
+terminal authorization and actual backend/queue drain; a timeout or an IPC
+projection alone cannot authorize reconciliation. World must include the public
+conditions in its final same operating-KV CAS and preserve unknown outcomes for
+exact-original retry. NeverAcquired settles pre-acquire history without inventing
+an old hold, policy epoch or acceptance. Foreign original/global state must not be
+released. The unchanged historical held snapshot decoder can still read a saved
+valid snapshot after terminal release, which is not proof of a current hold.
+
+The normal owner checks run real Redb held-terminal and absent-terminal
+predicate/replay cases alongside the unchanged projection codec/golden cases.
+They use explicitly unsigned fixture authorization, not live World/Files recovery
+or installed acceptance. Publication additionally requires clean origin/develop
+source, package verification and a Registry-only coherent dev.5 consumer. A
+consumer must use the formally issued exact IPC successor rather than aliasing
+incompatible policy pins.

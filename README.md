@@ -1,5 +1,16 @@
 # File authority IPC contract
 
+Version 0.1.13 admits actually issued Files Policy0.1.0-dev.5 for the optional
+`world-policy-projection` graph. It retains the issued WorldIPC0.3.12-dev.10
+pin and every 0.1.12 schema, operation, identity/fingerprint, codec, feature and
+bound. The new dependency supplies Files-owned trusted-local original-admission
+observation and terminal reconciliation, including pre-acquire originals. This
+IPC package adds no recovery wire or authority: its projection stays readonly
+historical data. Genuine original Access, current terminal authorization/drain
+and World same-store predicate revalidation remain consumer obligations.
+Publication requires the normal owner gates/hooks, clean origin/develop source,
+package verification and Registry-only recovery/codec consumer acceptance.
+
 Version 0.1.12 admits actually issued WorldIPC0.3.12-dev.10 for the selected
 ordinary Subject-policy session contract graph. Every 0.1.11 File/Content API,
 wire encoding, feature, default and bound stays unchanged; downstream consumers
@@ -64,6 +75,10 @@ without acquiring each other's implementation. Envelopes alone do not authorize
 an operation or bind a selected World/tenant. Callers choose transport timeout
 policy and servers enforce the relevant protocol bounds. Content bodies use a
 separate protocol and are not File-authority metadata messages.
+
+The owner uses Rust/Cargo 1.89 or newer, as declared by rust-version. The
+`release-workbench` profile inherits the normal release library profile; it
+publishes no native binary or runtime pointer.
 
 Run `bash scripts/check.sh`; publish a clean committed candidate with
 `bash scripts/publish.sh`. All dependencies are Registry packages. C0 Data must

@@ -84,6 +84,12 @@ impl Fixture {
         Self::with_descriptor_form(scope_padding, false).await
     }
     pub async fn with_descriptor_form(scope_padding: usize, bare: bool) -> Self {
+        Self::with_acquisition(scope_padding, bare, true).await
+    }
+    pub async fn unacquired() -> Self {
+        Self::with_acquisition(0, true, false).await
+    }
+    async fn with_acquisition(scope_padding: usize, bare: bool, acquire: bool) -> Self {
         let (retained, bytes) = canonical::retained();
         let original = &retained.original;
         let c = &original.admission.correlation;
@@ -157,7 +163,9 @@ impl Fixture {
             })
             .await
             .unwrap();
-        authority.acquire(&access).await.unwrap();
+        if acquire {
+            authority.acquire(&access).await.unwrap();
+        }
         let terminal = canonical::ack(&retained, false);
         Self {
             directory,
