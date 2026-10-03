@@ -1,5 +1,9 @@
 # File authority IPC contract
 
+Version 0.1.7 adds mandatory separate current readonly observer operations for saved
+original and terminal verification under `world-verifier`. Original historical
+proofs and all 0.1.6 encodings remain unchanged; current Auth stays World-owned.
+
 Version 0.1.6 adds opt-in `world-verifier` for the explicit reverse Content-to-World
 original reservation/journal verification callback. Full requests/observers/terminal
 records and bounded opaque witnesses remain untrusted wire values; see

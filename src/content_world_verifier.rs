@@ -70,6 +70,19 @@ pub enum Operation {
         retained: Box<Retained>,
         terminal: Box<WorldTerminal>,
     },
+    /// Separate CURRENT readonly caller proof; unchanged saved mutation proof is
+    /// historical evidence, never the credential for this verification.
+    VerifyOriginalWithObserver {
+        retained: Box<Retained>,
+        observer: Invocation,
+    },
+    /// Verify an ACTUAL recorded terminal with a separate CURRENT readonly caller.
+    /// Neither this operation nor its witness drains, releases or mutates anything.
+    VerifyTerminalWithObserver {
+        retained: Box<Retained>,
+        terminal: Box<WorldTerminal>,
+        observer: Invocation,
+    },
 }
 impl Operation {
     pub fn validate(&self) -> ContentResult<()> {
@@ -97,7 +110,58 @@ impl Operation {
                 Ok(())
             }
             Self::VerifyTerminal { retained, terminal } => terminal.validate_for(retained),
+            Self::VerifyOriginalWithObserver { retained, observer } => {
+                validate_original_observer(retained, observer)
+            }
+            Self::VerifyTerminalWithObserver {
+                retained,
+                terminal,
+                observer,
+            } => {
+                validate_original_observer(retained, observer)?;
+                terminal.validate_for(retained)
+            }
         }
+    }
+}
+
+/// Structural readonly input binding only. The opaque fresh headers MUST be
+/// opened by World with current Auth and matched to original caller/credential/
+/// delegation/provider/action/callback scope. No decoded value grants authority.
+fn validate_original_observer(retained: &Retained, observer: &Invocation) -> ContentResult<()> {
+    retained.validate()?;
+    observer.validate_schema()?;
+    use crate::content::retention::{SpatialBindingOperation, SubjectSourceOperation};
+    let fence = &retained.original.admission.correlation.selected_world_fence;
+    match (observer, &retained.original.invocation) {
+        (Invocation::Spatial(current), Invocation::Spatial(original)) => {
+            match (&current.operation, &original.operation) {
+                (
+                    SpatialBindingOperation::GetOrResume(read),
+                    SpatialBindingOperation::Apply(saved),
+                ) if read.read_only == Some(true) => {
+                    convert(read.validate_for(saved))?;
+                    convert(read.validate_live_fence(fence))
+                }
+                _ => need(
+                    false,
+                    "original verification requires readonly spatial GetOrResume",
+                ),
+            }
+        }
+        (Invocation::SubjectSource(current), Invocation::SubjectSource(original)) => {
+            match (&current.operation, &original.operation) {
+                (
+                    SubjectSourceOperation::SubjectSourceGetOrResume(read),
+                    SubjectSourceOperation::SubjectSourceSelect(saved),
+                ) if read.read_only => convert(read.validate_for(saved, fence)),
+                _ => need(
+                    false,
+                    "original verification requires readonly source GetOrResume",
+                ),
+            }
+        }
+        _ => need(false, "observer differs from original invocation family"),
     }
 }
 
@@ -159,6 +223,12 @@ impl Request {
             }
             | Operation::VerifyTerminal {
                 retained: value, ..
+            }
+            | Operation::VerifyOriginalWithObserver {
+                retained: value, ..
+            }
+            | Operation::VerifyTerminalWithObserver {
+                retained: value, ..
             } => value,
             Operation::VerifyAcquisition(_) => {
                 return need(
@@ -169,6 +239,9 @@ impl Request {
         };
         retained.validate_for(recorded)?;
         if let Operation::VerifyTerminal {
+            terminal: value, ..
+        }
+        | Operation::VerifyTerminalWithObserver {
             terminal: value, ..
         } = &self.operation
         {

@@ -3,7 +3,7 @@
 The optional `world-verifier` feature enables `content_world_verifier` and reuses
 `retention`; default features remain empty. This is an independent reverse callback
 family. It does not add/relabel a Content Acquire, Content Reply or WorldIPC Evidence
-operation. Existing File/Content encodings and immutable 0.1.6-dev.1 are preserved.
+operation. Existing File/Content and 0.1.6 verifier encodings, and immutable 0.1.6-dev.1, are preserved.
 
 Public provider `world`, direction `content_to_world`, capability
 `world-content-original-verifier-v1`, schema `univers.world-content-original-verifier/v1`,
@@ -39,8 +39,11 @@ Every Request includes exact schema/provider/capability/direction and one operat
   identity/incarnation, generation and FULL policy/pin record digest. World MUST have
   already durably recorded that returned Content binding in its ACTUAL original
   journal; `validate_recorded` compares that loaded binding, never request-as-record.
-  Original expired proofs remain byte-identical. Real owner-channel management is
-  distinct from new acquisition; no resealing/renewal/rebase/new generation occurs.
+  Original expired proofs remain byte-identical. This legacy operation has no
+  independently fresh caller credential. A selected Content channel/capability is
+  NOT current caller permission: expired original calls MUST stay held/unavailable.
+  Use the additive WithObserver operation for independently authorized saved-original
+  verification; no resealing/renewal/rebase/new generation occurs.
 - `InspectOriginal { retained, observer }` carries a separate FRESH canonical
   pureRead/readonly Invocation alongside the unchanged original. World uses the
   published complete codec and current scoped Auth, matches genuine original caller/
@@ -56,6 +59,29 @@ Every Request includes exact schema/provider/capability/direction and one operat
   corrupt/copied state or generation mismatch remains held; sender identity alone,
   timeout, process/PID death, capability expiry and old ACK cannot release a successor.
   This verifier itself neither drains nor releases. Reference removal is unsupported.
+
+Version 0.1.7 appends two operations without altering any legacy field or encoding:
+
+- `VerifyOriginalWithObserver { retained, observer }` requires a separate complete
+  canonical current readonly `Invocation` beside the unchanged saved `Retained`.
+- `VerifyTerminalWithObserver { retained, terminal, observer }` adds the same mandatory
+  observer to full unchanged `Retained` and `WorldTerminal`. Actual complete recorded
+  terminal comparison remains mandatory; verification never drains or releases.
+
+The new observer must be Spatial `GetOrResume(readOnly=true)` or SubjectSource
+`SubjectSourceGetOrResume(readOnly=true)`, in the original invocation family, with
+exact original operation ID/idempotency key/input request digest, organization,
+World and selected ORIGINAL revision fence. Shape validation cannot open opaque
+signed headers. World MUST authenticate both fresh headers with the published
+codec/current Auth, enforce exclusive fresh proof expiry, and bind original caller,
+credential, delegation chain, provider, readonly action, exact observer input and
+current callback scope to its genuine selected channel/current authenticated caller.
+Changed/revoked/expired/missing observer denies; historical original mutation proofs
+remain exact evidence and MUST NOT be passed off as current authorization. No optional
+observer or legacy fallback is permitted for these operations. Owner checks occur
+within the actual verification, including rechecks after awaits; no cached two-step
+allow, body ACK or identity-only allow. `validate_recorded` compares full loaded
+original binding and terminal independently of observer authentication.
 
 Reply includes the FULL sent Request on every status, not a reduced digest projection.
 `validate_for(sent)` requires exact operation/schema/original/retained/current observer/
@@ -81,8 +107,9 @@ byte-buffer exception or caller-installed authority configuration.
 
 World loads original physical storage and existing journal; no body-provided database
 is opened. Missing/corrupt/copied originals are unavailable, never adopted/recreated.
-Authentic original management remains possible after original admission expiry using
-real selected owner-channel authority; a fresh acquisition still rejects that expiry.
+Readonly saved-original/terminal verification after original admission expiry requires
+an independently fresh WithObserver invocation and real current scoped Auth, not
+merely selected owner-channel authority; a fresh acquisition still rejects that expiry.
 A readonly observer is independently authenticated and cannot change the original.
 Unknown reply/queued-write uncertainty keeps body/World original held. Cross-store
 callbacks are ordered validations, never an asserted SQL/KV/Content atomic transaction.
@@ -90,7 +117,7 @@ Binary rollback does not roll back World/Content journals or restore authority.
 
 ## Delivery and current consumer constraint
 
-Library SemVer 0.1.6 is a new additive opt-in coordinate, separate from any native/app
+Library SemVer 0.1.7 is an additive opt-in successor to immutable 0.1.6, separate from any native/app
 stable/development deployment pointer. World listener is mounted only after actual
 Registry publication and genuine owner implementation, not from this source package.
 All canonical dependencies remain Registry Data=rc.3, Shared=rc.2, C1=rc.11,
@@ -100,7 +127,7 @@ unchanged, and this contract does not need another Auth implementation dependenc
 
 Actual Registry `univers-aip-world-client=0.2.1-dev.3` declares
 `univers-aip-contracts-file-authority-ipc >=0.1.4, <=0.1.6-dev.1`. That upper bound
-rejects 0.1.6. World SDK owner must upgrade its supported authorityIPC bound to the
+rejects both 0.1.6 and 0.1.7. World SDK owner must upgrade its supported authorityIPC bound to the
 ACTUALLY published successor, enable `world-verifier` for the callback consumer and
 implement the real typed listener/SDK/current Auth/SQL+operating verification. Do not
 force the old SDK into a fictional single graph, downgrade, copy types, patch paths or
@@ -113,3 +140,12 @@ strict decoding/correlation and explicit recorded-binding comparisons. Their fix
 are synthetic unsigned values and do NOT establish live channel/Auth/four policies,
 actual SQLite/operating witness or genuine terminal quiescence. Local packaging is
 not publication or installed Files/World/native/HVAC business acceptance.
+
+World SDK/native owner consumption: handle the two new operation variants with the
+existing full typed Request/Reply at the same endpoint. Files must consume a real
+World SDK successor supporting ACTUALLY published IPC 0.1.7, with mandatory
+ipc-file-capability, retention, ipc-content and world-verifier support in one current
+canonical Registry graph. The World owner selects/checks/publishes its SDK version;
+this library does not guess that coordinate or edit SDK/native/Files repositories.
+Old 0.1.6 decoders reject the new operation tags; preserve explicit unsupported/held
+failure rather than retrying legacy operations with expired mutation proof.
