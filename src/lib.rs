@@ -278,3 +278,7 @@ pub struct FileRecordMoveRequest {
 /// Opt-in reverse Content-to-World original reservation/journal verifier wire.
 #[cfg(feature = "world-verifier")]
 pub mod content_world_verifier;
+
+/// Opt-in full same-operating-store Files policy projection; all wire values untrusted.
+#[cfg(feature = "world-policy-projection")]
+pub mod content_world_policy_projection;

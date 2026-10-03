@@ -31,7 +31,7 @@ fn convert<T>(result: Result<T, impl std::fmt::Debug>) -> ContentResult<T> {
 fn hash(bytes: &[u8]) -> String {
     format!("sha256:{:x}", Sha256::digest(bytes))
 }
-fn reason(value: &str) -> ContentResult<()> {
+pub(crate) fn reason(value: &str) -> ContentResult<()> {
     need(
         !value.is_empty()
             && value.len() <= 1024
@@ -365,8 +365,14 @@ impl Reply {
 }
 
 fn named<T: DeserializeOwned + Serialize>(bytes: &[u8]) -> ContentResult<T> {
+    decode_named_bounded(bytes, MAX_MESSAGE_BYTES)
+}
+pub(crate) fn decode_named_bounded<T: DeserializeOwned + Serialize>(
+    bytes: &[u8],
+    maximum: usize,
+) -> ContentResult<T> {
     need(
-        bytes.len() <= MAX_MESSAGE_BYTES,
+        bytes.len() <= maximum,
         "World verifier frame exceeds byte bound",
     )?;
     let mut decoder = rmp_serde::Deserializer::new(bytes);
@@ -385,8 +391,14 @@ fn named<T: DeserializeOwned + Serialize>(bytes: &[u8]) -> ContentResult<T> {
     Ok(typed)
 }
 fn json<T: DeserializeOwned + Serialize>(bytes: &[u8]) -> ContentResult<T> {
+    decode_json_bounded(bytes, MAX_MESSAGE_BYTES)
+}
+pub(crate) fn decode_json_bounded<T: DeserializeOwned + Serialize>(
+    bytes: &[u8],
+    maximum: usize,
+) -> ContentResult<T> {
     need(
-        bytes.len() <= MAX_MESSAGE_BYTES,
+        bytes.len() <= maximum,
         "World verifier frame exceeds byte bound",
     )?;
     let typed: T = convert(serde_json::from_slice(bytes))?;

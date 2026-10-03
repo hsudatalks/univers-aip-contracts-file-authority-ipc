@@ -1,5 +1,10 @@
 # File authority IPC contract
 
+Version 0.1.8 adds opt-in `world-policy-projection`: complete untrusted same-store
+Files held snapshot projection, using the issued Files decoder and bounded whole
+messages. See [CONTENT_WORLD_POLICY_PROJECTION.md](CONTENT_WORLD_POLICY_PROJECTION.md).
+All 0.1.7 encodings and bounds remain unchanged.
+
 Version 0.1.7 adds mandatory separate current readonly observer operations for saved
 original and terminal verification under `world-verifier`. Original historical
 proofs and all 0.1.6 encodings remain unchanged; current Auth stays World-owned.
