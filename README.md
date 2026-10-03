@@ -1,5 +1,13 @@
 # File authority IPC contract
 
+Version 0.1.6-dev.1 adds opt-in `retention` public Content acquire/original
+restore/pureRead status/owner drain/terminal and accepted-reference lifecycle
+envelopes. See [CONTENT_RETENTION.md](CONTENT_RETENTION.md) for authority,
+composition and recovery obligations. It requires published Data =rc.3 and pins
+WorldIPC dev.4/C1 rc.11/codec dev.3. Wire validation grants no backend or business
+acceptance. Existing default-feature variants retain their bytes.
+
+
 Version 0.1.5 adds optional `capability` wire values for the selected-World
 `/v1/file/capability` endpoint. Request variant ordering, legacy decode-only
 variants, reply payloads, the World envelope and request bound remain unchanged.

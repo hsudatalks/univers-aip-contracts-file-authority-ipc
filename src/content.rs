@@ -23,6 +23,9 @@ pub enum Request {
     Read(ContentReadRequest),
     Verify(ContentVerifyRequest),
     Delete(ContentDeleteRequest),
+    /// Explicit negotiated retention lane; no legacy fallback.
+    #[cfg(feature = "retention")]
+    Retention(Box<retention::Request>),
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -38,6 +41,8 @@ pub enum Reply {
     Verify(ContentVerifyReceipt),
     Delete(ContentDeleteReceipt),
     Error(ContentContractError),
+    #[cfg(feature = "retention")]
+    Retention(Box<retention::Reply>),
 }
 
 pub const ENDPOINT: &str = "/v1/content";
@@ -45,3 +50,7 @@ pub const CLIENT_URL: &str = "http://content-engine/v1/content";
 pub const CAPABILITY: &str = "content-engine";
 pub const CONTENT_CHUNK_BYTES: usize = 8 * 1024 * 1024;
 pub const MAX_CONTENT_REQUEST_BYTES: usize = 10 * 1024 * 1024;
+
+/// Optional canonical original Content retention wire.
+#[cfg(feature = "retention")]
+pub mod retention;

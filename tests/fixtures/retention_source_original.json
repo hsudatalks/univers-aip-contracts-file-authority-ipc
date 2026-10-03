@@ -1,0 +1,2431 @@
+{
+  "schema": "ark.world-governed-source-fixtures/v1",
+  "syntheticUnsignedValuesOnly": true,
+  "selectRequest": {
+    "schemaVersion": "ark.world-subject-source-selection/v1",
+    "operationId": "source-selection-operation-1",
+    "idempotencyKey": "source-selection-key-1",
+    "requestDigest": "sha256:bdea5a6929eac5f2616213ebaa910a8f044fa0987347770abcb993212d8ecc34",
+    "organizationId": "org-1",
+    "worldInstanceId": "world-1",
+    "expectedWorldRevision": 12,
+    "subject": {
+      "id": "subject-1",
+      "version": "v1",
+      "ownerRevision": "owner-snapshot-1",
+      "contentDigest": "sha256:5be1861bc5f3ea220b21ca8c617fcf7fa962aaf2d2cb1456f5e21b65bb7a7f67"
+    },
+    "declaration": {
+      "providerId": "fixture-native",
+      "subjectType": {
+        "id": "fixture.device",
+        "version": "v1",
+        "ownerRevision": "owner-snapshot-1",
+        "contentDigest": "sha256:235660cdddc796b5f51d30f5813bae9f6bf402b60cb89ca9ada2f96708a3fc4f"
+      },
+      "valueSchema": {
+        "id": "fixture.device.configuration",
+        "version": "v1",
+        "ownerRevision": "owner-snapshot-1",
+        "contentDigest": "sha256:aef6ea8649c59a3b4cf7335638265156e5899f95a272c1c1bbca5c169ad089c8"
+      },
+      "profile": {
+        "id": "fixture.device.physical",
+        "version": "v1",
+        "ownerRevision": "owner-snapshot-1",
+        "contentDigest": "sha256:6fbb406b6ab5b3ddabfe50c402fd8f623638332d72eae45d8fc7b50239feba76"
+      },
+      "validatorAction": {
+        "id": "fixture-native:qualify-device-source",
+        "version": "v1",
+        "ownerRevision": "owner-snapshot-1",
+        "contentDigest": "sha256:33a0b34dbd01f28bc8e280519da2b28ccc2b07109b65066885fb594c6dbb5922"
+      },
+      "configurationField": "fixture.device.configuration"
+    },
+    "source": {
+      "fact": {
+        "organizationId": "org-1",
+        "kind": "fact",
+        "id": "configuration-fact-1",
+        "version": "v1"
+      },
+      "evidence": {
+        "organizationId": "org-1",
+        "kind": "evidence",
+        "id": "configuration-evidence-1",
+        "version": "v1"
+      },
+      "reference": {
+        "organizationId": "org-1",
+        "kind": "reference",
+        "id": "configuration-reference-1",
+        "version": "v1"
+      },
+      "sourceId": "native-configuration-1",
+      "contentVersion": "v1",
+      "contentDigest": "sha256:a846ce4ed454f002a463cf4e212bfc921c6483297b4624bf155bd5919c5ad6af",
+      "sizeBytes": 57,
+      "provenance": "reported",
+      "validity": {
+        "validFrom": "2023-11-14T22:13:20Z",
+        "validUntil": "2030-01-01T00:00:00Z"
+      },
+      "authorityBoundary": {
+        "kind": "retained_immutable"
+      }
+    },
+    "qualificationScope": "instance_qualification",
+    "prior": {
+      "kind": "absent"
+    }
+  },
+  "selection": {
+    "schemaVersion": "ark.world-subject-source-selection/v1",
+    "selectedWorldFence": {
+      "schemaVersion": "ark.selected-world-revision-fence/v1",
+      "organizationId": "org-1",
+      "worldInstanceId": "world-1",
+      "revision": 12
+    },
+    "selectionId": "source-selection-1",
+    "selectionSequence": 7,
+    "selectionDigest": "sha256:e8ecf6513964cc1ddfd7917b1f526925d709154846c62765faa237672f27b786",
+    "receiptId": "source-receipt-1",
+    "organizationId": "org-1",
+    "worldInstanceId": "world-1",
+    "subject": {
+      "id": "subject-1",
+      "version": "v1",
+      "ownerRevision": "owner-snapshot-1",
+      "contentDigest": "sha256:5be1861bc5f3ea220b21ca8c617fcf7fa962aaf2d2cb1456f5e21b65bb7a7f67"
+    },
+    "declaration": {
+      "providerId": "fixture-native",
+      "subjectType": {
+        "id": "fixture.device",
+        "version": "v1",
+        "ownerRevision": "owner-snapshot-1",
+        "contentDigest": "sha256:235660cdddc796b5f51d30f5813bae9f6bf402b60cb89ca9ada2f96708a3fc4f"
+      },
+      "valueSchema": {
+        "id": "fixture.device.configuration",
+        "version": "v1",
+        "ownerRevision": "owner-snapshot-1",
+        "contentDigest": "sha256:aef6ea8649c59a3b4cf7335638265156e5899f95a272c1c1bbca5c169ad089c8"
+      },
+      "profile": {
+        "id": "fixture.device.physical",
+        "version": "v1",
+        "ownerRevision": "owner-snapshot-1",
+        "contentDigest": "sha256:6fbb406b6ab5b3ddabfe50c402fd8f623638332d72eae45d8fc7b50239feba76"
+      },
+      "validatorAction": {
+        "id": "fixture-native:qualify-device-source",
+        "version": "v1",
+        "ownerRevision": "owner-snapshot-1",
+        "contentDigest": "sha256:33a0b34dbd01f28bc8e280519da2b28ccc2b07109b65066885fb594c6dbb5922"
+      },
+      "configurationField": "fixture.device.configuration"
+    },
+    "source": {
+      "fact": {
+        "organizationId": "org-1",
+        "kind": "fact",
+        "id": "configuration-fact-1",
+        "version": "v1"
+      },
+      "evidence": {
+        "organizationId": "org-1",
+        "kind": "evidence",
+        "id": "configuration-evidence-1",
+        "version": "v1"
+      },
+      "reference": {
+        "organizationId": "org-1",
+        "kind": "reference",
+        "id": "configuration-reference-1",
+        "version": "v1"
+      },
+      "sourceId": "native-configuration-1",
+      "contentVersion": "v1",
+      "contentDigest": "sha256:a846ce4ed454f002a463cf4e212bfc921c6483297b4624bf155bd5919c5ad6af",
+      "sizeBytes": 57,
+      "provenance": "reported",
+      "validity": {
+        "validFrom": "2023-11-14T22:13:20Z",
+        "validUntil": "2030-01-01T00:00:00Z"
+      },
+      "authorityBoundary": {
+        "kind": "retained_immutable"
+      }
+    },
+    "qualificationScope": "instance_qualification",
+    "qualificationDigest": "sha256:ec0630d540c647d37d599eea445e7338ee8facb5f4ca5bbdb17dba326d101368"
+  },
+  "nativeQualificationPayload": {
+    "kind": "subject_source_qualify",
+    "request": {
+      "schemaVersion": "ark.world-subject-source-selection/v1",
+      "operationId": "source-selection-operation-1",
+      "idempotencyKey": "source-selection-key-1",
+      "requestDigest": "sha256:bdea5a6929eac5f2616213ebaa910a8f044fa0987347770abcb993212d8ecc34",
+      "organizationId": "org-1",
+      "worldInstanceId": "world-1",
+      "expectedWorldRevision": 12,
+      "subject": {
+        "id": "subject-1",
+        "version": "v1",
+        "ownerRevision": "owner-snapshot-1",
+        "contentDigest": "sha256:5be1861bc5f3ea220b21ca8c617fcf7fa962aaf2d2cb1456f5e21b65bb7a7f67"
+      },
+      "declaration": {
+        "providerId": "fixture-native",
+        "subjectType": {
+          "id": "fixture.device",
+          "version": "v1",
+          "ownerRevision": "owner-snapshot-1",
+          "contentDigest": "sha256:235660cdddc796b5f51d30f5813bae9f6bf402b60cb89ca9ada2f96708a3fc4f"
+        },
+        "valueSchema": {
+          "id": "fixture.device.configuration",
+          "version": "v1",
+          "ownerRevision": "owner-snapshot-1",
+          "contentDigest": "sha256:aef6ea8649c59a3b4cf7335638265156e5899f95a272c1c1bbca5c169ad089c8"
+        },
+        "profile": {
+          "id": "fixture.device.physical",
+          "version": "v1",
+          "ownerRevision": "owner-snapshot-1",
+          "contentDigest": "sha256:6fbb406b6ab5b3ddabfe50c402fd8f623638332d72eae45d8fc7b50239feba76"
+        },
+        "validatorAction": {
+          "id": "fixture-native:qualify-device-source",
+          "version": "v1",
+          "ownerRevision": "owner-snapshot-1",
+          "contentDigest": "sha256:33a0b34dbd01f28bc8e280519da2b28ccc2b07109b65066885fb594c6dbb5922"
+        },
+        "configurationField": "fixture.device.configuration"
+      },
+      "source": {
+        "fact": {
+          "organizationId": "org-1",
+          "kind": "fact",
+          "id": "configuration-fact-1",
+          "version": "v1"
+        },
+        "evidence": {
+          "organizationId": "org-1",
+          "kind": "evidence",
+          "id": "configuration-evidence-1",
+          "version": "v1"
+        },
+        "reference": {
+          "organizationId": "org-1",
+          "kind": "reference",
+          "id": "configuration-reference-1",
+          "version": "v1"
+        },
+        "sourceId": "native-configuration-1",
+        "contentVersion": "v1",
+        "contentDigest": "sha256:a846ce4ed454f002a463cf4e212bfc921c6483297b4624bf155bd5919c5ad6af",
+        "sizeBytes": 57,
+        "provenance": "reported",
+        "validity": {
+          "validFrom": "2023-11-14T22:13:20Z",
+          "validUntil": "2030-01-01T00:00:00Z"
+        },
+        "authorityBoundary": {
+          "kind": "retained_immutable"
+        }
+      },
+      "qualificationScope": "instance_qualification",
+      "prior": {
+        "kind": "absent"
+      }
+    }
+  },
+  "nativeQualification": {
+    "invocation": {
+      "schemaVersion": "ark.world-spatial-reconciliation/v1",
+      "operationId": "source-selection-operation-1",
+      "idempotencyKey": "source-selection-key-1",
+      "requestDigest": "sha256:bdea5a6929eac5f2616213ebaa910a8f044fa0987347770abcb993212d8ecc34",
+      "providerId": "fixture-native",
+      "actionId": "fixture-native:qualify-device-source",
+      "securityContext": {
+        "principalId": "principal-1",
+        "principalKind": "service",
+        "tenantId": "org-1",
+        "roles": [
+          "spatial-author"
+        ],
+        "permissions": [
+          "world:spatial-binding:read",
+          "world:spatial-binding:write",
+          "world:subject-source:read",
+          "world:subject-source:write"
+        ],
+        "delegationChain": [
+          {
+            "principalId": "original-agent",
+            "principalKind": "agent",
+            "delegatedAt": "2023-11-14T22:13:20Z",
+            "expiresAt": "2023-11-14T22:13:50Z"
+          }
+        ],
+        "authenticatedAt": "2023-11-14T22:13:20Z",
+        "expiresAt": "2023-11-14T22:14:20Z",
+        "credentialId": "synthetic-credential-reference",
+        "requestId": "request-1"
+      },
+      "verifiedCaller": {
+        "principalId": "principal-1",
+        "issuer": "trusted-auth",
+        "authorizationDecisionId": "decision-1"
+      },
+      "selectedWorldFence": {
+        "schemaVersion": "ark.selected-world-revision-fence/v1",
+        "organizationId": "org-1",
+        "worldInstanceId": "world-1",
+        "revision": 12
+      },
+      "actionProofDigest": "sha256:8a324368224a7a8ed12d9f509026c33c732891750128c9c5e568c69f0916ae40",
+      "forwardedContextProofDigest": "sha256:1519f921f40b2ba13b3cd56f9436807347b0de84c9837302c03ab2e0e58f6ec0",
+      "invocationDigest": "95bf3961d47232d5c6ba7c8b3873cf10e005cfee066a2900ba2f30817dd5c9a6"
+    },
+    "validatorRuntime": {
+      "providerId": "fixture-native",
+      "runtimeInstanceId": "fixture-native-incarnation-1",
+      "executableDigest": "sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+    },
+    "resultDigest": "sha256:5aa1ea8f2e2207c4b4072f97fc832a948444fc8ae7b783ebe06d0019ae777421",
+    "objectPolicy": {
+      "id": "fixture-live-object-policy",
+      "version": "v1",
+      "ownerRevision": "owner-snapshot-1",
+      "contentDigest": "sha256:c7a9431573821be445f588fc69738783ec7182674355c4cd2375e9e4899049d6"
+    }
+  },
+  "selectPayload": {
+    "kind": "subject_source_select",
+    "request": {
+      "schemaVersion": "ark.world-subject-source-selection/v1",
+      "operationId": "source-selection-operation-1",
+      "idempotencyKey": "source-selection-key-1",
+      "requestDigest": "sha256:bdea5a6929eac5f2616213ebaa910a8f044fa0987347770abcb993212d8ecc34",
+      "organizationId": "org-1",
+      "worldInstanceId": "world-1",
+      "expectedWorldRevision": 12,
+      "subject": {
+        "id": "subject-1",
+        "version": "v1",
+        "ownerRevision": "owner-snapshot-1",
+        "contentDigest": "sha256:5be1861bc5f3ea220b21ca8c617fcf7fa962aaf2d2cb1456f5e21b65bb7a7f67"
+      },
+      "declaration": {
+        "providerId": "fixture-native",
+        "subjectType": {
+          "id": "fixture.device",
+          "version": "v1",
+          "ownerRevision": "owner-snapshot-1",
+          "contentDigest": "sha256:235660cdddc796b5f51d30f5813bae9f6bf402b60cb89ca9ada2f96708a3fc4f"
+        },
+        "valueSchema": {
+          "id": "fixture.device.configuration",
+          "version": "v1",
+          "ownerRevision": "owner-snapshot-1",
+          "contentDigest": "sha256:aef6ea8649c59a3b4cf7335638265156e5899f95a272c1c1bbca5c169ad089c8"
+        },
+        "profile": {
+          "id": "fixture.device.physical",
+          "version": "v1",
+          "ownerRevision": "owner-snapshot-1",
+          "contentDigest": "sha256:6fbb406b6ab5b3ddabfe50c402fd8f623638332d72eae45d8fc7b50239feba76"
+        },
+        "validatorAction": {
+          "id": "fixture-native:qualify-device-source",
+          "version": "v1",
+          "ownerRevision": "owner-snapshot-1",
+          "contentDigest": "sha256:33a0b34dbd01f28bc8e280519da2b28ccc2b07109b65066885fb594c6dbb5922"
+        },
+        "configurationField": "fixture.device.configuration"
+      },
+      "source": {
+        "fact": {
+          "organizationId": "org-1",
+          "kind": "fact",
+          "id": "configuration-fact-1",
+          "version": "v1"
+        },
+        "evidence": {
+          "organizationId": "org-1",
+          "kind": "evidence",
+          "id": "configuration-evidence-1",
+          "version": "v1"
+        },
+        "reference": {
+          "organizationId": "org-1",
+          "kind": "reference",
+          "id": "configuration-reference-1",
+          "version": "v1"
+        },
+        "sourceId": "native-configuration-1",
+        "contentVersion": "v1",
+        "contentDigest": "sha256:a846ce4ed454f002a463cf4e212bfc921c6483297b4624bf155bd5919c5ad6af",
+        "sizeBytes": 57,
+        "provenance": "reported",
+        "validity": {
+          "validFrom": "2023-11-14T22:13:20Z",
+          "validUntil": "2030-01-01T00:00:00Z"
+        },
+        "authorityBoundary": {
+          "kind": "retained_immutable"
+        }
+      },
+      "qualificationScope": "instance_qualification",
+      "prior": {
+        "kind": "absent"
+      }
+    }
+  },
+  "selectCorrelation": {
+    "schemaVersion": "ark.world-spatial-reconciliation/v1",
+    "operationId": "source-selection-operation-1",
+    "idempotencyKey": "source-selection-key-1",
+    "requestDigest": "sha256:bdea5a6929eac5f2616213ebaa910a8f044fa0987347770abcb993212d8ecc34",
+    "providerId": "world",
+    "actionId": "world:subject-source:select",
+    "securityContext": {
+      "principalId": "principal-1",
+      "principalKind": "service",
+      "tenantId": "org-1",
+      "roles": [
+        "spatial-author"
+      ],
+      "permissions": [
+        "world:spatial-binding:read",
+        "world:spatial-binding:write",
+        "world:subject-source:read",
+        "world:subject-source:write"
+      ],
+      "delegationChain": [
+        {
+          "principalId": "original-agent",
+          "principalKind": "agent",
+          "delegatedAt": "2023-11-14T22:13:20Z",
+          "expiresAt": "2023-11-14T22:13:50Z"
+        }
+      ],
+      "authenticatedAt": "2023-11-14T22:13:20Z",
+      "expiresAt": "2023-11-14T22:14:20Z",
+      "credentialId": "synthetic-credential-reference",
+      "requestId": "request-1"
+    },
+    "verifiedCaller": {
+      "principalId": "principal-1",
+      "issuer": "trusted-auth",
+      "authorizationDecisionId": "decision-1"
+    },
+    "selectedWorldFence": {
+      "schemaVersion": "ark.selected-world-revision-fence/v1",
+      "organizationId": "org-1",
+      "worldInstanceId": "world-1",
+      "revision": 12
+    },
+    "actionProofDigest": "sha256:c27c32d03ac42e6710254bdfacc84572511b9699e362b76a31dc83a948950d53",
+    "forwardedContextProofDigest": "sha256:1519f921f40b2ba13b3cd56f9436807347b0de84c9837302c03ab2e0e58f6ec0",
+    "invocationDigest": "3f658d77e4ee6f841f9389f2d8662edb876ae1ad3ca41baaef4b7bd274a913d7"
+  },
+  "receipt": {
+    "receiptId": "source-receipt-1",
+    "request": {
+      "schemaVersion": "ark.world-subject-source-selection/v1",
+      "operationId": "source-selection-operation-1",
+      "idempotencyKey": "source-selection-key-1",
+      "requestDigest": "sha256:bdea5a6929eac5f2616213ebaa910a8f044fa0987347770abcb993212d8ecc34",
+      "organizationId": "org-1",
+      "worldInstanceId": "world-1",
+      "expectedWorldRevision": 12,
+      "subject": {
+        "id": "subject-1",
+        "version": "v1",
+        "ownerRevision": "owner-snapshot-1",
+        "contentDigest": "sha256:5be1861bc5f3ea220b21ca8c617fcf7fa962aaf2d2cb1456f5e21b65bb7a7f67"
+      },
+      "declaration": {
+        "providerId": "fixture-native",
+        "subjectType": {
+          "id": "fixture.device",
+          "version": "v1",
+          "ownerRevision": "owner-snapshot-1",
+          "contentDigest": "sha256:235660cdddc796b5f51d30f5813bae9f6bf402b60cb89ca9ada2f96708a3fc4f"
+        },
+        "valueSchema": {
+          "id": "fixture.device.configuration",
+          "version": "v1",
+          "ownerRevision": "owner-snapshot-1",
+          "contentDigest": "sha256:aef6ea8649c59a3b4cf7335638265156e5899f95a272c1c1bbca5c169ad089c8"
+        },
+        "profile": {
+          "id": "fixture.device.physical",
+          "version": "v1",
+          "ownerRevision": "owner-snapshot-1",
+          "contentDigest": "sha256:6fbb406b6ab5b3ddabfe50c402fd8f623638332d72eae45d8fc7b50239feba76"
+        },
+        "validatorAction": {
+          "id": "fixture-native:qualify-device-source",
+          "version": "v1",
+          "ownerRevision": "owner-snapshot-1",
+          "contentDigest": "sha256:33a0b34dbd01f28bc8e280519da2b28ccc2b07109b65066885fb594c6dbb5922"
+        },
+        "configurationField": "fixture.device.configuration"
+      },
+      "source": {
+        "fact": {
+          "organizationId": "org-1",
+          "kind": "fact",
+          "id": "configuration-fact-1",
+          "version": "v1"
+        },
+        "evidence": {
+          "organizationId": "org-1",
+          "kind": "evidence",
+          "id": "configuration-evidence-1",
+          "version": "v1"
+        },
+        "reference": {
+          "organizationId": "org-1",
+          "kind": "reference",
+          "id": "configuration-reference-1",
+          "version": "v1"
+        },
+        "sourceId": "native-configuration-1",
+        "contentVersion": "v1",
+        "contentDigest": "sha256:a846ce4ed454f002a463cf4e212bfc921c6483297b4624bf155bd5919c5ad6af",
+        "sizeBytes": 57,
+        "provenance": "reported",
+        "validity": {
+          "validFrom": "2023-11-14T22:13:20Z",
+          "validUntil": "2030-01-01T00:00:00Z"
+        },
+        "authorityBoundary": {
+          "kind": "retained_immutable"
+        }
+      },
+      "qualificationScope": "instance_qualification",
+      "prior": {
+        "kind": "absent"
+      }
+    },
+    "verifiedCaller": {
+      "principalId": "principal-1",
+      "issuer": "trusted-auth",
+      "authorizationDecisionId": "decision-1"
+    },
+    "selectedWorldFence": {
+      "schemaVersion": "ark.selected-world-revision-fence/v1",
+      "organizationId": "org-1",
+      "worldInstanceId": "world-1",
+      "revision": 12
+    },
+    "qualification": {
+      "invocation": {
+        "schemaVersion": "ark.world-spatial-reconciliation/v1",
+        "operationId": "source-selection-operation-1",
+        "idempotencyKey": "source-selection-key-1",
+        "requestDigest": "sha256:bdea5a6929eac5f2616213ebaa910a8f044fa0987347770abcb993212d8ecc34",
+        "providerId": "fixture-native",
+        "actionId": "fixture-native:qualify-device-source",
+        "securityContext": {
+          "principalId": "principal-1",
+          "principalKind": "service",
+          "tenantId": "org-1",
+          "roles": [
+            "spatial-author"
+          ],
+          "permissions": [
+            "world:spatial-binding:read",
+            "world:spatial-binding:write",
+            "world:subject-source:read",
+            "world:subject-source:write"
+          ],
+          "delegationChain": [
+            {
+              "principalId": "original-agent",
+              "principalKind": "agent",
+              "delegatedAt": "2023-11-14T22:13:20Z",
+              "expiresAt": "2023-11-14T22:13:50Z"
+            }
+          ],
+          "authenticatedAt": "2023-11-14T22:13:20Z",
+          "expiresAt": "2023-11-14T22:14:20Z",
+          "credentialId": "synthetic-credential-reference",
+          "requestId": "request-1"
+        },
+        "verifiedCaller": {
+          "principalId": "principal-1",
+          "issuer": "trusted-auth",
+          "authorizationDecisionId": "decision-1"
+        },
+        "selectedWorldFence": {
+          "schemaVersion": "ark.selected-world-revision-fence/v1",
+          "organizationId": "org-1",
+          "worldInstanceId": "world-1",
+          "revision": 12
+        },
+        "actionProofDigest": "sha256:8a324368224a7a8ed12d9f509026c33c732891750128c9c5e568c69f0916ae40",
+        "forwardedContextProofDigest": "sha256:1519f921f40b2ba13b3cd56f9436807347b0de84c9837302c03ab2e0e58f6ec0",
+        "invocationDigest": "95bf3961d47232d5c6ba7c8b3873cf10e005cfee066a2900ba2f30817dd5c9a6"
+      },
+      "validatorRuntime": {
+        "providerId": "fixture-native",
+        "runtimeInstanceId": "fixture-native-incarnation-1",
+        "executableDigest": "sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+      },
+      "resultDigest": "sha256:5aa1ea8f2e2207c4b4072f97fc832a948444fc8ae7b783ebe06d0019ae777421",
+      "objectPolicy": {
+        "id": "fixture-live-object-policy",
+        "version": "v1",
+        "ownerRevision": "owner-snapshot-1",
+        "contentDigest": "sha256:c7a9431573821be445f588fc69738783ec7182674355c4cd2375e9e4899049d6"
+      }
+    },
+    "outcome": {
+      "kind": "selected",
+      "selection": {
+        "schemaVersion": "ark.world-subject-source-selection/v1",
+        "selectedWorldFence": {
+          "schemaVersion": "ark.selected-world-revision-fence/v1",
+          "organizationId": "org-1",
+          "worldInstanceId": "world-1",
+          "revision": 12
+        },
+        "selectionId": "source-selection-1",
+        "selectionSequence": 7,
+        "selectionDigest": "sha256:e8ecf6513964cc1ddfd7917b1f526925d709154846c62765faa237672f27b786",
+        "receiptId": "source-receipt-1",
+        "organizationId": "org-1",
+        "worldInstanceId": "world-1",
+        "subject": {
+          "id": "subject-1",
+          "version": "v1",
+          "ownerRevision": "owner-snapshot-1",
+          "contentDigest": "sha256:5be1861bc5f3ea220b21ca8c617fcf7fa962aaf2d2cb1456f5e21b65bb7a7f67"
+        },
+        "declaration": {
+          "providerId": "fixture-native",
+          "subjectType": {
+            "id": "fixture.device",
+            "version": "v1",
+            "ownerRevision": "owner-snapshot-1",
+            "contentDigest": "sha256:235660cdddc796b5f51d30f5813bae9f6bf402b60cb89ca9ada2f96708a3fc4f"
+          },
+          "valueSchema": {
+            "id": "fixture.device.configuration",
+            "version": "v1",
+            "ownerRevision": "owner-snapshot-1",
+            "contentDigest": "sha256:aef6ea8649c59a3b4cf7335638265156e5899f95a272c1c1bbca5c169ad089c8"
+          },
+          "profile": {
+            "id": "fixture.device.physical",
+            "version": "v1",
+            "ownerRevision": "owner-snapshot-1",
+            "contentDigest": "sha256:6fbb406b6ab5b3ddabfe50c402fd8f623638332d72eae45d8fc7b50239feba76"
+          },
+          "validatorAction": {
+            "id": "fixture-native:qualify-device-source",
+            "version": "v1",
+            "ownerRevision": "owner-snapshot-1",
+            "contentDigest": "sha256:33a0b34dbd01f28bc8e280519da2b28ccc2b07109b65066885fb594c6dbb5922"
+          },
+          "configurationField": "fixture.device.configuration"
+        },
+        "source": {
+          "fact": {
+            "organizationId": "org-1",
+            "kind": "fact",
+            "id": "configuration-fact-1",
+            "version": "v1"
+          },
+          "evidence": {
+            "organizationId": "org-1",
+            "kind": "evidence",
+            "id": "configuration-evidence-1",
+            "version": "v1"
+          },
+          "reference": {
+            "organizationId": "org-1",
+            "kind": "reference",
+            "id": "configuration-reference-1",
+            "version": "v1"
+          },
+          "sourceId": "native-configuration-1",
+          "contentVersion": "v1",
+          "contentDigest": "sha256:a846ce4ed454f002a463cf4e212bfc921c6483297b4624bf155bd5919c5ad6af",
+          "sizeBytes": 57,
+          "provenance": "reported",
+          "validity": {
+            "validFrom": "2023-11-14T22:13:20Z",
+            "validUntil": "2030-01-01T00:00:00Z"
+          },
+          "authorityBoundary": {
+            "kind": "retained_immutable"
+          }
+        },
+        "qualificationScope": "instance_qualification",
+        "qualificationDigest": "sha256:ec0630d540c647d37d599eea445e7338ee8facb5f4ca5bbdb17dba326d101368"
+      }
+    }
+  },
+  "preview": {
+    "request": {
+      "schemaVersion": "ark.world-subject-source-selection/v1",
+      "operationId": "source-selection-operation-1",
+      "idempotencyKey": "source-selection-key-1",
+      "requestDigest": "sha256:bdea5a6929eac5f2616213ebaa910a8f044fa0987347770abcb993212d8ecc34",
+      "organizationId": "org-1",
+      "worldInstanceId": "world-1",
+      "expectedWorldRevision": 12,
+      "subject": {
+        "id": "subject-1",
+        "version": "v1",
+        "ownerRevision": "owner-snapshot-1",
+        "contentDigest": "sha256:5be1861bc5f3ea220b21ca8c617fcf7fa962aaf2d2cb1456f5e21b65bb7a7f67"
+      },
+      "declaration": {
+        "providerId": "fixture-native",
+        "subjectType": {
+          "id": "fixture.device",
+          "version": "v1",
+          "ownerRevision": "owner-snapshot-1",
+          "contentDigest": "sha256:235660cdddc796b5f51d30f5813bae9f6bf402b60cb89ca9ada2f96708a3fc4f"
+        },
+        "valueSchema": {
+          "id": "fixture.device.configuration",
+          "version": "v1",
+          "ownerRevision": "owner-snapshot-1",
+          "contentDigest": "sha256:aef6ea8649c59a3b4cf7335638265156e5899f95a272c1c1bbca5c169ad089c8"
+        },
+        "profile": {
+          "id": "fixture.device.physical",
+          "version": "v1",
+          "ownerRevision": "owner-snapshot-1",
+          "contentDigest": "sha256:6fbb406b6ab5b3ddabfe50c402fd8f623638332d72eae45d8fc7b50239feba76"
+        },
+        "validatorAction": {
+          "id": "fixture-native:qualify-device-source",
+          "version": "v1",
+          "ownerRevision": "owner-snapshot-1",
+          "contentDigest": "sha256:33a0b34dbd01f28bc8e280519da2b28ccc2b07109b65066885fb594c6dbb5922"
+        },
+        "configurationField": "fixture.device.configuration"
+      },
+      "source": {
+        "fact": {
+          "organizationId": "org-1",
+          "kind": "fact",
+          "id": "configuration-fact-1",
+          "version": "v1"
+        },
+        "evidence": {
+          "organizationId": "org-1",
+          "kind": "evidence",
+          "id": "configuration-evidence-1",
+          "version": "v1"
+        },
+        "reference": {
+          "organizationId": "org-1",
+          "kind": "reference",
+          "id": "configuration-reference-1",
+          "version": "v1"
+        },
+        "sourceId": "native-configuration-1",
+        "contentVersion": "v1",
+        "contentDigest": "sha256:a846ce4ed454f002a463cf4e212bfc921c6483297b4624bf155bd5919c5ad6af",
+        "sizeBytes": 57,
+        "provenance": "reported",
+        "validity": {
+          "validFrom": "2023-11-14T22:13:20Z",
+          "validUntil": "2030-01-01T00:00:00Z"
+        },
+        "authorityBoundary": {
+          "kind": "retained_immutable"
+        }
+      },
+      "qualificationScope": "instance_qualification",
+      "prior": {
+        "kind": "absent"
+      }
+    },
+    "verifiedCaller": {
+      "principalId": "principal-1",
+      "issuer": "trusted-auth",
+      "authorizationDecisionId": "decision-1"
+    },
+    "selectedWorldFence": {
+      "schemaVersion": "ark.selected-world-revision-fence/v1",
+      "organizationId": "org-1",
+      "worldInstanceId": "world-1",
+      "revision": 12
+    },
+    "qualification": {
+      "invocation": {
+        "schemaVersion": "ark.world-spatial-reconciliation/v1",
+        "operationId": "source-selection-operation-1",
+        "idempotencyKey": "source-selection-key-1",
+        "requestDigest": "sha256:bdea5a6929eac5f2616213ebaa910a8f044fa0987347770abcb993212d8ecc34",
+        "providerId": "fixture-native",
+        "actionId": "fixture-native:qualify-device-source",
+        "securityContext": {
+          "principalId": "principal-1",
+          "principalKind": "service",
+          "tenantId": "org-1",
+          "roles": [
+            "spatial-author"
+          ],
+          "permissions": [
+            "world:spatial-binding:read",
+            "world:spatial-binding:write",
+            "world:subject-source:read",
+            "world:subject-source:write"
+          ],
+          "delegationChain": [
+            {
+              "principalId": "original-agent",
+              "principalKind": "agent",
+              "delegatedAt": "2023-11-14T22:13:20Z",
+              "expiresAt": "2023-11-14T22:13:50Z"
+            }
+          ],
+          "authenticatedAt": "2023-11-14T22:13:20Z",
+          "expiresAt": "2023-11-14T22:14:20Z",
+          "credentialId": "synthetic-credential-reference",
+          "requestId": "request-1"
+        },
+        "verifiedCaller": {
+          "principalId": "principal-1",
+          "issuer": "trusted-auth",
+          "authorizationDecisionId": "decision-1"
+        },
+        "selectedWorldFence": {
+          "schemaVersion": "ark.selected-world-revision-fence/v1",
+          "organizationId": "org-1",
+          "worldInstanceId": "world-1",
+          "revision": 12
+        },
+        "actionProofDigest": "sha256:8a324368224a7a8ed12d9f509026c33c732891750128c9c5e568c69f0916ae40",
+        "forwardedContextProofDigest": "sha256:1519f921f40b2ba13b3cd56f9436807347b0de84c9837302c03ab2e0e58f6ec0",
+        "invocationDigest": "95bf3961d47232d5c6ba7c8b3873cf10e005cfee066a2900ba2f30817dd5c9a6"
+      },
+      "validatorRuntime": {
+        "providerId": "fixture-native",
+        "runtimeInstanceId": "fixture-native-incarnation-1",
+        "executableDigest": "sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+      },
+      "resultDigest": "sha256:5aa1ea8f2e2207c4b4072f97fc832a948444fc8ae7b783ebe06d0019ae777421",
+      "objectPolicy": {
+        "id": "fixture-live-object-policy",
+        "version": "v1",
+        "ownerRevision": "owner-snapshot-1",
+        "contentDigest": "sha256:c7a9431573821be445f588fc69738783ec7182674355c4cd2375e9e4899049d6"
+      }
+    }
+  },
+  "terminal": {
+    "kind": "terminal",
+    "receipt": {
+      "receiptId": "source-receipt-1",
+      "request": {
+        "schemaVersion": "ark.world-subject-source-selection/v1",
+        "operationId": "source-selection-operation-1",
+        "idempotencyKey": "source-selection-key-1",
+        "requestDigest": "sha256:bdea5a6929eac5f2616213ebaa910a8f044fa0987347770abcb993212d8ecc34",
+        "organizationId": "org-1",
+        "worldInstanceId": "world-1",
+        "expectedWorldRevision": 12,
+        "subject": {
+          "id": "subject-1",
+          "version": "v1",
+          "ownerRevision": "owner-snapshot-1",
+          "contentDigest": "sha256:5be1861bc5f3ea220b21ca8c617fcf7fa962aaf2d2cb1456f5e21b65bb7a7f67"
+        },
+        "declaration": {
+          "providerId": "fixture-native",
+          "subjectType": {
+            "id": "fixture.device",
+            "version": "v1",
+            "ownerRevision": "owner-snapshot-1",
+            "contentDigest": "sha256:235660cdddc796b5f51d30f5813bae9f6bf402b60cb89ca9ada2f96708a3fc4f"
+          },
+          "valueSchema": {
+            "id": "fixture.device.configuration",
+            "version": "v1",
+            "ownerRevision": "owner-snapshot-1",
+            "contentDigest": "sha256:aef6ea8649c59a3b4cf7335638265156e5899f95a272c1c1bbca5c169ad089c8"
+          },
+          "profile": {
+            "id": "fixture.device.physical",
+            "version": "v1",
+            "ownerRevision": "owner-snapshot-1",
+            "contentDigest": "sha256:6fbb406b6ab5b3ddabfe50c402fd8f623638332d72eae45d8fc7b50239feba76"
+          },
+          "validatorAction": {
+            "id": "fixture-native:qualify-device-source",
+            "version": "v1",
+            "ownerRevision": "owner-snapshot-1",
+            "contentDigest": "sha256:33a0b34dbd01f28bc8e280519da2b28ccc2b07109b65066885fb594c6dbb5922"
+          },
+          "configurationField": "fixture.device.configuration"
+        },
+        "source": {
+          "fact": {
+            "organizationId": "org-1",
+            "kind": "fact",
+            "id": "configuration-fact-1",
+            "version": "v1"
+          },
+          "evidence": {
+            "organizationId": "org-1",
+            "kind": "evidence",
+            "id": "configuration-evidence-1",
+            "version": "v1"
+          },
+          "reference": {
+            "organizationId": "org-1",
+            "kind": "reference",
+            "id": "configuration-reference-1",
+            "version": "v1"
+          },
+          "sourceId": "native-configuration-1",
+          "contentVersion": "v1",
+          "contentDigest": "sha256:a846ce4ed454f002a463cf4e212bfc921c6483297b4624bf155bd5919c5ad6af",
+          "sizeBytes": 57,
+          "provenance": "reported",
+          "validity": {
+            "validFrom": "2023-11-14T22:13:20Z",
+            "validUntil": "2030-01-01T00:00:00Z"
+          },
+          "authorityBoundary": {
+            "kind": "retained_immutable"
+          }
+        },
+        "qualificationScope": "instance_qualification",
+        "prior": {
+          "kind": "absent"
+        }
+      },
+      "verifiedCaller": {
+        "principalId": "principal-1",
+        "issuer": "trusted-auth",
+        "authorizationDecisionId": "decision-1"
+      },
+      "selectedWorldFence": {
+        "schemaVersion": "ark.selected-world-revision-fence/v1",
+        "organizationId": "org-1",
+        "worldInstanceId": "world-1",
+        "revision": 12
+      },
+      "qualification": {
+        "invocation": {
+          "schemaVersion": "ark.world-spatial-reconciliation/v1",
+          "operationId": "source-selection-operation-1",
+          "idempotencyKey": "source-selection-key-1",
+          "requestDigest": "sha256:bdea5a6929eac5f2616213ebaa910a8f044fa0987347770abcb993212d8ecc34",
+          "providerId": "fixture-native",
+          "actionId": "fixture-native:qualify-device-source",
+          "securityContext": {
+            "principalId": "principal-1",
+            "principalKind": "service",
+            "tenantId": "org-1",
+            "roles": [
+              "spatial-author"
+            ],
+            "permissions": [
+              "world:spatial-binding:read",
+              "world:spatial-binding:write",
+              "world:subject-source:read",
+              "world:subject-source:write"
+            ],
+            "delegationChain": [
+              {
+                "principalId": "original-agent",
+                "principalKind": "agent",
+                "delegatedAt": "2023-11-14T22:13:20Z",
+                "expiresAt": "2023-11-14T22:13:50Z"
+              }
+            ],
+            "authenticatedAt": "2023-11-14T22:13:20Z",
+            "expiresAt": "2023-11-14T22:14:20Z",
+            "credentialId": "synthetic-credential-reference",
+            "requestId": "request-1"
+          },
+          "verifiedCaller": {
+            "principalId": "principal-1",
+            "issuer": "trusted-auth",
+            "authorizationDecisionId": "decision-1"
+          },
+          "selectedWorldFence": {
+            "schemaVersion": "ark.selected-world-revision-fence/v1",
+            "organizationId": "org-1",
+            "worldInstanceId": "world-1",
+            "revision": 12
+          },
+          "actionProofDigest": "sha256:8a324368224a7a8ed12d9f509026c33c732891750128c9c5e568c69f0916ae40",
+          "forwardedContextProofDigest": "sha256:1519f921f40b2ba13b3cd56f9436807347b0de84c9837302c03ab2e0e58f6ec0",
+          "invocationDigest": "95bf3961d47232d5c6ba7c8b3873cf10e005cfee066a2900ba2f30817dd5c9a6"
+        },
+        "validatorRuntime": {
+          "providerId": "fixture-native",
+          "runtimeInstanceId": "fixture-native-incarnation-1",
+          "executableDigest": "sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+        },
+        "resultDigest": "sha256:5aa1ea8f2e2207c4b4072f97fc832a948444fc8ae7b783ebe06d0019ae777421",
+        "objectPolicy": {
+          "id": "fixture-live-object-policy",
+          "version": "v1",
+          "ownerRevision": "owner-snapshot-1",
+          "contentDigest": "sha256:c7a9431573821be445f588fc69738783ec7182674355c4cd2375e9e4899049d6"
+        }
+      },
+      "outcome": {
+        "kind": "selected",
+        "selection": {
+          "schemaVersion": "ark.world-subject-source-selection/v1",
+          "selectedWorldFence": {
+            "schemaVersion": "ark.selected-world-revision-fence/v1",
+            "organizationId": "org-1",
+            "worldInstanceId": "world-1",
+            "revision": 12
+          },
+          "selectionId": "source-selection-1",
+          "selectionSequence": 7,
+          "selectionDigest": "sha256:e8ecf6513964cc1ddfd7917b1f526925d709154846c62765faa237672f27b786",
+          "receiptId": "source-receipt-1",
+          "organizationId": "org-1",
+          "worldInstanceId": "world-1",
+          "subject": {
+            "id": "subject-1",
+            "version": "v1",
+            "ownerRevision": "owner-snapshot-1",
+            "contentDigest": "sha256:5be1861bc5f3ea220b21ca8c617fcf7fa962aaf2d2cb1456f5e21b65bb7a7f67"
+          },
+          "declaration": {
+            "providerId": "fixture-native",
+            "subjectType": {
+              "id": "fixture.device",
+              "version": "v1",
+              "ownerRevision": "owner-snapshot-1",
+              "contentDigest": "sha256:235660cdddc796b5f51d30f5813bae9f6bf402b60cb89ca9ada2f96708a3fc4f"
+            },
+            "valueSchema": {
+              "id": "fixture.device.configuration",
+              "version": "v1",
+              "ownerRevision": "owner-snapshot-1",
+              "contentDigest": "sha256:aef6ea8649c59a3b4cf7335638265156e5899f95a272c1c1bbca5c169ad089c8"
+            },
+            "profile": {
+              "id": "fixture.device.physical",
+              "version": "v1",
+              "ownerRevision": "owner-snapshot-1",
+              "contentDigest": "sha256:6fbb406b6ab5b3ddabfe50c402fd8f623638332d72eae45d8fc7b50239feba76"
+            },
+            "validatorAction": {
+              "id": "fixture-native:qualify-device-source",
+              "version": "v1",
+              "ownerRevision": "owner-snapshot-1",
+              "contentDigest": "sha256:33a0b34dbd01f28bc8e280519da2b28ccc2b07109b65066885fb594c6dbb5922"
+            },
+            "configurationField": "fixture.device.configuration"
+          },
+          "source": {
+            "fact": {
+              "organizationId": "org-1",
+              "kind": "fact",
+              "id": "configuration-fact-1",
+              "version": "v1"
+            },
+            "evidence": {
+              "organizationId": "org-1",
+              "kind": "evidence",
+              "id": "configuration-evidence-1",
+              "version": "v1"
+            },
+            "reference": {
+              "organizationId": "org-1",
+              "kind": "reference",
+              "id": "configuration-reference-1",
+              "version": "v1"
+            },
+            "sourceId": "native-configuration-1",
+            "contentVersion": "v1",
+            "contentDigest": "sha256:a846ce4ed454f002a463cf4e212bfc921c6483297b4624bf155bd5919c5ad6af",
+            "sizeBytes": 57,
+            "provenance": "reported",
+            "validity": {
+              "validFrom": "2023-11-14T22:13:20Z",
+              "validUntil": "2030-01-01T00:00:00Z"
+            },
+            "authorityBoundary": {
+              "kind": "retained_immutable"
+            }
+          },
+          "qualificationScope": "instance_qualification",
+          "qualificationDigest": "sha256:ec0630d540c647d37d599eea445e7338ee8facb5f4ca5bbdb17dba326d101368"
+        }
+      }
+    },
+    "replayed": false
+  },
+  "pending": {
+    "kind": "pending",
+    "operationId": "source-selection-operation-1",
+    "requestDigest": "sha256:bdea5a6929eac5f2616213ebaa910a8f044fa0987347770abcb993212d8ecc34",
+    "stage": "owner_qualified"
+  },
+  "readRequest": {
+    "schemaVersion": "ark.world-subject-source-selection/v1",
+    "organizationId": "org-1",
+    "worldInstanceId": "world-1",
+    "subjectId": "subject-1",
+    "expectedWorldRevision": 12,
+    "expectedSelection": {
+      "kind": "selected",
+      "selectionId": "source-selection-1",
+      "selectionSequence": 7,
+      "selectionDigest": "sha256:e8ecf6513964cc1ddfd7917b1f526925d709154846c62765faa237672f27b786"
+    }
+  },
+  "readResult": {
+    "kind": "selected",
+    "receipt": {
+      "receiptId": "source-receipt-1",
+      "request": {
+        "schemaVersion": "ark.world-subject-source-selection/v1",
+        "operationId": "source-selection-operation-1",
+        "idempotencyKey": "source-selection-key-1",
+        "requestDigest": "sha256:bdea5a6929eac5f2616213ebaa910a8f044fa0987347770abcb993212d8ecc34",
+        "organizationId": "org-1",
+        "worldInstanceId": "world-1",
+        "expectedWorldRevision": 12,
+        "subject": {
+          "id": "subject-1",
+          "version": "v1",
+          "ownerRevision": "owner-snapshot-1",
+          "contentDigest": "sha256:5be1861bc5f3ea220b21ca8c617fcf7fa962aaf2d2cb1456f5e21b65bb7a7f67"
+        },
+        "declaration": {
+          "providerId": "fixture-native",
+          "subjectType": {
+            "id": "fixture.device",
+            "version": "v1",
+            "ownerRevision": "owner-snapshot-1",
+            "contentDigest": "sha256:235660cdddc796b5f51d30f5813bae9f6bf402b60cb89ca9ada2f96708a3fc4f"
+          },
+          "valueSchema": {
+            "id": "fixture.device.configuration",
+            "version": "v1",
+            "ownerRevision": "owner-snapshot-1",
+            "contentDigest": "sha256:aef6ea8649c59a3b4cf7335638265156e5899f95a272c1c1bbca5c169ad089c8"
+          },
+          "profile": {
+            "id": "fixture.device.physical",
+            "version": "v1",
+            "ownerRevision": "owner-snapshot-1",
+            "contentDigest": "sha256:6fbb406b6ab5b3ddabfe50c402fd8f623638332d72eae45d8fc7b50239feba76"
+          },
+          "validatorAction": {
+            "id": "fixture-native:qualify-device-source",
+            "version": "v1",
+            "ownerRevision": "owner-snapshot-1",
+            "contentDigest": "sha256:33a0b34dbd01f28bc8e280519da2b28ccc2b07109b65066885fb594c6dbb5922"
+          },
+          "configurationField": "fixture.device.configuration"
+        },
+        "source": {
+          "fact": {
+            "organizationId": "org-1",
+            "kind": "fact",
+            "id": "configuration-fact-1",
+            "version": "v1"
+          },
+          "evidence": {
+            "organizationId": "org-1",
+            "kind": "evidence",
+            "id": "configuration-evidence-1",
+            "version": "v1"
+          },
+          "reference": {
+            "organizationId": "org-1",
+            "kind": "reference",
+            "id": "configuration-reference-1",
+            "version": "v1"
+          },
+          "sourceId": "native-configuration-1",
+          "contentVersion": "v1",
+          "contentDigest": "sha256:a846ce4ed454f002a463cf4e212bfc921c6483297b4624bf155bd5919c5ad6af",
+          "sizeBytes": 57,
+          "provenance": "reported",
+          "validity": {
+            "validFrom": "2023-11-14T22:13:20Z",
+            "validUntil": "2030-01-01T00:00:00Z"
+          },
+          "authorityBoundary": {
+            "kind": "retained_immutable"
+          }
+        },
+        "qualificationScope": "instance_qualification",
+        "prior": {
+          "kind": "absent"
+        }
+      },
+      "verifiedCaller": {
+        "principalId": "principal-1",
+        "issuer": "trusted-auth",
+        "authorizationDecisionId": "decision-1"
+      },
+      "selectedWorldFence": {
+        "schemaVersion": "ark.selected-world-revision-fence/v1",
+        "organizationId": "org-1",
+        "worldInstanceId": "world-1",
+        "revision": 12
+      },
+      "qualification": {
+        "invocation": {
+          "schemaVersion": "ark.world-spatial-reconciliation/v1",
+          "operationId": "source-selection-operation-1",
+          "idempotencyKey": "source-selection-key-1",
+          "requestDigest": "sha256:bdea5a6929eac5f2616213ebaa910a8f044fa0987347770abcb993212d8ecc34",
+          "providerId": "fixture-native",
+          "actionId": "fixture-native:qualify-device-source",
+          "securityContext": {
+            "principalId": "principal-1",
+            "principalKind": "service",
+            "tenantId": "org-1",
+            "roles": [
+              "spatial-author"
+            ],
+            "permissions": [
+              "world:spatial-binding:read",
+              "world:spatial-binding:write",
+              "world:subject-source:read",
+              "world:subject-source:write"
+            ],
+            "delegationChain": [
+              {
+                "principalId": "original-agent",
+                "principalKind": "agent",
+                "delegatedAt": "2023-11-14T22:13:20Z",
+                "expiresAt": "2023-11-14T22:13:50Z"
+              }
+            ],
+            "authenticatedAt": "2023-11-14T22:13:20Z",
+            "expiresAt": "2023-11-14T22:14:20Z",
+            "credentialId": "synthetic-credential-reference",
+            "requestId": "request-1"
+          },
+          "verifiedCaller": {
+            "principalId": "principal-1",
+            "issuer": "trusted-auth",
+            "authorizationDecisionId": "decision-1"
+          },
+          "selectedWorldFence": {
+            "schemaVersion": "ark.selected-world-revision-fence/v1",
+            "organizationId": "org-1",
+            "worldInstanceId": "world-1",
+            "revision": 12
+          },
+          "actionProofDigest": "sha256:8a324368224a7a8ed12d9f509026c33c732891750128c9c5e568c69f0916ae40",
+          "forwardedContextProofDigest": "sha256:1519f921f40b2ba13b3cd56f9436807347b0de84c9837302c03ab2e0e58f6ec0",
+          "invocationDigest": "95bf3961d47232d5c6ba7c8b3873cf10e005cfee066a2900ba2f30817dd5c9a6"
+        },
+        "validatorRuntime": {
+          "providerId": "fixture-native",
+          "runtimeInstanceId": "fixture-native-incarnation-1",
+          "executableDigest": "sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+        },
+        "resultDigest": "sha256:5aa1ea8f2e2207c4b4072f97fc832a948444fc8ae7b783ebe06d0019ae777421",
+        "objectPolicy": {
+          "id": "fixture-live-object-policy",
+          "version": "v1",
+          "ownerRevision": "owner-snapshot-1",
+          "contentDigest": "sha256:c7a9431573821be445f588fc69738783ec7182674355c4cd2375e9e4899049d6"
+        }
+      },
+      "outcome": {
+        "kind": "selected",
+        "selection": {
+          "schemaVersion": "ark.world-subject-source-selection/v1",
+          "selectedWorldFence": {
+            "schemaVersion": "ark.selected-world-revision-fence/v1",
+            "organizationId": "org-1",
+            "worldInstanceId": "world-1",
+            "revision": 12
+          },
+          "selectionId": "source-selection-1",
+          "selectionSequence": 7,
+          "selectionDigest": "sha256:e8ecf6513964cc1ddfd7917b1f526925d709154846c62765faa237672f27b786",
+          "receiptId": "source-receipt-1",
+          "organizationId": "org-1",
+          "worldInstanceId": "world-1",
+          "subject": {
+            "id": "subject-1",
+            "version": "v1",
+            "ownerRevision": "owner-snapshot-1",
+            "contentDigest": "sha256:5be1861bc5f3ea220b21ca8c617fcf7fa962aaf2d2cb1456f5e21b65bb7a7f67"
+          },
+          "declaration": {
+            "providerId": "fixture-native",
+            "subjectType": {
+              "id": "fixture.device",
+              "version": "v1",
+              "ownerRevision": "owner-snapshot-1",
+              "contentDigest": "sha256:235660cdddc796b5f51d30f5813bae9f6bf402b60cb89ca9ada2f96708a3fc4f"
+            },
+            "valueSchema": {
+              "id": "fixture.device.configuration",
+              "version": "v1",
+              "ownerRevision": "owner-snapshot-1",
+              "contentDigest": "sha256:aef6ea8649c59a3b4cf7335638265156e5899f95a272c1c1bbca5c169ad089c8"
+            },
+            "profile": {
+              "id": "fixture.device.physical",
+              "version": "v1",
+              "ownerRevision": "owner-snapshot-1",
+              "contentDigest": "sha256:6fbb406b6ab5b3ddabfe50c402fd8f623638332d72eae45d8fc7b50239feba76"
+            },
+            "validatorAction": {
+              "id": "fixture-native:qualify-device-source",
+              "version": "v1",
+              "ownerRevision": "owner-snapshot-1",
+              "contentDigest": "sha256:33a0b34dbd01f28bc8e280519da2b28ccc2b07109b65066885fb594c6dbb5922"
+            },
+            "configurationField": "fixture.device.configuration"
+          },
+          "source": {
+            "fact": {
+              "organizationId": "org-1",
+              "kind": "fact",
+              "id": "configuration-fact-1",
+              "version": "v1"
+            },
+            "evidence": {
+              "organizationId": "org-1",
+              "kind": "evidence",
+              "id": "configuration-evidence-1",
+              "version": "v1"
+            },
+            "reference": {
+              "organizationId": "org-1",
+              "kind": "reference",
+              "id": "configuration-reference-1",
+              "version": "v1"
+            },
+            "sourceId": "native-configuration-1",
+            "contentVersion": "v1",
+            "contentDigest": "sha256:a846ce4ed454f002a463cf4e212bfc921c6483297b4624bf155bd5919c5ad6af",
+            "sizeBytes": 57,
+            "provenance": "reported",
+            "validity": {
+              "validFrom": "2023-11-14T22:13:20Z",
+              "validUntil": "2030-01-01T00:00:00Z"
+            },
+            "authorityBoundary": {
+              "kind": "retained_immutable"
+            }
+          },
+          "qualificationScope": "instance_qualification",
+          "qualificationDigest": "sha256:ec0630d540c647d37d599eea445e7338ee8facb5f4ca5bbdb17dba326d101368"
+        }
+      }
+    }
+  },
+  "currentReadRequest": {
+    "schemaVersion": "ark.world-subject-source-selection/v1",
+    "organizationId": "org-1",
+    "worldInstanceId": "world-1",
+    "subjectId": "subject-1",
+    "expectedWorldRevision": 12
+  },
+  "recoveryRequest": {
+    "schemaVersion": "ark.world-subject-source-selection/v1",
+    "operationId": "source-selection-operation-1",
+    "idempotencyKey": "source-selection-key-1",
+    "requestDigest": "sha256:bdea5a6929eac5f2616213ebaa910a8f044fa0987347770abcb993212d8ecc34",
+    "organizationId": "org-1",
+    "worldInstanceId": "world-1",
+    "expectedWorldRevision": 12,
+    "subjectId": "subject-1",
+    "readOnly": true
+  },
+  "nominalPresentationRequest": {
+    "schemaVersion": "ark.world-subject-source-selection/v1",
+    "operationId": "nominal-selection-operation-1",
+    "idempotencyKey": "nominal-selection-key-1",
+    "requestDigest": "sha256:b1124a1854fc53f5f686ae76e20f5fcd26f790390141480e4e23365eb414d3cf",
+    "organizationId": "org-1",
+    "worldInstanceId": "world-1",
+    "expectedWorldRevision": 12,
+    "subject": {
+      "id": "subject-1",
+      "version": "v1",
+      "ownerRevision": "owner-snapshot-1",
+      "contentDigest": "sha256:5be1861bc5f3ea220b21ca8c617fcf7fa962aaf2d2cb1456f5e21b65bb7a7f67"
+    },
+    "declaration": {
+      "providerId": "fixture-native",
+      "subjectType": {
+        "id": "fixture.device",
+        "version": "v1",
+        "ownerRevision": "owner-snapshot-1",
+        "contentDigest": "sha256:235660cdddc796b5f51d30f5813bae9f6bf402b60cb89ca9ada2f96708a3fc4f"
+      },
+      "valueSchema": {
+        "id": "fixture.device.configuration",
+        "version": "v1",
+        "ownerRevision": "owner-snapshot-1",
+        "contentDigest": "sha256:aef6ea8649c59a3b4cf7335638265156e5899f95a272c1c1bbca5c169ad089c8"
+      },
+      "profile": {
+        "id": "fixture.device.physical",
+        "version": "v1",
+        "ownerRevision": "owner-snapshot-1",
+        "contentDigest": "sha256:6fbb406b6ab5b3ddabfe50c402fd8f623638332d72eae45d8fc7b50239feba76"
+      },
+      "validatorAction": {
+        "id": "fixture-native:qualify-device-source",
+        "version": "v1",
+        "ownerRevision": "owner-snapshot-1",
+        "contentDigest": "sha256:33a0b34dbd01f28bc8e280519da2b28ccc2b07109b65066885fb594c6dbb5922"
+      },
+      "configurationField": "fixture.device.configuration"
+    },
+    "source": {
+      "fact": {
+        "organizationId": "org-1",
+        "kind": "fact",
+        "id": "configuration-fact-1",
+        "version": "v1"
+      },
+      "evidence": {
+        "organizationId": "org-1",
+        "kind": "evidence",
+        "id": "configuration-evidence-1",
+        "version": "v1"
+      },
+      "reference": {
+        "organizationId": "org-1",
+        "kind": "reference",
+        "id": "configuration-reference-1",
+        "version": "v1"
+      },
+      "sourceId": "native-configuration-1",
+      "contentVersion": "v1",
+      "contentDigest": "sha256:a846ce4ed454f002a463cf4e212bfc921c6483297b4624bf155bd5919c5ad6af",
+      "sizeBytes": 57,
+      "provenance": "nominal",
+      "validity": {
+        "validFrom": "2023-11-14T22:13:20Z",
+        "validUntil": "2030-01-01T00:00:00Z"
+      },
+      "authorityBoundary": {
+        "kind": "retained_immutable"
+      }
+    },
+    "qualificationScope": "nominal_presentation",
+    "prior": {
+      "kind": "absent"
+    }
+  },
+  "spatialV2Request": {
+    "schemaVersion": "ark.world-spatial-binding/v2",
+    "operationId": "placement-1",
+    "idempotencyKey": "placement-1-key",
+    "organizationId": "org-1",
+    "worldInstanceId": "world-1",
+    "expectedWorldRevision": 12,
+    "subjectId": "subject-1",
+    "fields": {
+      "geometry": "hvac.ahu.geometry",
+      "pose": "hvac.ahu.pose",
+      "extent": "hvac.ahu.extent"
+    },
+    "triple": {
+      "geometry": {
+        "schemaVersion": 1,
+        "representation": "gltf_binary",
+        "artifactRef": "artifact://immutable-model-v1",
+        "contentType": "model/gltf-binary",
+        "coordinateFrame": {
+          "kind": "subject_local",
+          "subjectId": "subject-1"
+        }
+      },
+      "pose": {
+        "schemaVersion": 1,
+        "coordinateFrame": {
+          "kind": "world",
+          "worldInstanceId": "world-1"
+        },
+        "position": {
+          "kind": "cartesian",
+          "xM": 5.0,
+          "yM": 0.0,
+          "zM": 0.0
+        },
+        "orientation": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "extent": {
+        "schemaVersion": 1,
+        "coordinateFrame": {
+          "kind": "world",
+          "worldInstanceId": "world-1"
+        },
+        "minimum": {
+          "kind": "cartesian",
+          "xM": 4.0,
+          "yM": -1.0,
+          "zM": -1.0
+        },
+        "maximum": {
+          "kind": "cartesian",
+          "xM": 6.0,
+          "yM": 1.0,
+          "zM": 1.0
+        }
+      }
+    },
+    "expectedAsset": {
+      "artifactId": "artifacts:immutable-model-v1",
+      "artifactRef": "artifact://immutable-model-v1",
+      "sha256": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "sizeBytes": 128,
+      "contentType": "model/gltf-binary"
+    },
+    "source": {
+      "sourceId": "author-model",
+      "sourceRevision": "v1",
+      "provenance": "nominal",
+      "evidenceIds": [
+        "source-evidence-1"
+      ],
+      "sourceSelection": {
+        "schemaVersion": "ark.world-subject-source-selection/v1",
+        "selectedWorldFence": {
+          "schemaVersion": "ark.selected-world-revision-fence/v1",
+          "organizationId": "org-1",
+          "worldInstanceId": "world-1",
+          "revision": 12
+        },
+        "selectionId": "source-selection-1",
+        "selectionSequence": 7,
+        "selectionDigest": "sha256:e8ecf6513964cc1ddfd7917b1f526925d709154846c62765faa237672f27b786",
+        "receiptId": "source-receipt-1",
+        "organizationId": "org-1",
+        "worldInstanceId": "world-1",
+        "subject": {
+          "id": "subject-1",
+          "version": "v1",
+          "ownerRevision": "owner-snapshot-1",
+          "contentDigest": "sha256:5be1861bc5f3ea220b21ca8c617fcf7fa962aaf2d2cb1456f5e21b65bb7a7f67"
+        },
+        "declaration": {
+          "providerId": "fixture-native",
+          "subjectType": {
+            "id": "fixture.device",
+            "version": "v1",
+            "ownerRevision": "owner-snapshot-1",
+            "contentDigest": "sha256:235660cdddc796b5f51d30f5813bae9f6bf402b60cb89ca9ada2f96708a3fc4f"
+          },
+          "valueSchema": {
+            "id": "fixture.device.configuration",
+            "version": "v1",
+            "ownerRevision": "owner-snapshot-1",
+            "contentDigest": "sha256:aef6ea8649c59a3b4cf7335638265156e5899f95a272c1c1bbca5c169ad089c8"
+          },
+          "profile": {
+            "id": "fixture.device.physical",
+            "version": "v1",
+            "ownerRevision": "owner-snapshot-1",
+            "contentDigest": "sha256:6fbb406b6ab5b3ddabfe50c402fd8f623638332d72eae45d8fc7b50239feba76"
+          },
+          "validatorAction": {
+            "id": "fixture-native:qualify-device-source",
+            "version": "v1",
+            "ownerRevision": "owner-snapshot-1",
+            "contentDigest": "sha256:33a0b34dbd01f28bc8e280519da2b28ccc2b07109b65066885fb594c6dbb5922"
+          },
+          "configurationField": "fixture.device.configuration"
+        },
+        "source": {
+          "fact": {
+            "organizationId": "org-1",
+            "kind": "fact",
+            "id": "configuration-fact-1",
+            "version": "v1"
+          },
+          "evidence": {
+            "organizationId": "org-1",
+            "kind": "evidence",
+            "id": "configuration-evidence-1",
+            "version": "v1"
+          },
+          "reference": {
+            "organizationId": "org-1",
+            "kind": "reference",
+            "id": "configuration-reference-1",
+            "version": "v1"
+          },
+          "sourceId": "native-configuration-1",
+          "contentVersion": "v1",
+          "contentDigest": "sha256:a846ce4ed454f002a463cf4e212bfc921c6483297b4624bf155bd5919c5ad6af",
+          "sizeBytes": 57,
+          "provenance": "reported",
+          "validity": {
+            "validFrom": "2023-11-14T22:13:20Z",
+            "validUntil": "2030-01-01T00:00:00Z"
+          },
+          "authorityBoundary": {
+            "kind": "retained_immutable"
+          }
+        },
+        "qualificationScope": "instance_qualification",
+        "qualificationDigest": "sha256:ec0630d540c647d37d599eea445e7338ee8facb5f4ca5bbdb17dba326d101368"
+      }
+    },
+    "prior": {
+      "kind": "absent"
+    },
+    "requestDigest": "sha256:c05ad385f3accebf39b06f5f13b4bca62925257c1594deb2c8d6d034fc539f02"
+  },
+  "spatialV2Receipt": {
+    "schemaVersion": "ark.world-spatial-binding/v2",
+    "operationId": "placement-1",
+    "idempotencyKey": "placement-1-key",
+    "requestDigest": "sha256:c05ad385f3accebf39b06f5f13b4bca62925257c1594deb2c8d6d034fc539f02",
+    "subjectId": "subject-1",
+    "fields": {
+      "geometry": "hvac.ahu.geometry",
+      "pose": "hvac.ahu.pose",
+      "extent": "hvac.ahu.extent"
+    },
+    "verifiedCaller": {
+      "principalId": "principal-1",
+      "issuer": "trusted-auth",
+      "authorizationDecisionId": "decision-1"
+    },
+    "selectedWorldFence": {
+      "schemaVersion": "ark.selected-world-revision-fence/v1",
+      "organizationId": "org-1",
+      "worldInstanceId": "world-1",
+      "revision": 12
+    },
+    "revisionPolicy": "bound_to_selected_world_revision",
+    "prior": {
+      "kind": "absent"
+    },
+    "receiptId": "receipt-1",
+    "expectedAsset": {
+      "artifactId": "artifacts:immutable-model-v1",
+      "artifactRef": "artifact://immutable-model-v1",
+      "sha256": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "sizeBytes": 128,
+      "contentType": "model/gltf-binary"
+    },
+    "assetVerified": true,
+    "source": {
+      "sourceId": "author-model",
+      "sourceRevision": "v1",
+      "provenance": "nominal",
+      "evidenceIds": [
+        "source-evidence-1"
+      ],
+      "sourceSelection": {
+        "schemaVersion": "ark.world-subject-source-selection/v1",
+        "selectedWorldFence": {
+          "schemaVersion": "ark.selected-world-revision-fence/v1",
+          "organizationId": "org-1",
+          "worldInstanceId": "world-1",
+          "revision": 12
+        },
+        "selectionId": "source-selection-1",
+        "selectionSequence": 7,
+        "selectionDigest": "sha256:e8ecf6513964cc1ddfd7917b1f526925d709154846c62765faa237672f27b786",
+        "receiptId": "source-receipt-1",
+        "organizationId": "org-1",
+        "worldInstanceId": "world-1",
+        "subject": {
+          "id": "subject-1",
+          "version": "v1",
+          "ownerRevision": "owner-snapshot-1",
+          "contentDigest": "sha256:5be1861bc5f3ea220b21ca8c617fcf7fa962aaf2d2cb1456f5e21b65bb7a7f67"
+        },
+        "declaration": {
+          "providerId": "fixture-native",
+          "subjectType": {
+            "id": "fixture.device",
+            "version": "v1",
+            "ownerRevision": "owner-snapshot-1",
+            "contentDigest": "sha256:235660cdddc796b5f51d30f5813bae9f6bf402b60cb89ca9ada2f96708a3fc4f"
+          },
+          "valueSchema": {
+            "id": "fixture.device.configuration",
+            "version": "v1",
+            "ownerRevision": "owner-snapshot-1",
+            "contentDigest": "sha256:aef6ea8649c59a3b4cf7335638265156e5899f95a272c1c1bbca5c169ad089c8"
+          },
+          "profile": {
+            "id": "fixture.device.physical",
+            "version": "v1",
+            "ownerRevision": "owner-snapshot-1",
+            "contentDigest": "sha256:6fbb406b6ab5b3ddabfe50c402fd8f623638332d72eae45d8fc7b50239feba76"
+          },
+          "validatorAction": {
+            "id": "fixture-native:qualify-device-source",
+            "version": "v1",
+            "ownerRevision": "owner-snapshot-1",
+            "contentDigest": "sha256:33a0b34dbd01f28bc8e280519da2b28ccc2b07109b65066885fb594c6dbb5922"
+          },
+          "configurationField": "fixture.device.configuration"
+        },
+        "source": {
+          "fact": {
+            "organizationId": "org-1",
+            "kind": "fact",
+            "id": "configuration-fact-1",
+            "version": "v1"
+          },
+          "evidence": {
+            "organizationId": "org-1",
+            "kind": "evidence",
+            "id": "configuration-evidence-1",
+            "version": "v1"
+          },
+          "reference": {
+            "organizationId": "org-1",
+            "kind": "reference",
+            "id": "configuration-reference-1",
+            "version": "v1"
+          },
+          "sourceId": "native-configuration-1",
+          "contentVersion": "v1",
+          "contentDigest": "sha256:a846ce4ed454f002a463cf4e212bfc921c6483297b4624bf155bd5919c5ad6af",
+          "sizeBytes": 57,
+          "provenance": "reported",
+          "validity": {
+            "validFrom": "2023-11-14T22:13:20Z",
+            "validUntil": "2030-01-01T00:00:00Z"
+          },
+          "authorityBoundary": {
+            "kind": "retained_immutable"
+          }
+        },
+        "qualificationScope": "instance_qualification",
+        "qualificationDigest": "sha256:ec0630d540c647d37d599eea445e7338ee8facb5f4ca5bbdb17dba326d101368"
+      }
+    },
+    "outcome": {
+      "kind": "accepted",
+      "bundleId": "bundle-1",
+      "bindingSequence": 1,
+      "factIds": {
+        "geometry": "fact-g-1",
+        "pose": "fact-p-1",
+        "extent": "fact-e-1"
+      },
+      "evidenceIds": {
+        "geometry": "evidence-g-1",
+        "pose": "evidence-p-1",
+        "extent": "evidence-e-1"
+      }
+    }
+  },
+  "spatialV2Preview": {
+    "schemaVersion": "ark.world-spatial-binding/v2",
+    "operationId": "placement-1",
+    "idempotencyKey": "placement-1-key",
+    "requestDigest": "sha256:c05ad385f3accebf39b06f5f13b4bca62925257c1594deb2c8d6d034fc539f02",
+    "subjectId": "subject-1",
+    "fields": {
+      "geometry": "hvac.ahu.geometry",
+      "pose": "hvac.ahu.pose",
+      "extent": "hvac.ahu.extent"
+    },
+    "verifiedCaller": {
+      "principalId": "principal-1",
+      "issuer": "trusted-auth",
+      "authorizationDecisionId": "decision-1"
+    },
+    "selectedWorldFence": {
+      "schemaVersion": "ark.selected-world-revision-fence/v1",
+      "organizationId": "org-1",
+      "worldInstanceId": "world-1",
+      "revision": 12
+    },
+    "revisionPolicy": "bound_to_selected_world_revision",
+    "verifiedAsset": {
+      "artifactId": "artifacts:immutable-model-v1",
+      "artifactRef": "artifact://immutable-model-v1",
+      "sha256": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "sizeBytes": 128,
+      "contentType": "model/gltf-binary"
+    },
+    "prior": {
+      "kind": "absent"
+    },
+    "sourceSelection": {
+      "schemaVersion": "ark.world-subject-source-selection/v1",
+      "selectedWorldFence": {
+        "schemaVersion": "ark.selected-world-revision-fence/v1",
+        "organizationId": "org-1",
+        "worldInstanceId": "world-1",
+        "revision": 12
+      },
+      "selectionId": "source-selection-1",
+      "selectionSequence": 7,
+      "selectionDigest": "sha256:e8ecf6513964cc1ddfd7917b1f526925d709154846c62765faa237672f27b786",
+      "receiptId": "source-receipt-1",
+      "organizationId": "org-1",
+      "worldInstanceId": "world-1",
+      "subject": {
+        "id": "subject-1",
+        "version": "v1",
+        "ownerRevision": "owner-snapshot-1",
+        "contentDigest": "sha256:5be1861bc5f3ea220b21ca8c617fcf7fa962aaf2d2cb1456f5e21b65bb7a7f67"
+      },
+      "declaration": {
+        "providerId": "fixture-native",
+        "subjectType": {
+          "id": "fixture.device",
+          "version": "v1",
+          "ownerRevision": "owner-snapshot-1",
+          "contentDigest": "sha256:235660cdddc796b5f51d30f5813bae9f6bf402b60cb89ca9ada2f96708a3fc4f"
+        },
+        "valueSchema": {
+          "id": "fixture.device.configuration",
+          "version": "v1",
+          "ownerRevision": "owner-snapshot-1",
+          "contentDigest": "sha256:aef6ea8649c59a3b4cf7335638265156e5899f95a272c1c1bbca5c169ad089c8"
+        },
+        "profile": {
+          "id": "fixture.device.physical",
+          "version": "v1",
+          "ownerRevision": "owner-snapshot-1",
+          "contentDigest": "sha256:6fbb406b6ab5b3ddabfe50c402fd8f623638332d72eae45d8fc7b50239feba76"
+        },
+        "validatorAction": {
+          "id": "fixture-native:qualify-device-source",
+          "version": "v1",
+          "ownerRevision": "owner-snapshot-1",
+          "contentDigest": "sha256:33a0b34dbd01f28bc8e280519da2b28ccc2b07109b65066885fb594c6dbb5922"
+        },
+        "configurationField": "fixture.device.configuration"
+      },
+      "source": {
+        "fact": {
+          "organizationId": "org-1",
+          "kind": "fact",
+          "id": "configuration-fact-1",
+          "version": "v1"
+        },
+        "evidence": {
+          "organizationId": "org-1",
+          "kind": "evidence",
+          "id": "configuration-evidence-1",
+          "version": "v1"
+        },
+        "reference": {
+          "organizationId": "org-1",
+          "kind": "reference",
+          "id": "configuration-reference-1",
+          "version": "v1"
+        },
+        "sourceId": "native-configuration-1",
+        "contentVersion": "v1",
+        "contentDigest": "sha256:a846ce4ed454f002a463cf4e212bfc921c6483297b4624bf155bd5919c5ad6af",
+        "sizeBytes": 57,
+        "provenance": "reported",
+        "validity": {
+          "validFrom": "2023-11-14T22:13:20Z",
+          "validUntil": "2030-01-01T00:00:00Z"
+        },
+        "authorityBoundary": {
+          "kind": "retained_immutable"
+        }
+      },
+      "qualificationScope": "instance_qualification",
+      "qualificationDigest": "sha256:ec0630d540c647d37d599eea445e7338ee8facb5f4ca5bbdb17dba326d101368"
+    }
+  },
+  "sourceCommitAck": {
+    "admission": {
+      "correlation": {
+        "schemaVersion": "ark.world-spatial-reconciliation/v1",
+        "operationId": "source-selection-operation-1",
+        "idempotencyKey": "source-selection-key-1",
+        "requestDigest": "sha256:bdea5a6929eac5f2616213ebaa910a8f044fa0987347770abcb993212d8ecc34",
+        "providerId": "world",
+        "actionId": "world:subject-source:select",
+        "securityContext": {
+          "principalId": "principal-1",
+          "principalKind": "service",
+          "tenantId": "org-1",
+          "roles": [
+            "spatial-author"
+          ],
+          "permissions": [
+            "world:spatial-binding:read",
+            "world:spatial-binding:write",
+            "world:subject-source:read",
+            "world:subject-source:write"
+          ],
+          "delegationChain": [
+            {
+              "principalId": "original-agent",
+              "principalKind": "agent",
+              "delegatedAt": "2023-11-14T22:13:20Z",
+              "expiresAt": "2023-11-14T22:13:50Z"
+            }
+          ],
+          "authenticatedAt": "2023-11-14T22:13:20Z",
+          "expiresAt": "2023-11-14T22:14:20Z",
+          "credentialId": "synthetic-credential-reference",
+          "requestId": "request-1"
+        },
+        "verifiedCaller": {
+          "principalId": "principal-1",
+          "issuer": "trusted-auth",
+          "authorizationDecisionId": "decision-1"
+        },
+        "selectedWorldFence": {
+          "schemaVersion": "ark.selected-world-revision-fence/v1",
+          "organizationId": "org-1",
+          "worldInstanceId": "world-1",
+          "revision": 12
+        },
+        "actionProofDigest": "sha256:c27c32d03ac42e6710254bdfacc84572511b9699e362b76a31dc83a948950d53",
+        "forwardedContextProofDigest": "sha256:1519f921f40b2ba13b3cd56f9436807347b0de84c9837302c03ab2e0e58f6ec0",
+        "invocationDigest": "3f658d77e4ee6f841f9389f2d8662edb876ae1ad3ca41baaef4b7bd274a913d7"
+      },
+      "actionProofExpiresAtUnixMs": 1700000050000,
+      "forwardedContextExpiresAtUnixMs": 1700000060000,
+      "notAfterUnixMs": 1700000029000
+    },
+    "kernel": {
+      "providerId": "world",
+      "runtimeInstanceId": "kernel-incarnation-1",
+      "executableDigest": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+    },
+    "acknowledgement": "commit_acknowledged",
+    "reconciliationId": "kernel-reconcile-1",
+    "quiescentAtUnixMs": 1700000090000,
+    "quiescence": {
+      "kind": "drained"
+    },
+    "outcome": {
+      "kind": "subject_source_terminal",
+      "receipt": {
+        "receiptId": "source-receipt-1",
+        "request": {
+          "schemaVersion": "ark.world-subject-source-selection/v1",
+          "operationId": "source-selection-operation-1",
+          "idempotencyKey": "source-selection-key-1",
+          "requestDigest": "sha256:bdea5a6929eac5f2616213ebaa910a8f044fa0987347770abcb993212d8ecc34",
+          "organizationId": "org-1",
+          "worldInstanceId": "world-1",
+          "expectedWorldRevision": 12,
+          "subject": {
+            "id": "subject-1",
+            "version": "v1",
+            "ownerRevision": "owner-snapshot-1",
+            "contentDigest": "sha256:5be1861bc5f3ea220b21ca8c617fcf7fa962aaf2d2cb1456f5e21b65bb7a7f67"
+          },
+          "declaration": {
+            "providerId": "fixture-native",
+            "subjectType": {
+              "id": "fixture.device",
+              "version": "v1",
+              "ownerRevision": "owner-snapshot-1",
+              "contentDigest": "sha256:235660cdddc796b5f51d30f5813bae9f6bf402b60cb89ca9ada2f96708a3fc4f"
+            },
+            "valueSchema": {
+              "id": "fixture.device.configuration",
+              "version": "v1",
+              "ownerRevision": "owner-snapshot-1",
+              "contentDigest": "sha256:aef6ea8649c59a3b4cf7335638265156e5899f95a272c1c1bbca5c169ad089c8"
+            },
+            "profile": {
+              "id": "fixture.device.physical",
+              "version": "v1",
+              "ownerRevision": "owner-snapshot-1",
+              "contentDigest": "sha256:6fbb406b6ab5b3ddabfe50c402fd8f623638332d72eae45d8fc7b50239feba76"
+            },
+            "validatorAction": {
+              "id": "fixture-native:qualify-device-source",
+              "version": "v1",
+              "ownerRevision": "owner-snapshot-1",
+              "contentDigest": "sha256:33a0b34dbd01f28bc8e280519da2b28ccc2b07109b65066885fb594c6dbb5922"
+            },
+            "configurationField": "fixture.device.configuration"
+          },
+          "source": {
+            "fact": {
+              "organizationId": "org-1",
+              "kind": "fact",
+              "id": "configuration-fact-1",
+              "version": "v1"
+            },
+            "evidence": {
+              "organizationId": "org-1",
+              "kind": "evidence",
+              "id": "configuration-evidence-1",
+              "version": "v1"
+            },
+            "reference": {
+              "organizationId": "org-1",
+              "kind": "reference",
+              "id": "configuration-reference-1",
+              "version": "v1"
+            },
+            "sourceId": "native-configuration-1",
+            "contentVersion": "v1",
+            "contentDigest": "sha256:a846ce4ed454f002a463cf4e212bfc921c6483297b4624bf155bd5919c5ad6af",
+            "sizeBytes": 57,
+            "provenance": "reported",
+            "validity": {
+              "validFrom": "2023-11-14T22:13:20Z",
+              "validUntil": "2030-01-01T00:00:00Z"
+            },
+            "authorityBoundary": {
+              "kind": "retained_immutable"
+            }
+          },
+          "qualificationScope": "instance_qualification",
+          "prior": {
+            "kind": "absent"
+          }
+        },
+        "verifiedCaller": {
+          "principalId": "principal-1",
+          "issuer": "trusted-auth",
+          "authorizationDecisionId": "decision-1"
+        },
+        "selectedWorldFence": {
+          "schemaVersion": "ark.selected-world-revision-fence/v1",
+          "organizationId": "org-1",
+          "worldInstanceId": "world-1",
+          "revision": 12
+        },
+        "qualification": {
+          "invocation": {
+            "schemaVersion": "ark.world-spatial-reconciliation/v1",
+            "operationId": "source-selection-operation-1",
+            "idempotencyKey": "source-selection-key-1",
+            "requestDigest": "sha256:bdea5a6929eac5f2616213ebaa910a8f044fa0987347770abcb993212d8ecc34",
+            "providerId": "fixture-native",
+            "actionId": "fixture-native:qualify-device-source",
+            "securityContext": {
+              "principalId": "principal-1",
+              "principalKind": "service",
+              "tenantId": "org-1",
+              "roles": [
+                "spatial-author"
+              ],
+              "permissions": [
+                "world:spatial-binding:read",
+                "world:spatial-binding:write",
+                "world:subject-source:read",
+                "world:subject-source:write"
+              ],
+              "delegationChain": [
+                {
+                  "principalId": "original-agent",
+                  "principalKind": "agent",
+                  "delegatedAt": "2023-11-14T22:13:20Z",
+                  "expiresAt": "2023-11-14T22:13:50Z"
+                }
+              ],
+              "authenticatedAt": "2023-11-14T22:13:20Z",
+              "expiresAt": "2023-11-14T22:14:20Z",
+              "credentialId": "synthetic-credential-reference",
+              "requestId": "request-1"
+            },
+            "verifiedCaller": {
+              "principalId": "principal-1",
+              "issuer": "trusted-auth",
+              "authorizationDecisionId": "decision-1"
+            },
+            "selectedWorldFence": {
+              "schemaVersion": "ark.selected-world-revision-fence/v1",
+              "organizationId": "org-1",
+              "worldInstanceId": "world-1",
+              "revision": 12
+            },
+            "actionProofDigest": "sha256:8a324368224a7a8ed12d9f509026c33c732891750128c9c5e568c69f0916ae40",
+            "forwardedContextProofDigest": "sha256:1519f921f40b2ba13b3cd56f9436807347b0de84c9837302c03ab2e0e58f6ec0",
+            "invocationDigest": "95bf3961d47232d5c6ba7c8b3873cf10e005cfee066a2900ba2f30817dd5c9a6"
+          },
+          "validatorRuntime": {
+            "providerId": "fixture-native",
+            "runtimeInstanceId": "fixture-native-incarnation-1",
+            "executableDigest": "sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+          },
+          "resultDigest": "sha256:5aa1ea8f2e2207c4b4072f97fc832a948444fc8ae7b783ebe06d0019ae777421",
+          "objectPolicy": {
+            "id": "fixture-live-object-policy",
+            "version": "v1",
+            "ownerRevision": "owner-snapshot-1",
+            "contentDigest": "sha256:c7a9431573821be445f588fc69738783ec7182674355c4cd2375e9e4899049d6"
+          }
+        },
+        "outcome": {
+          "kind": "selected",
+          "selection": {
+            "schemaVersion": "ark.world-subject-source-selection/v1",
+            "selectedWorldFence": {
+              "schemaVersion": "ark.selected-world-revision-fence/v1",
+              "organizationId": "org-1",
+              "worldInstanceId": "world-1",
+              "revision": 12
+            },
+            "selectionId": "source-selection-1",
+            "selectionSequence": 7,
+            "selectionDigest": "sha256:e8ecf6513964cc1ddfd7917b1f526925d709154846c62765faa237672f27b786",
+            "receiptId": "source-receipt-1",
+            "organizationId": "org-1",
+            "worldInstanceId": "world-1",
+            "subject": {
+              "id": "subject-1",
+              "version": "v1",
+              "ownerRevision": "owner-snapshot-1",
+              "contentDigest": "sha256:5be1861bc5f3ea220b21ca8c617fcf7fa962aaf2d2cb1456f5e21b65bb7a7f67"
+            },
+            "declaration": {
+              "providerId": "fixture-native",
+              "subjectType": {
+                "id": "fixture.device",
+                "version": "v1",
+                "ownerRevision": "owner-snapshot-1",
+                "contentDigest": "sha256:235660cdddc796b5f51d30f5813bae9f6bf402b60cb89ca9ada2f96708a3fc4f"
+              },
+              "valueSchema": {
+                "id": "fixture.device.configuration",
+                "version": "v1",
+                "ownerRevision": "owner-snapshot-1",
+                "contentDigest": "sha256:aef6ea8649c59a3b4cf7335638265156e5899f95a272c1c1bbca5c169ad089c8"
+              },
+              "profile": {
+                "id": "fixture.device.physical",
+                "version": "v1",
+                "ownerRevision": "owner-snapshot-1",
+                "contentDigest": "sha256:6fbb406b6ab5b3ddabfe50c402fd8f623638332d72eae45d8fc7b50239feba76"
+              },
+              "validatorAction": {
+                "id": "fixture-native:qualify-device-source",
+                "version": "v1",
+                "ownerRevision": "owner-snapshot-1",
+                "contentDigest": "sha256:33a0b34dbd01f28bc8e280519da2b28ccc2b07109b65066885fb594c6dbb5922"
+              },
+              "configurationField": "fixture.device.configuration"
+            },
+            "source": {
+              "fact": {
+                "organizationId": "org-1",
+                "kind": "fact",
+                "id": "configuration-fact-1",
+                "version": "v1"
+              },
+              "evidence": {
+                "organizationId": "org-1",
+                "kind": "evidence",
+                "id": "configuration-evidence-1",
+                "version": "v1"
+              },
+              "reference": {
+                "organizationId": "org-1",
+                "kind": "reference",
+                "id": "configuration-reference-1",
+                "version": "v1"
+              },
+              "sourceId": "native-configuration-1",
+              "contentVersion": "v1",
+              "contentDigest": "sha256:a846ce4ed454f002a463cf4e212bfc921c6483297b4624bf155bd5919c5ad6af",
+              "sizeBytes": 57,
+              "provenance": "reported",
+              "validity": {
+                "validFrom": "2023-11-14T22:13:20Z",
+                "validUntil": "2030-01-01T00:00:00Z"
+              },
+              "authorityBoundary": {
+                "kind": "retained_immutable"
+              }
+            },
+            "qualificationScope": "instance_qualification",
+            "qualificationDigest": "sha256:ec0630d540c647d37d599eea445e7338ee8facb5f4ca5bbdb17dba326d101368"
+          }
+        }
+      },
+      "replayed": false
+    }
+  },
+  "successorWithSameSourceBytes": {
+    "schemaVersion": "ark.world-subject-source-selection/v1",
+    "selectedWorldFence": {
+      "schemaVersion": "ark.selected-world-revision-fence/v1",
+      "organizationId": "org-1",
+      "worldInstanceId": "world-1",
+      "revision": 12
+    },
+    "selectionId": "source-selection-2",
+    "selectionSequence": 9,
+    "selectionDigest": "sha256:30f450bd1bd28e73c5be45f37f31fa7aa3c3b622d8a7bc2bddd56b97a25fc33b",
+    "receiptId": "source-receipt-2",
+    "organizationId": "org-1",
+    "worldInstanceId": "world-1",
+    "subject": {
+      "id": "subject-1",
+      "version": "v1",
+      "ownerRevision": "owner-snapshot-1",
+      "contentDigest": "sha256:5be1861bc5f3ea220b21ca8c617fcf7fa962aaf2d2cb1456f5e21b65bb7a7f67"
+    },
+    "declaration": {
+      "providerId": "fixture-native",
+      "subjectType": {
+        "id": "fixture.device",
+        "version": "v1",
+        "ownerRevision": "owner-snapshot-1",
+        "contentDigest": "sha256:235660cdddc796b5f51d30f5813bae9f6bf402b60cb89ca9ada2f96708a3fc4f"
+      },
+      "valueSchema": {
+        "id": "fixture.device.configuration",
+        "version": "v1",
+        "ownerRevision": "owner-snapshot-1",
+        "contentDigest": "sha256:aef6ea8649c59a3b4cf7335638265156e5899f95a272c1c1bbca5c169ad089c8"
+      },
+      "profile": {
+        "id": "fixture.device.physical",
+        "version": "v1",
+        "ownerRevision": "owner-snapshot-1",
+        "contentDigest": "sha256:6fbb406b6ab5b3ddabfe50c402fd8f623638332d72eae45d8fc7b50239feba76"
+      },
+      "validatorAction": {
+        "id": "fixture-native:qualify-device-source",
+        "version": "v1",
+        "ownerRevision": "owner-snapshot-1",
+        "contentDigest": "sha256:33a0b34dbd01f28bc8e280519da2b28ccc2b07109b65066885fb594c6dbb5922"
+      },
+      "configurationField": "fixture.device.configuration"
+    },
+    "source": {
+      "fact": {
+        "organizationId": "org-1",
+        "kind": "fact",
+        "id": "configuration-fact-1",
+        "version": "v1"
+      },
+      "evidence": {
+        "organizationId": "org-1",
+        "kind": "evidence",
+        "id": "configuration-evidence-1",
+        "version": "v1"
+      },
+      "reference": {
+        "organizationId": "org-1",
+        "kind": "reference",
+        "id": "configuration-reference-1",
+        "version": "v1"
+      },
+      "sourceId": "native-configuration-1",
+      "contentVersion": "v1",
+      "contentDigest": "sha256:a846ce4ed454f002a463cf4e212bfc921c6483297b4624bf155bd5919c5ad6af",
+      "sizeBytes": 57,
+      "provenance": "reported",
+      "validity": {
+        "validFrom": "2023-11-14T22:13:20Z",
+        "validUntil": "2030-01-01T00:00:00Z"
+      },
+      "authorityBoundary": {
+        "kind": "retained_immutable"
+      }
+    },
+    "qualificationScope": "instance_qualification",
+    "qualificationDigest": "sha256:ec0630d540c647d37d599eea445e7338ee8facb5f4ca5bbdb17dba326d101368"
+  },
+  "digestDomains": {
+    "select": "ark.world-subject-source-selection/request/v1",
+    "selection": "ark.world-subject-source-selection/selection/v1",
+    "spatialV2": "ark.world-spatial-binding/request/v2",
+    "qualification": "ark.world-subject-source-selection/qualification/v1"
+  },
+  "mutationGoldenV1Unchanged": "sha256:b60d6ee05200f4db63a61be366862f0db0114fd8b3672afde025111bbbfb3f39",
+  "previewPayload": {
+    "kind": "subject_source_preview",
+    "request": {
+      "schemaVersion": "ark.world-subject-source-selection/v1",
+      "operationId": "source-selection-operation-1",
+      "idempotencyKey": "source-selection-key-1",
+      "requestDigest": "sha256:bdea5a6929eac5f2616213ebaa910a8f044fa0987347770abcb993212d8ecc34",
+      "organizationId": "org-1",
+      "worldInstanceId": "world-1",
+      "expectedWorldRevision": 12,
+      "subject": {
+        "id": "subject-1",
+        "version": "v1",
+        "ownerRevision": "owner-snapshot-1",
+        "contentDigest": "sha256:5be1861bc5f3ea220b21ca8c617fcf7fa962aaf2d2cb1456f5e21b65bb7a7f67"
+      },
+      "declaration": {
+        "providerId": "fixture-native",
+        "subjectType": {
+          "id": "fixture.device",
+          "version": "v1",
+          "ownerRevision": "owner-snapshot-1",
+          "contentDigest": "sha256:235660cdddc796b5f51d30f5813bae9f6bf402b60cb89ca9ada2f96708a3fc4f"
+        },
+        "valueSchema": {
+          "id": "fixture.device.configuration",
+          "version": "v1",
+          "ownerRevision": "owner-snapshot-1",
+          "contentDigest": "sha256:aef6ea8649c59a3b4cf7335638265156e5899f95a272c1c1bbca5c169ad089c8"
+        },
+        "profile": {
+          "id": "fixture.device.physical",
+          "version": "v1",
+          "ownerRevision": "owner-snapshot-1",
+          "contentDigest": "sha256:6fbb406b6ab5b3ddabfe50c402fd8f623638332d72eae45d8fc7b50239feba76"
+        },
+        "validatorAction": {
+          "id": "fixture-native:qualify-device-source",
+          "version": "v1",
+          "ownerRevision": "owner-snapshot-1",
+          "contentDigest": "sha256:33a0b34dbd01f28bc8e280519da2b28ccc2b07109b65066885fb594c6dbb5922"
+        },
+        "configurationField": "fixture.device.configuration"
+      },
+      "source": {
+        "fact": {
+          "organizationId": "org-1",
+          "kind": "fact",
+          "id": "configuration-fact-1",
+          "version": "v1"
+        },
+        "evidence": {
+          "organizationId": "org-1",
+          "kind": "evidence",
+          "id": "configuration-evidence-1",
+          "version": "v1"
+        },
+        "reference": {
+          "organizationId": "org-1",
+          "kind": "reference",
+          "id": "configuration-reference-1",
+          "version": "v1"
+        },
+        "sourceId": "native-configuration-1",
+        "contentVersion": "v1",
+        "contentDigest": "sha256:a846ce4ed454f002a463cf4e212bfc921c6483297b4624bf155bd5919c5ad6af",
+        "sizeBytes": 57,
+        "provenance": "reported",
+        "validity": {
+          "validFrom": "2023-11-14T22:13:20Z",
+          "validUntil": "2030-01-01T00:00:00Z"
+        },
+        "authorityBoundary": {
+          "kind": "retained_immutable"
+        }
+      },
+      "qualificationScope": "instance_qualification",
+      "prior": {
+        "kind": "absent"
+      }
+    }
+  },
+  "readPayload": {
+    "kind": "subject_source_read",
+    "request": {
+      "schemaVersion": "ark.world-subject-source-selection/v1",
+      "organizationId": "org-1",
+      "worldInstanceId": "world-1",
+      "subjectId": "subject-1",
+      "expectedWorldRevision": 12,
+      "expectedSelection": {
+        "kind": "selected",
+        "selectionId": "source-selection-1",
+        "selectionSequence": 7,
+        "selectionDigest": "sha256:e8ecf6513964cc1ddfd7917b1f526925d709154846c62765faa237672f27b786"
+      }
+    }
+  },
+  "recoveryPayload": {
+    "kind": "subject_source_get_or_resume",
+    "request": {
+      "schemaVersion": "ark.world-subject-source-selection/v1",
+      "operationId": "source-selection-operation-1",
+      "idempotencyKey": "source-selection-key-1",
+      "requestDigest": "sha256:bdea5a6929eac5f2616213ebaa910a8f044fa0987347770abcb993212d8ecc34",
+      "organizationId": "org-1",
+      "worldInstanceId": "world-1",
+      "expectedWorldRevision": 12,
+      "subjectId": "subject-1",
+      "readOnly": true
+    }
+  },
+  "previewCorrelation": {
+    "schemaVersion": "ark.world-spatial-reconciliation/v1",
+    "operationId": "source-selection-operation-1",
+    "idempotencyKey": "source-selection-key-1",
+    "requestDigest": "sha256:bdea5a6929eac5f2616213ebaa910a8f044fa0987347770abcb993212d8ecc34",
+    "providerId": "world",
+    "actionId": "world:subject-source:preview",
+    "securityContext": {
+      "principalId": "principal-1",
+      "principalKind": "service",
+      "tenantId": "org-1",
+      "roles": [
+        "spatial-author"
+      ],
+      "permissions": [
+        "world:spatial-binding:read",
+        "world:spatial-binding:write",
+        "world:subject-source:read",
+        "world:subject-source:write"
+      ],
+      "delegationChain": [
+        {
+          "principalId": "original-agent",
+          "principalKind": "agent",
+          "delegatedAt": "2023-11-14T22:13:20Z",
+          "expiresAt": "2023-11-14T22:13:50Z"
+        }
+      ],
+      "authenticatedAt": "2023-11-14T22:13:20Z",
+      "expiresAt": "2023-11-14T22:14:20Z",
+      "credentialId": "synthetic-credential-reference",
+      "requestId": "request-1"
+    },
+    "verifiedCaller": {
+      "principalId": "principal-1",
+      "issuer": "trusted-auth",
+      "authorizationDecisionId": "decision-1"
+    },
+    "selectedWorldFence": {
+      "schemaVersion": "ark.selected-world-revision-fence/v1",
+      "organizationId": "org-1",
+      "worldInstanceId": "world-1",
+      "revision": 12
+    },
+    "actionProofDigest": "sha256:c9198bd515b11037d09e931ff7c6eb9a6727bb6968a7e727923911a48b9b8dbd",
+    "forwardedContextProofDigest": "sha256:1519f921f40b2ba13b3cd56f9436807347b0de84c9837302c03ab2e0e58f6ec0",
+    "invocationDigest": "5120a739073840aa339a87b5fefbb0de80a74aa5d436b007a5e03829150951bc"
+  }
+}

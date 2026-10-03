@@ -1,0 +1,852 @@
+{
+  "schema": "ark.world-spatial-reconciliation-fixtures/v1",
+  "syntheticUnsignedValuesOnly": true,
+  "notSigningProofs": {
+    "action": "synthetic-action-proof.not-a-signature",
+    "context": "synthetic-context-proof.not-a-signature"
+  },
+  "operationPayload": {
+    "kind": "apply",
+    "request": {
+      "schemaVersion": "ark.world-spatial-binding/v1",
+      "operationId": "placement-1",
+      "idempotencyKey": "placement-1-key",
+      "organizationId": "org-1",
+      "worldInstanceId": "world-1",
+      "expectedWorldRevision": 12,
+      "subjectId": "subject-1",
+      "fields": {
+        "geometry": "hvac.ahu.geometry",
+        "pose": "hvac.ahu.pose",
+        "extent": "hvac.ahu.extent"
+      },
+      "triple": {
+        "geometry": {
+          "schemaVersion": 1,
+          "representation": "gltf_binary",
+          "artifactRef": "artifact://immutable-model-v1",
+          "contentType": "model/gltf-binary",
+          "coordinateFrame": {
+            "kind": "subject_local",
+            "subjectId": "subject-1"
+          }
+        },
+        "pose": {
+          "schemaVersion": 1,
+          "coordinateFrame": {
+            "kind": "world",
+            "worldInstanceId": "world-1"
+          },
+          "position": {
+            "kind": "cartesian",
+            "xM": 5.0,
+            "yM": 0.0,
+            "zM": 0.0
+          },
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "extent": {
+          "schemaVersion": 1,
+          "coordinateFrame": {
+            "kind": "world",
+            "worldInstanceId": "world-1"
+          },
+          "minimum": {
+            "kind": "cartesian",
+            "xM": 4.0,
+            "yM": -1.0,
+            "zM": -1.0
+          },
+          "maximum": {
+            "kind": "cartesian",
+            "xM": 6.0,
+            "yM": 1.0,
+            "zM": 1.0
+          }
+        }
+      },
+      "expectedAsset": {
+        "artifactId": "artifacts:immutable-model-v1",
+        "artifactRef": "artifact://immutable-model-v1",
+        "sha256": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "sizeBytes": 128,
+        "contentType": "model/gltf-binary"
+      },
+      "source": {
+        "sourceId": "author-model",
+        "sourceRevision": "v1",
+        "provenance": "nominal",
+        "evidenceIds": [
+          "source-evidence-1"
+        ]
+      },
+      "prior": {
+        "kind": "absent"
+      },
+      "requestDigest": "sha256:b60d6ee05200f4db63a61be366862f0db0114fd8b3672afde025111bbbfb3f39"
+    }
+  },
+  "canonicalInvocationJson": "{\"action\":\"world:spatial-binding:apply\",\"identity\":{\"authenticatedAt\":\"2023-11-14T22:13:20Z\",\"credentialId\":\"synthetic-credential-reference\",\"delegationChain\":[{\"delegatedAt\":\"2023-11-14T22:13:20Z\",\"expiresAt\":\"2023-11-14T22:13:50Z\",\"principalId\":\"original-agent\",\"principalKind\":\"agent\"}],\"expiresAt\":\"2023-11-14T22:14:20Z\",\"permissions\":[\"world:spatial-binding:read\",\"world:spatial-binding:write\"],\"principalId\":\"principal-1\",\"principalKind\":\"service\",\"requestId\":\"request-1\",\"roles\":[\"spatial-author\"],\"tenantId\":\"org-1\"},\"payload\":{\"kind\":\"apply\",\"request\":{\"expectedAsset\":{\"artifactId\":\"artifacts:immutable-model-v1\",\"artifactRef\":\"artifact://immutable-model-v1\",\"contentType\":\"model/gltf-binary\",\"sha256\":\"sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"sizeBytes\":128},\"expectedWorldRevision\":12,\"fields\":{\"extent\":\"hvac.ahu.extent\",\"geometry\":\"hvac.ahu.geometry\",\"pose\":\"hvac.ahu.pose\"},\"idempotencyKey\":\"placement-1-key\",\"operationId\":\"placement-1\",\"organizationId\":\"org-1\",\"prior\":{\"kind\":\"absent\"},\"requestDigest\":\"sha256:b60d6ee05200f4db63a61be366862f0db0114fd8b3672afde025111bbbfb3f39\",\"schemaVersion\":\"ark.world-spatial-binding/v1\",\"source\":{\"evidenceIds\":[\"source-evidence-1\"],\"provenance\":\"nominal\",\"sourceId\":\"author-model\",\"sourceRevision\":\"v1\"},\"subjectId\":\"subject-1\",\"triple\":{\"extent\":{\"coordinateFrame\":{\"kind\":\"world\",\"worldInstanceId\":\"world-1\"},\"maximum\":{\"kind\":\"cartesian\",\"xM\":6.0,\"yM\":1.0,\"zM\":1.0},\"minimum\":{\"kind\":\"cartesian\",\"xM\":4.0,\"yM\":-1.0,\"zM\":-1.0},\"schemaVersion\":1},\"geometry\":{\"artifactRef\":\"artifact://immutable-model-v1\",\"contentType\":\"model/gltf-binary\",\"coordinateFrame\":{\"kind\":\"subject_local\",\"subjectId\":\"subject-1\"},\"representation\":\"gltf_binary\",\"schemaVersion\":1},\"pose\":{\"coordinateFrame\":{\"kind\":\"world\",\"worldInstanceId\":\"world-1\"},\"orientation\":[0.0,0.0,0.0,1.0],\"position\":{\"kind\":\"cartesian\",\"xM\":5.0,\"yM\":0.0,\"zM\":0.0},\"scale\":[1.0,1.0,1.0],\"schemaVersion\":1}},\"worldInstanceId\":\"world-1\"}},\"provider\":\"world\",\"world\":{\"organizationId\":\"org-1\",\"revision\":12,\"schemaVersion\":\"ark.selected-world-revision-fence/v1\",\"worldInstanceId\":\"world-1\"}}",
+  "admission": {
+    "correlation": {
+      "schemaVersion": "ark.world-spatial-reconciliation/v1",
+      "operationId": "placement-1",
+      "idempotencyKey": "placement-1-key",
+      "requestDigest": "sha256:b60d6ee05200f4db63a61be366862f0db0114fd8b3672afde025111bbbfb3f39",
+      "providerId": "world",
+      "actionId": "world:spatial-binding:apply",
+      "securityContext": {
+        "principalId": "principal-1",
+        "principalKind": "service",
+        "tenantId": "org-1",
+        "roles": [
+          "spatial-author"
+        ],
+        "permissions": [
+          "world:spatial-binding:read",
+          "world:spatial-binding:write"
+        ],
+        "delegationChain": [
+          {
+            "principalId": "original-agent",
+            "principalKind": "agent",
+            "delegatedAt": "2023-11-14T22:13:20Z",
+            "expiresAt": "2023-11-14T22:13:50Z"
+          }
+        ],
+        "authenticatedAt": "2023-11-14T22:13:20Z",
+        "expiresAt": "2023-11-14T22:14:20Z",
+        "credentialId": "synthetic-credential-reference",
+        "requestId": "request-1"
+      },
+      "verifiedCaller": {
+        "principalId": "principal-1",
+        "issuer": "trusted-auth",
+        "authorizationDecisionId": "decision-1"
+      },
+      "selectedWorldFence": {
+        "schemaVersion": "ark.selected-world-revision-fence/v1",
+        "organizationId": "org-1",
+        "worldInstanceId": "world-1",
+        "revision": 12
+      },
+      "actionProofDigest": "sha256:47c574af651c93bb93ca03d436ffa9f7fa4764a3dc0de66aa50bb2a87f809d7a",
+      "forwardedContextProofDigest": "sha256:6fcdf1f1c588d4b6bb0eb7eaf74b5ff6f45830a092de4da7b82a4bee82a3391b",
+      "invocationDigest": "bc4c9c73249bd8607a81dea24dd0147c50d682eb1ab45ed640240f86f1d6f8f0"
+    },
+    "actionProofExpiresAtUnixMs": 1700000050000,
+    "forwardedContextExpiresAtUnixMs": 1700000060000,
+    "notAfterUnixMs": 1700000029000
+  },
+  "assignedKernel": {
+    "providerId": "world",
+    "runtimeInstanceId": "kernel-incarnation-1",
+    "executableDigest": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+  },
+  "commitAck": {
+    "admission": {
+      "correlation": {
+        "schemaVersion": "ark.world-spatial-reconciliation/v1",
+        "operationId": "placement-1",
+        "idempotencyKey": "placement-1-key",
+        "requestDigest": "sha256:b60d6ee05200f4db63a61be366862f0db0114fd8b3672afde025111bbbfb3f39",
+        "providerId": "world",
+        "actionId": "world:spatial-binding:apply",
+        "securityContext": {
+          "principalId": "principal-1",
+          "principalKind": "service",
+          "tenantId": "org-1",
+          "roles": [
+            "spatial-author"
+          ],
+          "permissions": [
+            "world:spatial-binding:read",
+            "world:spatial-binding:write"
+          ],
+          "delegationChain": [
+            {
+              "principalId": "original-agent",
+              "principalKind": "agent",
+              "delegatedAt": "2023-11-14T22:13:20Z",
+              "expiresAt": "2023-11-14T22:13:50Z"
+            }
+          ],
+          "authenticatedAt": "2023-11-14T22:13:20Z",
+          "expiresAt": "2023-11-14T22:14:20Z",
+          "credentialId": "synthetic-credential-reference",
+          "requestId": "request-1"
+        },
+        "verifiedCaller": {
+          "principalId": "principal-1",
+          "issuer": "trusted-auth",
+          "authorizationDecisionId": "decision-1"
+        },
+        "selectedWorldFence": {
+          "schemaVersion": "ark.selected-world-revision-fence/v1",
+          "organizationId": "org-1",
+          "worldInstanceId": "world-1",
+          "revision": 12
+        },
+        "actionProofDigest": "sha256:47c574af651c93bb93ca03d436ffa9f7fa4764a3dc0de66aa50bb2a87f809d7a",
+        "forwardedContextProofDigest": "sha256:6fcdf1f1c588d4b6bb0eb7eaf74b5ff6f45830a092de4da7b82a4bee82a3391b",
+        "invocationDigest": "bc4c9c73249bd8607a81dea24dd0147c50d682eb1ab45ed640240f86f1d6f8f0"
+      },
+      "actionProofExpiresAtUnixMs": 1700000050000,
+      "forwardedContextExpiresAtUnixMs": 1700000060000,
+      "notAfterUnixMs": 1700000029000
+    },
+    "kernel": {
+      "providerId": "world",
+      "runtimeInstanceId": "kernel-incarnation-1",
+      "executableDigest": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+    },
+    "acknowledgement": "commit_acknowledged",
+    "reconciliationId": "kernel-reconcile-1",
+    "quiescentAtUnixMs": 1700000090000,
+    "quiescence": {
+      "kind": "drained"
+    },
+    "outcome": {
+      "kind": "terminal",
+      "receipt": {
+        "schemaVersion": "ark.world-spatial-binding/v1",
+        "operationId": "placement-1",
+        "idempotencyKey": "placement-1-key",
+        "requestDigest": "sha256:b60d6ee05200f4db63a61be366862f0db0114fd8b3672afde025111bbbfb3f39",
+        "subjectId": "subject-1",
+        "fields": {
+          "geometry": "hvac.ahu.geometry",
+          "pose": "hvac.ahu.pose",
+          "extent": "hvac.ahu.extent"
+        },
+        "verifiedCaller": {
+          "principalId": "principal-1",
+          "issuer": "trusted-auth",
+          "authorizationDecisionId": "decision-1"
+        },
+        "selectedWorldFence": {
+          "schemaVersion": "ark.selected-world-revision-fence/v1",
+          "organizationId": "org-1",
+          "worldInstanceId": "world-1",
+          "revision": 12
+        },
+        "revisionPolicy": "bound_to_selected_world_revision",
+        "prior": {
+          "kind": "absent"
+        },
+        "receiptId": "receipt-1",
+        "expectedAsset": {
+          "artifactId": "artifacts:immutable-model-v1",
+          "artifactRef": "artifact://immutable-model-v1",
+          "sha256": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "sizeBytes": 128,
+          "contentType": "model/gltf-binary"
+        },
+        "assetVerified": true,
+        "source": {
+          "sourceId": "author-model",
+          "sourceRevision": "v1",
+          "provenance": "nominal",
+          "evidenceIds": [
+            "source-evidence-1"
+          ]
+        },
+        "outcome": {
+          "kind": "accepted",
+          "bundleId": "bundle-1",
+          "bindingSequence": 1,
+          "factIds": {
+            "geometry": "fact-g-1",
+            "pose": "fact-p-1",
+            "extent": "fact-e-1"
+          },
+          "evidenceIds": {
+            "geometry": "evidence-g-1",
+            "pose": "evidence-p-1",
+            "extent": "evidence-e-1"
+          }
+        }
+      },
+      "replayed": false
+    }
+  },
+  "abortAck": {
+    "admission": {
+      "correlation": {
+        "schemaVersion": "ark.world-spatial-reconciliation/v1",
+        "operationId": "placement-1",
+        "idempotencyKey": "placement-1-key",
+        "requestDigest": "sha256:b60d6ee05200f4db63a61be366862f0db0114fd8b3672afde025111bbbfb3f39",
+        "providerId": "world",
+        "actionId": "world:spatial-binding:apply",
+        "securityContext": {
+          "principalId": "principal-1",
+          "principalKind": "service",
+          "tenantId": "org-1",
+          "roles": [
+            "spatial-author"
+          ],
+          "permissions": [
+            "world:spatial-binding:read",
+            "world:spatial-binding:write"
+          ],
+          "delegationChain": [
+            {
+              "principalId": "original-agent",
+              "principalKind": "agent",
+              "delegatedAt": "2023-11-14T22:13:20Z",
+              "expiresAt": "2023-11-14T22:13:50Z"
+            }
+          ],
+          "authenticatedAt": "2023-11-14T22:13:20Z",
+          "expiresAt": "2023-11-14T22:14:20Z",
+          "credentialId": "synthetic-credential-reference",
+          "requestId": "request-1"
+        },
+        "verifiedCaller": {
+          "principalId": "principal-1",
+          "issuer": "trusted-auth",
+          "authorizationDecisionId": "decision-1"
+        },
+        "selectedWorldFence": {
+          "schemaVersion": "ark.selected-world-revision-fence/v1",
+          "organizationId": "org-1",
+          "worldInstanceId": "world-1",
+          "revision": 12
+        },
+        "actionProofDigest": "sha256:47c574af651c93bb93ca03d436ffa9f7fa4764a3dc0de66aa50bb2a87f809d7a",
+        "forwardedContextProofDigest": "sha256:6fcdf1f1c588d4b6bb0eb7eaf74b5ff6f45830a092de4da7b82a4bee82a3391b",
+        "invocationDigest": "bc4c9c73249bd8607a81dea24dd0147c50d682eb1ab45ed640240f86f1d6f8f0"
+      },
+      "actionProofExpiresAtUnixMs": 1700000050000,
+      "forwardedContextExpiresAtUnixMs": 1700000060000,
+      "notAfterUnixMs": 1700000029000
+    },
+    "kernel": {
+      "providerId": "world",
+      "runtimeInstanceId": "kernel-incarnation-1",
+      "executableDigest": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+    },
+    "acknowledgement": "abort_acknowledged",
+    "reconciliationId": "kernel-abort-1",
+    "quiescentAtUnixMs": 1700000090000,
+    "quiescence": {
+      "kind": "drained"
+    },
+    "outcome": {
+      "kind": "staged",
+      "stage": "facts_staged"
+    }
+  },
+  "restartAck": {
+    "admission": {
+      "correlation": {
+        "schemaVersion": "ark.world-spatial-reconciliation/v1",
+        "operationId": "placement-1",
+        "idempotencyKey": "placement-1-key",
+        "requestDigest": "sha256:b60d6ee05200f4db63a61be366862f0db0114fd8b3672afde025111bbbfb3f39",
+        "providerId": "world",
+        "actionId": "world:spatial-binding:apply",
+        "securityContext": {
+          "principalId": "principal-1",
+          "principalKind": "service",
+          "tenantId": "org-1",
+          "roles": [
+            "spatial-author"
+          ],
+          "permissions": [
+            "world:spatial-binding:read",
+            "world:spatial-binding:write"
+          ],
+          "delegationChain": [
+            {
+              "principalId": "original-agent",
+              "principalKind": "agent",
+              "delegatedAt": "2023-11-14T22:13:20Z",
+              "expiresAt": "2023-11-14T22:13:50Z"
+            }
+          ],
+          "authenticatedAt": "2023-11-14T22:13:20Z",
+          "expiresAt": "2023-11-14T22:14:20Z",
+          "credentialId": "synthetic-credential-reference",
+          "requestId": "request-1"
+        },
+        "verifiedCaller": {
+          "principalId": "principal-1",
+          "issuer": "trusted-auth",
+          "authorizationDecisionId": "decision-1"
+        },
+        "selectedWorldFence": {
+          "schemaVersion": "ark.selected-world-revision-fence/v1",
+          "organizationId": "org-1",
+          "worldInstanceId": "world-1",
+          "revision": 12
+        },
+        "actionProofDigest": "sha256:47c574af651c93bb93ca03d436ffa9f7fa4764a3dc0de66aa50bb2a87f809d7a",
+        "forwardedContextProofDigest": "sha256:6fcdf1f1c588d4b6bb0eb7eaf74b5ff6f45830a092de4da7b82a4bee82a3391b",
+        "invocationDigest": "bc4c9c73249bd8607a81dea24dd0147c50d682eb1ab45ed640240f86f1d6f8f0"
+      },
+      "actionProofExpiresAtUnixMs": 1700000050000,
+      "forwardedContextExpiresAtUnixMs": 1700000060000,
+      "notAfterUnixMs": 1700000029000
+    },
+    "kernel": {
+      "providerId": "world",
+      "runtimeInstanceId": "kernel-incarnation-1",
+      "executableDigest": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+    },
+    "acknowledgement": "reconciled",
+    "reconciliationId": "kernel-restart-reconcile-1",
+    "quiescentAtUnixMs": 1700000090000,
+    "quiescence": {
+      "kind": "restart_reconciled",
+      "replacementKernel": {
+        "providerId": "world",
+        "runtimeInstanceId": "kernel-incarnation-2",
+        "executableDigest": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "drainId": "durable-drain-1"
+    },
+    "outcome": {
+      "kind": "terminal",
+      "receipt": {
+        "schemaVersion": "ark.world-spatial-binding/v1",
+        "operationId": "placement-1",
+        "idempotencyKey": "placement-1-key",
+        "requestDigest": "sha256:b60d6ee05200f4db63a61be366862f0db0114fd8b3672afde025111bbbfb3f39",
+        "subjectId": "subject-1",
+        "fields": {
+          "geometry": "hvac.ahu.geometry",
+          "pose": "hvac.ahu.pose",
+          "extent": "hvac.ahu.extent"
+        },
+        "verifiedCaller": {
+          "principalId": "principal-1",
+          "issuer": "trusted-auth",
+          "authorizationDecisionId": "decision-1"
+        },
+        "selectedWorldFence": {
+          "schemaVersion": "ark.selected-world-revision-fence/v1",
+          "organizationId": "org-1",
+          "worldInstanceId": "world-1",
+          "revision": 12
+        },
+        "revisionPolicy": "bound_to_selected_world_revision",
+        "prior": {
+          "kind": "absent"
+        },
+        "receiptId": "receipt-1",
+        "expectedAsset": {
+          "artifactId": "artifacts:immutable-model-v1",
+          "artifactRef": "artifact://immutable-model-v1",
+          "sha256": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "sizeBytes": 128,
+          "contentType": "model/gltf-binary"
+        },
+        "assetVerified": true,
+        "source": {
+          "sourceId": "author-model",
+          "sourceRevision": "v1",
+          "provenance": "nominal",
+          "evidenceIds": [
+            "source-evidence-1"
+          ]
+        },
+        "outcome": {
+          "kind": "accepted",
+          "bundleId": "bundle-1",
+          "bindingSequence": 1,
+          "factIds": {
+            "geometry": "fact-g-1",
+            "pose": "fact-p-1",
+            "extent": "fact-e-1"
+          },
+          "evidenceIds": {
+            "geometry": "evidence-g-1",
+            "pose": "evidence-p-1",
+            "extent": "evidence-e-1"
+          }
+        }
+      },
+      "replayed": false
+    }
+  },
+  "drainRequest": {
+    "admission": {
+      "correlation": {
+        "schemaVersion": "ark.world-spatial-reconciliation/v1",
+        "operationId": "placement-1",
+        "idempotencyKey": "placement-1-key",
+        "requestDigest": "sha256:b60d6ee05200f4db63a61be366862f0db0114fd8b3672afde025111bbbfb3f39",
+        "providerId": "world",
+        "actionId": "world:spatial-binding:apply",
+        "securityContext": {
+          "principalId": "principal-1",
+          "principalKind": "service",
+          "tenantId": "org-1",
+          "roles": [
+            "spatial-author"
+          ],
+          "permissions": [
+            "world:spatial-binding:read",
+            "world:spatial-binding:write"
+          ],
+          "delegationChain": [
+            {
+              "principalId": "original-agent",
+              "principalKind": "agent",
+              "delegatedAt": "2023-11-14T22:13:20Z",
+              "expiresAt": "2023-11-14T22:13:50Z"
+            }
+          ],
+          "authenticatedAt": "2023-11-14T22:13:20Z",
+          "expiresAt": "2023-11-14T22:14:20Z",
+          "credentialId": "synthetic-credential-reference",
+          "requestId": "request-1"
+        },
+        "verifiedCaller": {
+          "principalId": "principal-1",
+          "issuer": "trusted-auth",
+          "authorizationDecisionId": "decision-1"
+        },
+        "selectedWorldFence": {
+          "schemaVersion": "ark.selected-world-revision-fence/v1",
+          "organizationId": "org-1",
+          "worldInstanceId": "world-1",
+          "revision": 12
+        },
+        "actionProofDigest": "sha256:47c574af651c93bb93ca03d436ffa9f7fa4764a3dc0de66aa50bb2a87f809d7a",
+        "forwardedContextProofDigest": "sha256:6fcdf1f1c588d4b6bb0eb7eaf74b5ff6f45830a092de4da7b82a4bee82a3391b",
+        "invocationDigest": "bc4c9c73249bd8607a81dea24dd0147c50d682eb1ab45ed640240f86f1d6f8f0"
+      },
+      "actionProofExpiresAtUnixMs": 1700000050000,
+      "forwardedContextExpiresAtUnixMs": 1700000060000,
+      "notAfterUnixMs": 1700000029000
+    },
+    "kernel": {
+      "providerId": "world",
+      "runtimeInstanceId": "kernel-incarnation-1",
+      "executableDigest": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+    },
+    "intent": "drain"
+  },
+  "abortRequest": {
+    "admission": {
+      "correlation": {
+        "schemaVersion": "ark.world-spatial-reconciliation/v1",
+        "operationId": "placement-1",
+        "idempotencyKey": "placement-1-key",
+        "requestDigest": "sha256:b60d6ee05200f4db63a61be366862f0db0114fd8b3672afde025111bbbfb3f39",
+        "providerId": "world",
+        "actionId": "world:spatial-binding:apply",
+        "securityContext": {
+          "principalId": "principal-1",
+          "principalKind": "service",
+          "tenantId": "org-1",
+          "roles": [
+            "spatial-author"
+          ],
+          "permissions": [
+            "world:spatial-binding:read",
+            "world:spatial-binding:write"
+          ],
+          "delegationChain": [
+            {
+              "principalId": "original-agent",
+              "principalKind": "agent",
+              "delegatedAt": "2023-11-14T22:13:20Z",
+              "expiresAt": "2023-11-14T22:13:50Z"
+            }
+          ],
+          "authenticatedAt": "2023-11-14T22:13:20Z",
+          "expiresAt": "2023-11-14T22:14:20Z",
+          "credentialId": "synthetic-credential-reference",
+          "requestId": "request-1"
+        },
+        "verifiedCaller": {
+          "principalId": "principal-1",
+          "issuer": "trusted-auth",
+          "authorizationDecisionId": "decision-1"
+        },
+        "selectedWorldFence": {
+          "schemaVersion": "ark.selected-world-revision-fence/v1",
+          "organizationId": "org-1",
+          "worldInstanceId": "world-1",
+          "revision": 12
+        },
+        "actionProofDigest": "sha256:47c574af651c93bb93ca03d436ffa9f7fa4764a3dc0de66aa50bb2a87f809d7a",
+        "forwardedContextProofDigest": "sha256:6fcdf1f1c588d4b6bb0eb7eaf74b5ff6f45830a092de4da7b82a4bee82a3391b",
+        "invocationDigest": "bc4c9c73249bd8607a81dea24dd0147c50d682eb1ab45ed640240f86f1d6f8f0"
+      },
+      "actionProofExpiresAtUnixMs": 1700000050000,
+      "forwardedContextExpiresAtUnixMs": 1700000060000,
+      "notAfterUnixMs": 1700000029000
+    },
+    "kernel": {
+      "providerId": "world",
+      "runtimeInstanceId": "kernel-incarnation-1",
+      "executableDigest": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+    },
+    "intent": "abort_and_drain"
+  },
+  "resumeProjections": {
+    "legacy": {
+      "correlation": {
+        "schemaVersion": "ark.world-spatial-reconciliation/v1",
+        "operationId": "placement-1",
+        "idempotencyKey": "placement-1-key",
+        "requestDigest": "sha256:b60d6ee05200f4db63a61be366862f0db0114fd8b3672afde025111bbbfb3f39",
+        "providerId": "world",
+        "actionId": "world:spatial-binding:get-or-resume",
+        "securityContext": {
+          "principalId": "principal-1",
+          "principalKind": "service",
+          "tenantId": "org-1",
+          "roles": [
+            "spatial-author"
+          ],
+          "permissions": [
+            "world:spatial-binding:read",
+            "world:spatial-binding:write"
+          ],
+          "delegationChain": [
+            {
+              "principalId": "original-agent",
+              "principalKind": "agent",
+              "delegatedAt": "2023-11-14T22:13:20Z",
+              "expiresAt": "2023-11-14T22:13:50Z"
+            }
+          ],
+          "authenticatedAt": "2023-11-14T22:13:20Z",
+          "expiresAt": "2023-11-14T22:14:20Z",
+          "credentialId": "synthetic-credential-reference",
+          "requestId": "request-1"
+        },
+        "verifiedCaller": {
+          "principalId": "principal-1",
+          "issuer": "trusted-auth",
+          "authorizationDecisionId": "decision-1"
+        },
+        "selectedWorldFence": {
+          "schemaVersion": "ark.selected-world-revision-fence/v1",
+          "organizationId": "org-1",
+          "worldInstanceId": "world-1",
+          "revision": 12
+        },
+        "actionProofDigest": "sha256:47c574af651c93bb93ca03d436ffa9f7fa4764a3dc0de66aa50bb2a87f809d7a",
+        "forwardedContextProofDigest": "sha256:6fcdf1f1c588d4b6bb0eb7eaf74b5ff6f45830a092de4da7b82a4bee82a3391b",
+        "invocationDigest": "b780b4128456c1b37b07ca4bee3a86e481657552b207f5986eb3cee81f1e5e61"
+      },
+      "operationPayload": {
+        "kind": "get_or_resume",
+        "request": {
+          "schemaVersion": "ark.world-spatial-binding/v1",
+          "operationId": "placement-1",
+          "idempotencyKey": "placement-1-key",
+          "requestDigest": "sha256:b60d6ee05200f4db63a61be366862f0db0114fd8b3672afde025111bbbfb3f39",
+          "organizationId": "org-1",
+          "worldInstanceId": "world-1",
+          "expectedWorldRevision": 12
+        }
+      },
+      "canonicalInvocationJson": "{\"action\":\"world:spatial-binding:get-or-resume\",\"identity\":{\"authenticatedAt\":\"2023-11-14T22:13:20Z\",\"credentialId\":\"synthetic-credential-reference\",\"delegationChain\":[{\"delegatedAt\":\"2023-11-14T22:13:20Z\",\"expiresAt\":\"2023-11-14T22:13:50Z\",\"principalId\":\"original-agent\",\"principalKind\":\"agent\"}],\"expiresAt\":\"2023-11-14T22:14:20Z\",\"permissions\":[\"world:spatial-binding:read\",\"world:spatial-binding:write\"],\"principalId\":\"principal-1\",\"principalKind\":\"service\",\"requestId\":\"request-1\",\"roles\":[\"spatial-author\"],\"tenantId\":\"org-1\"},\"payload\":{\"kind\":\"get_or_resume\",\"request\":{\"expectedWorldRevision\":12,\"idempotencyKey\":\"placement-1-key\",\"operationId\":\"placement-1\",\"organizationId\":\"org-1\",\"requestDigest\":\"sha256:b60d6ee05200f4db63a61be366862f0db0114fd8b3672afde025111bbbfb3f39\",\"schemaVersion\":\"ark.world-spatial-binding/v1\",\"worldInstanceId\":\"world-1\"}},\"provider\":\"world\",\"world\":{\"organizationId\":\"org-1\",\"revision\":12,\"schemaVersion\":\"ark.selected-world-revision-fence/v1\",\"worldInstanceId\":\"world-1\"}}"
+    },
+    "readOnly": {
+      "correlation": {
+        "schemaVersion": "ark.world-spatial-reconciliation/v1",
+        "operationId": "placement-1",
+        "idempotencyKey": "placement-1-key",
+        "requestDigest": "sha256:b60d6ee05200f4db63a61be366862f0db0114fd8b3672afde025111bbbfb3f39",
+        "providerId": "world",
+        "actionId": "world:spatial-binding:get-or-resume",
+        "securityContext": {
+          "principalId": "principal-1",
+          "principalKind": "service",
+          "tenantId": "org-1",
+          "roles": [
+            "spatial-author"
+          ],
+          "permissions": [
+            "world:spatial-binding:read",
+            "world:spatial-binding:write"
+          ],
+          "delegationChain": [
+            {
+              "principalId": "original-agent",
+              "principalKind": "agent",
+              "delegatedAt": "2023-11-14T22:13:20Z",
+              "expiresAt": "2023-11-14T22:13:50Z"
+            }
+          ],
+          "authenticatedAt": "2023-11-14T22:13:20Z",
+          "expiresAt": "2023-11-14T22:14:20Z",
+          "credentialId": "synthetic-credential-reference",
+          "requestId": "request-1"
+        },
+        "verifiedCaller": {
+          "principalId": "principal-1",
+          "issuer": "trusted-auth",
+          "authorizationDecisionId": "decision-1"
+        },
+        "selectedWorldFence": {
+          "schemaVersion": "ark.selected-world-revision-fence/v1",
+          "organizationId": "org-1",
+          "worldInstanceId": "world-1",
+          "revision": 12
+        },
+        "actionProofDigest": "sha256:47c574af651c93bb93ca03d436ffa9f7fa4764a3dc0de66aa50bb2a87f809d7a",
+        "forwardedContextProofDigest": "sha256:6fcdf1f1c588d4b6bb0eb7eaf74b5ff6f45830a092de4da7b82a4bee82a3391b",
+        "invocationDigest": "75e75c313670c2a73547ce7bf85bda404c49cfae906bf5d2f80277d0c2b056f1"
+      },
+      "operationPayload": {
+        "kind": "get_or_resume",
+        "request": {
+          "schemaVersion": "ark.world-spatial-binding/v1",
+          "operationId": "placement-1",
+          "idempotencyKey": "placement-1-key",
+          "requestDigest": "sha256:b60d6ee05200f4db63a61be366862f0db0114fd8b3672afde025111bbbfb3f39",
+          "organizationId": "org-1",
+          "worldInstanceId": "world-1",
+          "expectedWorldRevision": 12,
+          "readOnly": true
+        }
+      },
+      "canonicalInvocationJson": "{\"action\":\"world:spatial-binding:get-or-resume\",\"identity\":{\"authenticatedAt\":\"2023-11-14T22:13:20Z\",\"credentialId\":\"synthetic-credential-reference\",\"delegationChain\":[{\"delegatedAt\":\"2023-11-14T22:13:20Z\",\"expiresAt\":\"2023-11-14T22:13:50Z\",\"principalId\":\"original-agent\",\"principalKind\":\"agent\"}],\"expiresAt\":\"2023-11-14T22:14:20Z\",\"permissions\":[\"world:spatial-binding:read\",\"world:spatial-binding:write\"],\"principalId\":\"principal-1\",\"principalKind\":\"service\",\"requestId\":\"request-1\",\"roles\":[\"spatial-author\"],\"tenantId\":\"org-1\"},\"payload\":{\"kind\":\"get_or_resume\",\"request\":{\"expectedWorldRevision\":12,\"idempotencyKey\":\"placement-1-key\",\"operationId\":\"placement-1\",\"organizationId\":\"org-1\",\"readOnly\":true,\"requestDigest\":\"sha256:b60d6ee05200f4db63a61be366862f0db0114fd8b3672afde025111bbbfb3f39\",\"schemaVersion\":\"ark.world-spatial-binding/v1\",\"worldInstanceId\":\"world-1\"}},\"provider\":\"world\",\"world\":{\"organizationId\":\"org-1\",\"revision\":12,\"schemaVersion\":\"ark.selected-world-revision-fence/v1\",\"worldInstanceId\":\"world-1\"}}"
+    },
+    "explicitResume": {
+      "correlation": {
+        "schemaVersion": "ark.world-spatial-reconciliation/v1",
+        "operationId": "placement-1",
+        "idempotencyKey": "placement-1-key",
+        "requestDigest": "sha256:b60d6ee05200f4db63a61be366862f0db0114fd8b3672afde025111bbbfb3f39",
+        "providerId": "world",
+        "actionId": "world:spatial-binding:get-or-resume",
+        "securityContext": {
+          "principalId": "principal-1",
+          "principalKind": "service",
+          "tenantId": "org-1",
+          "roles": [
+            "spatial-author"
+          ],
+          "permissions": [
+            "world:spatial-binding:read",
+            "world:spatial-binding:write"
+          ],
+          "delegationChain": [
+            {
+              "principalId": "original-agent",
+              "principalKind": "agent",
+              "delegatedAt": "2023-11-14T22:13:20Z",
+              "expiresAt": "2023-11-14T22:13:50Z"
+            }
+          ],
+          "authenticatedAt": "2023-11-14T22:13:20Z",
+          "expiresAt": "2023-11-14T22:14:20Z",
+          "credentialId": "synthetic-credential-reference",
+          "requestId": "request-1"
+        },
+        "verifiedCaller": {
+          "principalId": "principal-1",
+          "issuer": "trusted-auth",
+          "authorizationDecisionId": "decision-1"
+        },
+        "selectedWorldFence": {
+          "schemaVersion": "ark.selected-world-revision-fence/v1",
+          "organizationId": "org-1",
+          "worldInstanceId": "world-1",
+          "revision": 12
+        },
+        "actionProofDigest": "sha256:47c574af651c93bb93ca03d436ffa9f7fa4764a3dc0de66aa50bb2a87f809d7a",
+        "forwardedContextProofDigest": "sha256:6fcdf1f1c588d4b6bb0eb7eaf74b5ff6f45830a092de4da7b82a4bee82a3391b",
+        "invocationDigest": "634d8cef4353731e77e8cc59722c8bb901cad5b8c0ac13ce8af5d9c184124387"
+      },
+      "operationPayload": {
+        "kind": "get_or_resume",
+        "request": {
+          "schemaVersion": "ark.world-spatial-binding/v1",
+          "operationId": "placement-1",
+          "idempotencyKey": "placement-1-key",
+          "requestDigest": "sha256:b60d6ee05200f4db63a61be366862f0db0114fd8b3672afde025111bbbfb3f39",
+          "organizationId": "org-1",
+          "worldInstanceId": "world-1",
+          "expectedWorldRevision": 12,
+          "readOnly": false
+        }
+      },
+      "canonicalInvocationJson": "{\"action\":\"world:spatial-binding:get-or-resume\",\"identity\":{\"authenticatedAt\":\"2023-11-14T22:13:20Z\",\"credentialId\":\"synthetic-credential-reference\",\"delegationChain\":[{\"delegatedAt\":\"2023-11-14T22:13:20Z\",\"expiresAt\":\"2023-11-14T22:13:50Z\",\"principalId\":\"original-agent\",\"principalKind\":\"agent\"}],\"expiresAt\":\"2023-11-14T22:14:20Z\",\"permissions\":[\"world:spatial-binding:read\",\"world:spatial-binding:write\"],\"principalId\":\"principal-1\",\"principalKind\":\"service\",\"requestId\":\"request-1\",\"roles\":[\"spatial-author\"],\"tenantId\":\"org-1\"},\"payload\":{\"kind\":\"get_or_resume\",\"request\":{\"expectedWorldRevision\":12,\"idempotencyKey\":\"placement-1-key\",\"operationId\":\"placement-1\",\"organizationId\":\"org-1\",\"readOnly\":false,\"requestDigest\":\"sha256:b60d6ee05200f4db63a61be366862f0db0114fd8b3672afde025111bbbfb3f39\",\"schemaVersion\":\"ark.world-spatial-binding/v1\",\"worldInstanceId\":\"world-1\"}},\"provider\":\"world\",\"world\":{\"organizationId\":\"org-1\",\"revision\":12,\"schemaVersion\":\"ark.selected-world-revision-fence/v1\",\"worldInstanceId\":\"world-1\"}}"
+    }
+  },
+  "expiryCases": [
+    {
+      "nowUnixMs": 1700000028999,
+      "mayAdmit": true
+    },
+    {
+      "nowUnixMs": 1700000029000,
+      "mayAdmit": false
+    },
+    {
+      "nowUnixMs": 1700000100000,
+      "mayAdmit": false
+    }
+  ],
+  "nonReleasingSignals": [
+    "pending",
+    "terminal_without_quiescence",
+    "network_error",
+    "deadline_expired",
+    "cancel_sent_unacknowledged",
+    "local_future_dropped",
+    "kernel_process_exited",
+    "new_kernel_started_without_data_drain"
+  ],
+  "releaseCases": [
+    {
+      "ack": "commitAck",
+      "mayReleaseAfterAuthenticatedVerifiedAck": true,
+      "newAcceptance": true
+    },
+    {
+      "ack": "abortAck",
+      "mayReleaseAfterAuthenticatedVerifiedAck": true,
+      "newAcceptance": false
+    },
+    {
+      "ack": "restartAck",
+      "mayReleaseAfterAuthenticatedVerifiedAck": true,
+      "newAcceptance": false
+    }
+  ],
+  "mismatchPaths": [
+    "admission.correlation.operationId",
+    "admission.correlation.idempotencyKey",
+    "admission.correlation.requestDigest",
+    "admission.correlation.providerId",
+    "admission.correlation.actionId",
+    "admission.correlation.securityContext.requestId",
+    "admission.correlation.securityContext.principalKind",
+    "admission.correlation.securityContext.credentialId",
+    "admission.correlation.securityContext.permissions",
+    "admission.correlation.verifiedCaller.issuer",
+    "admission.correlation.selectedWorldFence.organizationId",
+    "admission.correlation.selectedWorldFence.worldInstanceId",
+    "admission.correlation.selectedWorldFence.revision",
+    "admission.correlation.invocationDigest",
+    "admission.correlation.actionProofDigest",
+    "admission.correlation.forwardedContextProofDigest",
+    "admission.notAfterUnixMs",
+    "kernel.runtimeInstanceId",
+    "kernel.executableDigest"
+  ],
+  "mismatchExpectedError": "WORLD_SPATIAL_RECOVERY_REQUIRED"
+}
