@@ -568,7 +568,7 @@ dependencies = [
 
 [[package]]
 name = "univers-aip-contracts-file-authority-ipc"
-version = "0.1.13"
+version = "0.1.14"
 dependencies = [
  "async-trait",
  "bytes",
@@ -614,9 +614,9 @@ dependencies = [
 
 [[package]]
 name = "univers-aip-contracts-world"
-version = "1.0.0-rc.11"
+version = "1.0.0-rc.15"
 source = "sparse+https://david-server.mink-ph.ts.net/api/v1/crates/"
-checksum = "ce524c8af944737681b168891b063226c74c7a47180d6875496e2f866e717c8a"
+checksum = "543ad904333259784f700e40dac238f15ad654ae2e7b0ec19a998905ede33447"
 dependencies = [
  "async-trait",
  "chrono",
@@ -631,9 +631,9 @@ dependencies = [
 
 [[package]]
 name = "univers-aip-contracts-world-ipc"
-version = "0.3.12-dev.10"
+version = "0.3.12-dev.12"
 source = "sparse+https://david-server.mink-ph.ts.net/api/v1/crates/"
-checksum = "dda10d12a09a364c728e720b0b3c9ac97915bcaef0cfc55aaf1e608f16097efa"
+checksum = "969bbdfcdb2d74fed118af25ed579ecf2596fd657eade8872d1c688b04dd872c"
 dependencies = [
  "chrono",
  "rmp-serde",
@@ -647,9 +647,9 @@ dependencies = [
 
 [[package]]
 name = "univers-aip-lib-forwarded-context"
-version = "0.1.3-dev.3"
+version = "0.1.3-dev.4"
 source = "sparse+https://david-server.mink-ph.ts.net/api/v1/crates/"
-checksum = "b3ced88252e080747d7f21998c5ab6499996f8ab7da48638cc05c9fc4f44acc6"
+checksum = "58f150f9bc9e9c220cac73ae53b89757bcb69fc1d75327f4527ed26f3ccbb219"
 dependencies = [
  "base64",
  "chrono",
@@ -677,9 +677,9 @@ dependencies = [
 
 [[package]]
 name = "univers-file-governed-policy"
-version = "0.1.0-dev.5"
+version = "0.1.0-dev.6"
 source = "sparse+https://david-server.mink-ph.ts.net/api/v1/crates/"
-checksum = "cfa56e68c2e356dfab08266bc08a3dbd9395e42d9fe6b4f639e441f91dcfe9be"
+checksum = "9ef66eed133e4f446d392c74b5d02cecdc85aae01eb2b4af399d71d8cec6f653"
 dependencies = [
  "async-trait",
  "bytes",

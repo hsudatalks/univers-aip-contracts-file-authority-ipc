@@ -1,5 +1,13 @@
 # File authority IPC contract
 
+Version 0.1.14 admits issued WorldIPC0.3.12-dev.12 and Files
+Policy0.1.0-dev.6 for the C1rc15/C3dev12 World SDK graph while preserving every
+0.1.13 capability, retention, world-verifier and world-policy-projection API,
+schema, operation, codec, feature and bound. It does not add feature-off
+behavior, copied guards or local authority; consumers still prove real
+World/File policy, current Auth and actual same-store records through their
+owner graphs.
+
 Version 0.1.13 admits actually issued Files Policy0.1.0-dev.5 for the optional
 `world-policy-projection` graph. It retains the issued WorldIPC0.3.12-dev.10
 pin and every 0.1.12 schema, operation, identity/fingerprint, codec, feature and

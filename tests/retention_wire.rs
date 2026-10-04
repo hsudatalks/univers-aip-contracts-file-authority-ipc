@@ -12,7 +12,7 @@ use support::*;
 #[test]
 fn complete_original_body_and_all_lifecycle_wire_roundtrip_without_projection() {
     let (retained, bytes) = retained();
-    let requests = vec![
+    let requests = [
         Request::Probe,
         Request::Acquire(Box::new(retained.original.clone())),
         Request::Restore(Box::new(retained.clone())),
@@ -31,7 +31,7 @@ fn complete_original_body_and_all_lifecycle_wire_roundtrip_without_projection() 
             removal: removal(&retained),
         },
     ];
-    let replies = vec![
+    let replies = [
         Reply::Protocol(Protocol {
             schema_version: SCHEMA.into(),
             capabilities: vec![CAPABILITY.into()],
