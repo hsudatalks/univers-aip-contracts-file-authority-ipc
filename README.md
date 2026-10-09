@@ -1,5 +1,25 @@
 # File authority IPC contract
 
+Version 0.1.15 replaces this crate's exact Univers dependency pins with bounded
+compatible ranges, retaining the accepted lower bounds and the workspace's
+contracts-world rc.15 lock. All 0.1.14 APIs, schemas, codecs, features and bounds
+remain unchanged. This crate has no direct contracts-world requirement; WorldIPC
+and Files Policy supply that dependency. A consumer can select published
+WorldIPC 0.4.0-dev.5, Files Policy 0.1.0-dev.7 and contracts-world 1.0.0-rc.18
+without requiring this workspace to select rc.18 before publication.
+
+The WorldIPC range names both prerelease cores, from 0.3.12-dev.12 through
+0.4.0-dev.5 inclusive. Cargo does not admit a new core's prerelease through a
+plain stable upper bound such as `<0.5.0`; the inclusive upper bound admits the
+verified 0.4.0 candidate while preserving the existing 0.3.12 workspace lock.
+Later WorldIPC candidates require an explicit compatibility review. Other
+Univers ranges follow the workspace dependency policy with accepted prerelease
+lower bounds and the next minor upper bound. The downstream compatibility check
+enables every FileIPC feature together with published contracts-world rc.18,
+WorldIPC 0.4.0-dev.5, forwarded-context 0.1.3-dev.6, AuthIPC 0.2.1-dev.3 and
+Files Policy 0.1.0-dev.7. These checks establish Rust graph/API compatibility;
+consumers retain the authority and recovery obligations described below.
+
 Version 0.1.14 admits issued WorldIPC0.3.12-dev.12 and Files
 Policy0.1.0-dev.6 for the C1rc15/C3dev12 World SDK graph while preserving every
 0.1.13 capability, retention, world-verifier and world-policy-projection API,

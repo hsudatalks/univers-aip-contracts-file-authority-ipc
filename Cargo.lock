@@ -568,7 +568,7 @@ dependencies = [
 
 [[package]]
 name = "univers-aip-contracts-file-authority-ipc"
-version = "0.1.14"
+version = "0.1.15"
 dependencies = [
  "async-trait",
  "bytes",

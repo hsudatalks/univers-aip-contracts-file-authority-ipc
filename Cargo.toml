@@ -1,6 +1,6 @@
 [package]
 name = "univers-aip-contracts-file-authority-ipc"
-version = "0.1.14"
+version = "0.1.15"
 edition = "2021"
 rust-version = "1.89"
 license = "MIT"
@@ -21,12 +21,15 @@ world-policy-projection = ["world-verifier", "dep:univers-file-governed-policy"]
 [dependencies]
 bytes = { version = "1", features = ["serde"], optional = true }
 serde = { version = "1", features = ["derive"] }
-univers-aip-contracts-data = { version = "=1.0.0-rc.3", registry = "univers", default-features = false, features = ["content-types", "file", "file-authority", "storage-full"] }
+univers-aip-contracts-data = { version = ">=1.0.0-rc.3, <1.1.0", registry = "univers", default-features = false, features = ["content-types", "file", "file-authority", "storage-full"] }
 rmp-serde = { version = "1", optional = true }
 serde_json = { version = "1", optional = true }
 sha2 = { version = "0.10", optional = true }
-univers-aip-contracts-world-ipc = { version = "=0.3.12-dev.12", registry = "univers", default-features = false, features = ["spatial-mutation"], optional = true }
-univers-file-governed-policy = { version = "=0.1.0-dev.6", registry = "univers", optional = true }
+# Both prerelease cores must occur in the requirement: a plain <0.5.0 upper
+# bound would reject 0.4.0-dev.5. Keep the accepted 0.3.12 lock and cap the
+# second core at the 0.4.0 candidate verified by the downstream graph check.
+univers-aip-contracts-world-ipc = { version = ">=0.3.12-dev.12, <=0.4.0-dev.5", registry = "univers", default-features = false, features = ["spatial-mutation"], optional = true }
+univers-file-governed-policy = { version = ">=0.1.0-dev.6, <0.2.0", registry = "univers", optional = true }
 [dev-dependencies]
 serde_json = "1"
 rmp-serde = "1"
@@ -34,8 +37,8 @@ async-trait = "0.1"
 bytes = "1"
 tokio = { version = "1", features = ["rt", "macros"] }
 tempfile = "3"
-univers-aip-lib-kv-redb = { version = "=1.0.0-dev.3", registry = "univers" }
-univers-aip-contracts-shared = { version = "=1.0.0-rc.2", registry = "univers", default-features = false, features = ["artifact-ref"] }
+univers-aip-lib-kv-redb = { version = ">=1.0.0-dev.3, <1.1.0", registry = "univers" }
+univers-aip-contracts-shared = { version = ">=1.0.0-rc.2, <1.1.0", registry = "univers", default-features = false, features = ["artifact-ref"] }
 
 [profile.release-workbench]
 inherits = "release"
