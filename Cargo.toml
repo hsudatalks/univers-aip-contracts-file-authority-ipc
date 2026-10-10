@@ -1,6 +1,6 @@
 [package]
 name = "univers-aip-contracts-file-authority-ipc"
-version = "0.1.15"
+version = "0.1.16"
 edition = "2021"
 rust-version = "1.89"
 license = "MIT"
@@ -8,17 +8,20 @@ description = "Pure File authority IPC requests, replies and protocol bounds"
 repository = "https://github.com/hsudatalks/univers-aip-contracts-file-authority-ipc"
 publish = ["univers"]
 readme = "README.md"
-include = ["Cargo.toml", "Cargo.lock", "README.md", "CONTENT_RETENTION.md", "CONTENT_WORLD_VERIFIER.md", "CONTENT_WORLD_POLICY_PROJECTION.md", "src/**", "tests/**", "scripts/**", ".cargo/config.toml"]
+include = ["Cargo.toml", "Cargo.lock", "README.md", "CONTENT_PHYSICAL_EFFECTS.md", "CONTENT_RETENTION.md", "CONTENT_WORLD_VERIFIER.md", "CONTENT_WORLD_POLICY_PROJECTION.md", "src/**", "tests/**", "scripts/**", ".cargo/config.toml"]
 [workspace]
 members = ["."]
 resolver = "2"
 [features]
 default = []
+artifact-physical-effects = ["dep:univers-aip-contracts-data-effects", "dep:serde_json"]
 capability = ["dep:bytes", "univers-aip-contracts-data/file-file"]
 retention = ["univers-aip-contracts-data/file-artifact", "dep:univers-aip-contracts-world-ipc", "dep:rmp-serde", "dep:serde_json", "dep:sha2"]
 world-verifier = ["retention"]
 world-policy-projection = ["world-verifier", "dep:univers-file-governed-policy"]
 [dependencies]
+# Independent epoch: preserve the legacy Data 1.x graph and use issued query values.
+univers-aip-contracts-data-effects = { package = "univers-aip-contracts-data", version = "=2.0.0-rc.6", registry = "univers", default-features = false, features = ["artifact-effects"], optional = true }
 bytes = { version = "1", features = ["serde"], optional = true }
 serde = { version = "1", features = ["derive"] }
 univers-aip-contracts-data = { version = ">=1.0.0-rc.3, <1.1.0", registry = "univers", default-features = false, features = ["content-types", "file", "file-authority", "storage-full"] }

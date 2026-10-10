@@ -1,0 +1,26 @@
+{
+  "schema": "univers.artifact-effects",
+  "version": 1,
+  "binding": {
+    "attempt": {
+      "scope": {
+        "organizationId": "org-1",
+        "worldId": "world-1",
+        "worldIncarnation": {
+          "kind": "canonical_relation_journal_generation",
+          "dataNamespace": "namespace-1",
+          "generation": "journal-generation-1"
+        },
+        "invokingOwner": "economic"
+      },
+      "requestId": "original-request-1",
+      "attemptId": "original-attempt-1"
+    },
+    "writeId": "original-write-1"
+  },
+  "intentDigest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "expectedAuthority": {
+    "authorityId": "content",
+    "generation": "receipt-lineage-1"
+  }
+}

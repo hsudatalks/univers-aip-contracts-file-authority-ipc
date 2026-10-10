@@ -54,3 +54,7 @@ pub const MAX_CONTENT_REQUEST_BYTES: usize = 10 * 1024 * 1024;
 /// Optional canonical original Content retention wire.
 #[cfg(feature = "retention")]
 pub mod retention;
+
+/// Optional read-only original Artifact physical receipt query.
+#[cfg(feature = "artifact-physical-effects")]
+pub mod physical_effects;

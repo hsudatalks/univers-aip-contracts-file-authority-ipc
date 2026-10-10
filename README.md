@@ -1,5 +1,13 @@
 # File authority IPC contract
 
+Version 0.1.16 adds opt-in `artifact-physical-effects`, a separate read-only
+`content::physical_effects` query and capability advertisement using issued Data
+2.0.0-rc.6 values through an optional Registry alias. The legacy Data 1.x graph
+and Content/File encodings remain unchanged. See
+[CONTENT_PHYSICAL_EFFECTS.md](CONTENT_PHYSICAL_EFFECTS.md) for protocol bounds
+and provider obligations. This delivery supplies wire contracts and tests; Files
+provider implementation and installed acceptance remain separate work.
+
 Version 0.1.15 replaces this crate's exact Univers dependency pins with bounded
 compatible ranges, retaining the accepted lower bounds and the workspace's
 contracts-world rc.15 lock. All 0.1.14 APIs, schemas, codecs, features and bounds

@@ -1,0 +1,62 @@
+{
+  "query": {
+    "schema": "univers.artifact-effects",
+    "version": 1,
+    "binding": {
+      "attempt": {
+        "scope": {
+          "organizationId": "org-1",
+          "worldId": "world-1",
+          "worldIncarnation": {
+            "kind": "canonical_relation_journal_generation",
+            "dataNamespace": "namespace-1",
+            "generation": "journal-generation-1"
+          },
+          "invokingOwner": "economic"
+        },
+        "requestId": "original-request-1",
+        "attemptId": "original-attempt-1"
+      },
+      "writeId": "original-write-1"
+    },
+    "intentDigest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "expectedAuthority": {
+      "authorityId": "content",
+      "generation": "receipt-lineage-1"
+    }
+  },
+  "state": {
+    "state": "published",
+    "receipt": {
+      "receiptId": "original-physical-receipt-1",
+      "authority": {
+        "authorityId": "content",
+        "generation": "receipt-lineage-1"
+      },
+      "binding": {
+        "attempt": {
+          "scope": {
+            "organizationId": "org-1",
+            "worldId": "world-1",
+            "worldIncarnation": {
+              "kind": "canonical_relation_journal_generation",
+              "dataNamespace": "namespace-1",
+              "generation": "journal-generation-1"
+            },
+            "invokingOwner": "economic"
+          },
+          "requestId": "original-request-1",
+          "attemptId": "original-attempt-1"
+        },
+        "writeId": "original-write-1"
+      },
+      "intentDigest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "logicalSha256": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "logicalSizeBytes": "9007199254740993",
+      "physicalSha256": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "physicalSizeBytes": "18446744073709551615",
+      "outcome": "created",
+      "bytesWritten": "18446744073709551615"
+    }
+  }
+}

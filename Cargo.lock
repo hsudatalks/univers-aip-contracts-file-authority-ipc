@@ -567,8 +567,20 @@ dependencies = [
 ]
 
 [[package]]
+name = "univers-aip-contracts-data"
+version = "2.0.0-rc.6"
+source = "sparse+https://david-server.mink-ph.ts.net/api/v1/crates/"
+checksum = "efe90aa87ed612c5ab3769647352c214836930e2b886daf3642290f11562cb3a"
+dependencies = [
+ "serde",
+ "serde_json",
+ "sha2",
+ "thiserror",
+]
+
+[[package]]
 name = "univers-aip-contracts-file-authority-ipc"
-version = "0.1.15"
+version = "0.1.16"
 dependencies = [
  "async-trait",
  "bytes",
@@ -578,7 +590,8 @@ dependencies = [
  "sha2",
  "tempfile",
  "tokio",
- "univers-aip-contracts-data",
+ "univers-aip-contracts-data 1.0.0-rc.3",
+ "univers-aip-contracts-data 2.0.0-rc.6",
  "univers-aip-contracts-shared",
  "univers-aip-contracts-world-ipc",
  "univers-aip-lib-kv-redb",
@@ -624,7 +637,7 @@ dependencies = [
  "serde_json",
  "sha2",
  "thiserror",
- "univers-aip-contracts-data",
+ "univers-aip-contracts-data 1.0.0-rc.3",
  "univers-aip-contracts-shared",
  "uuid",
 ]
@@ -640,7 +653,7 @@ dependencies = [
  "serde",
  "serde_json",
  "sha2",
- "univers-aip-contracts-data",
+ "univers-aip-contracts-data 1.0.0-rc.3",
  "univers-aip-contracts-world",
  "univers-aip-lib-forwarded-context",
 ]
@@ -672,7 +685,7 @@ dependencies = [
  "async-trait",
  "redb",
  "tokio",
- "univers-aip-contracts-data",
+ "univers-aip-contracts-data 1.0.0-rc.3",
 ]
 
 [[package]]
@@ -687,7 +700,7 @@ dependencies = [
  "serde",
  "sha2",
  "thiserror",
- "univers-aip-contracts-data",
+ "univers-aip-contracts-data 1.0.0-rc.3",
  "univers-aip-contracts-world",
 ]
 
