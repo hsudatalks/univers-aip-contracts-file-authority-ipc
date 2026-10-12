@@ -1,5 +1,14 @@
 # File authority IPC contract
 
+Version 0.1.16 also admits issued WorldIPC `0.4.0-dev.t09.4` through
+`>=0.4.0-dev.t09.4, <0.5.0` and Files Policy through
+`>=0.1.0-dev.8, <0.2.0`. These ranges admit compatible later candidates;
+WorldIPC and Files Policy own their contracts-world ranges, which admit
+`1.0.0-rc.28`. FileIPC adds no direct World dependency or exact World pin.
+The complete feature graph is checked with a single WorldIPC t09.4 and World
+rc.28. All existing features, defaults, schemas, codecs and protocol bounds
+remain unchanged by this dependency update.
+
 Version 0.1.16 adds opt-in `artifact-physical-effects`, a separate read-only
 `content::physical_effects` query and capability advertisement using issued Data
 2.0.0-rc.6 values through an optional Registry alias. The legacy Data 1.x graph

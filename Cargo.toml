@@ -28,11 +28,11 @@ univers-aip-contracts-data = { version = ">=1.0.0-rc.3, <1.1.0", registry = "uni
 rmp-serde = { version = "1", optional = true }
 serde_json = { version = "1", optional = true }
 sha2 = { version = "0.10", optional = true }
-# Both prerelease cores must occur in the requirement: a plain <0.5.0 upper
-# bound would reject 0.4.0-dev.5. Keep the accepted 0.3.12 lock and cap the
-# second core at the 0.4.0 candidate verified by the downstream graph check.
-univers-aip-contracts-world-ipc = { version = ">=0.3.12-dev.12, <=0.4.0-dev.5", registry = "univers", default-features = false, features = ["spatial-mutation"], optional = true }
-univers-file-governed-policy = { version = ">=0.1.0-dev.6, <0.2.0", registry = "univers", optional = true }
+# Admit compatible 0.4.0 prereleases and stable releases through the next minor.
+# WorldIPC owns the contracts-world requirement; FileIPC adds no World pin.
+univers-aip-contracts-world-ipc = { version = ">=0.4.0-dev.t09.4, <0.5.0", registry = "univers", default-features = false, features = ["spatial-mutation"], optional = true }
+# dev.8 removes the transitive exact World pins of earlier policy releases.
+univers-file-governed-policy = { version = ">=0.1.0-dev.8, <0.2.0", registry = "univers", optional = true }
 [dev-dependencies]
 serde_json = "1"
 rmp-serde = "1"
